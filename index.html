@@ -1,1948 +1,303 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="theme-color" content="#000000">
-	<meta name="msapplication-navbutton-color" content="#000000">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
-	<title>0xFTP &#8211; Grim Reaper</title>
-	<meta name='robots' content='max-image-preview:large' />
-	<link rel='dns-prefetch' href='http://cdnjs.cloudflare.com/' />
-	<link rel='stylesheet' id='dashicons-css' href='assets/css/dashicons.minb6a4.css?ver=6.6.1' type='text/css' media='all' />
-	<link rel='stylesheet' id='post-views-counter-frontend-css' href='assets/css/frontend.min6dbf.css?ver=1.4.7' type='text/css' media='all' />
-	<link rel='stylesheet' id='style-css' href='assets/css/stylecc91.css?ver=2.1.8' type='text/css' media='all' />
-	<link rel='stylesheet' id='lightstyle-css' href='assets/css/lightmodecc91.css?ver=2.1.8' type='text/css' media='all' />
-	<script type="text/javascript" src="assets/js/jquery.min9d52.js?ver=3.5.1" id="jquery-js"></script>
-	<script type="text/javascript" src="assets/js/functioncc91.js?ver=2.1.8" id="tsfn_scripts-js"></script>
-	<script type="text/javascript" src="assets/js/tabscc91.js?ver=2.1.8" id="tabs-js"></script>
-	<!-- for f12 disable  -->
-	<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
-	<meta name="generator" content="WordPress 6.6.1" />
-	<meta name="generator" content="performance-lab 3.4.0; plugins: ">
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
-	<!-- for detect mobile or desktop -->
-	<script>
-		$(document).ready(function () {
-			$(".shme").click(function () {
-				$(".mm").toggleClass("shwx");
-			});
-			$(".srcmob").click(function () {
-				$(".minmb").toggleClass("minmbx");
-			});
-		});
-	</script>
-	<!-- for arrow to move page to top -->
-	<script type="text/javascript">
-		$(document).ready(function () {
-
-			//Check to see if the window is top if not then display button
-			$(window).scroll(function () {
-				if ($(this).scrollTop() > 100) {
-					$('.scrollToTop').fadeIn();
-				} else {
-					$('.scrollToTop').fadeOut();
-				}
-			});
-
-			//Click event to scroll to top
-			$('.scrollToTop').click(function () {
-				$('html, body').animate({
-					scrollTop: 0
-				}, 800);
-				return false;
-			});
-
-		});
-	</script>
-	<style>
-		.th,
-		.serieslist.pop ul li.topone .limit .bw .ctr,
-		.releases .vl,
-		.scrollToTop,
-		#sidebar #bm-history li a:hover,
-		.hpage a,
-		#footer .footermenu,
-		.footer-az .az-list li a,
-		.main-info .info-desc .spe span:before,
-		.bxcl ul li span.dt a,
-		.bookmark,
-		.commentx #submit,
-		.radiox input:checked~.checkmarkx,
-		.advancedsearch button.searchz,
-		.lightmode .nav_apb a:hover,
-		.lista a,
-		.lightmode .lista a:hover,
-		.nextprev a,
-		.disqusmen #commentform #submit,
-		.blogbox .btitle .vl,
-		.bigblogt span a,
-		.big-slider .paging .centerpaging .swiper-pagination span.swiper-pagination-bullet-active {
-			background: #000000
-		}
-
-		.pagination span.page-numbers.current,
-		.quickfilter .filters .filter.submit button,
-		#sidebar .section .ts-wpop-series-gen .ts-wpop-nav-tabs li.active span,
-		#gallery.owl-loaded .owl-dots .owl-dot.active span,
-		.bs.stylefiv .bsx .chfiv li a:hover,
-		.bs.stylesix .bsx .chfiv li a:hover {
-			background: #000000 !important
-		}
-
-		#sidebar .section #searchform #searchsubmit,
-		.series-gen .nav-tabs li.active a,
-		.lastend .inepcx a,
-		.nav_apb a:hover,
-		#top-menu li a:hover,
-		.readingnav.rnavbot .readingnavbot .readingbar .readingprogress,
-		.lightmode .main-info .info-desc .wd-full .mgen a:hover,
-		.lightmode .bxcl ul li .chbox:hover,
-		.lightmode ul.taxindex li a:hover,
-		.comment-list .comment-body .reply a:hover,
-		.topmobile,
-		.bxcl ul::-webkit-scrollbar-thumb,
-		.lightmode .slider:before,
-		.quickfilter .filters .filter .genrez::-webkit-scrollbar-thumb,
-		.hothome .releases,
-		.lightmode .seriestucon .seriestucont .seriestucontr .seriestugenre a:hover,
-		.bloglist .blogbox .innerblog .thumb .btags,
-		.slidernom2 .mainslider .limit .sliderinfo .sliderinfolimit .start-reading span:hover,
-		.lightmode .bixbox .bvlcen .bvl,
-		.tsfront .headfront .fsearch #submit,
-		.tsfront .headfront .fhomebutton a {
-			background: #000000
-		}
-
-		.lightmode #sidebar .section h4,
-		.lightmode .serieslist ul li .ctr,
-		.listupd .utao .uta .luf ul li,
-		.lightmode .bs .bsx:hover .tt,
-		.soralist ul,
-		a:hover,
-		.lightmode .blogbox .btitle h3,
-		.lightmode .blogbox .btitle h1,
-		.bxcl ul li .lchx a:visited,
-		.listupd .utao .uta .luf ul li a:visited,
-		.lightmode .pagination a:hover,
-		.lightmode a:hover,
-		#sidebar .serieslist ul li .leftseries h2 a:hover,
-		.bs.styletere .epxs,
-		.bxcl ul li .dt a,
-		.lightmode .main-info .info-desc .wd-full .mgen a,
-		.lightmode #sidebar .serieslist ul li .leftseries h2 a:hover,
-		.comment-list .comment-body .reply a,
-		.bxcl ul li .eph-num a:visited,
-		.headpost .allc a,
-		.lightmode .seriestucon .seriestucont .seriestucontr .seriestugenre a,
-		.bs.stylesix .bsx .chfiv li a,
-		.bs.stylefor .bsx a:visited .bigor .adds .epxs,
-		.bs.stylefiv .bsx .chfiv li a:visited .fivchap,
-		.stylesven .sveninner .svenbottom .svenmetabot .svenchapters li a:visited,
-		.listupd .utao.stylegg .uta .luf ul li a:visited .eggchap,
-		.lightmode .listupd .utao.stylegg .uta .luf ul li a:visited .eggchap,
-		.lightmode .serieslist ul li .leftseries span a {
-			color: #000000
-		}
-
-		.bxcl ul li .lchx a:visited,
-		.listupd .utao .uta .luf ul li a:visited,
-		.bs.stylesix .bsx .chfiv li a {
-			color: #000000 !important
-		}
-
-		.lightmode .serieslist ul li .ctr,
-		.advancedsearch button.searchz,
-		.lista a,
-		.lightmode .lista a:hover,
-		.blogbox .boxlist .bma .bmb .bmba,
-		.page.blog .thumb,
-		#sidebar .section #searchform #searchsubmit,
-		.lightmode .main-info .info-desc .wd-full .mgen a,
-		.lightmode .bxcl ul li .chbox:hover,
-		.comment-list .comment-body .reply a,
-		.lightmode .seriestucon .seriestucont .seriestucontr .seriestugenre a,
-		.slidernom2 .mainslider .limit .sliderinfo .sliderinfolimit .start-reading span:hover {
-			border-color: #000000
-		}
-
-		.bs.stylesix .bsx .chfiv li a:before {
-			content: "";
-			background: #000000;
-			opacity: 0.2;
-			position: absolute;
-			display: block;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			border-radius: 10px;
-		}
-
-		.bs.stylesix .bsx .chfiv li a {
-			background: none !important;
-		}
-
-		.slider.round:before {
-			background: #333;
-		}
-
-		.hpage a:hover,
-		.bs.stylefiv .bsx .chfiv li a:hover,
-		.bs.stylesix .bsx .chfiv li a:hover {
-			color: #FFF !important;
-		}
-
-		@media only screen and (max-width:800px) {
-
-			.lightmode.black .th,
-			.lightmode .th,
-			.th,
-			.surprise {
-				background: #000000
-			}
-
-			#main-menu {
-				background: rgba(28, 28, 28, 0.95);
-			}
-		}
-	</style>
-	<style>
-		.home-genres,
-		.home-genres.gennom2 .alman a,
-		.lightmode .home-genres.gennom2 {
-			background: #913fe2;
-		}
-
-		.home-genres .alman a {
-			color: #913fe2;
-		}
-
-		.home-genres.gennom2 {
-			border-color: #913fe2;
-		}
-	</style>
-	<link rel="icon" href="assets/images/intruder.png" sizes="32x32" />
-	<link rel="icon" href="assets/images/intruder.png" sizes="192x192" />
-	<!-- <link rel="apple-touch-icon" href="assets/images/intruder.png" /> -->
-	<style type="text/css" id="wp-custom-css">
-		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
-
-
-		body {
-			font-family: 'Inter', sans-serif;
-			background-color: #080808;
-		}
-
-
-		#main-menu ul li a {
-			font-size: 14px;
-			font-weight: 400;
-			color: #b8b8b8;
-
-		}
-
-		#main-menu ul li a span {
-
-			transition: background-color 0.15s, color 0.15s, padding 0.3s;
-		}
-
-
-
-		#main-menu ul li a span:hover {
-			color: white;
-
-			border-radius: 5px;
-			border: 2px solid transparent;
-
-
-			background-color: #131313;
-			border: 9px solid #131313;
-			padding: 0px 5px;
-		}
-
-
-
-
-		.searchx {
-			width: 115px;
-			transition-duration: .5s;
-			border-radius: 1px !important;
-		}
-
-		.searchx #form #s {
-			background: #131313;
-			font-size: 12px;
-			border-radius: 5px;
-			font-weight: 300;
-		}
-
-		.searchx #form #s {
-			color: #787878;
-			border: 1px solid #222;
-		}
-
-		.searchx #form {
-			position: relative;
-		}
-
-		.searchx #form #s {
-			position: absolute;
-			right: 0;
-			width: 160px;
-			transition: width 0.3s ease;
-		}
-
-		.searchx #form #s:hover {
-			width: 240px;
-		}
-
-		.slidernom3 .mainslider .limit .sliderinfo .sliderinfolimit .start-reading span {
-			display: inline-block;
-			background: #fff;
-			color: #111;
-			font-weight: 500;
-			font-size: 14px;
-			line-height: 35px;
-			padding: 0 20px;
-			border-radius: 4px;
-			padding: 13px 20px 13px 20px;
-		}
-
-
-		.slidernom3 .mainslider .limit .sliderinfo .sliderinfolimit .start-reading span:hover {
-			background: grey;
-			color: white;
-		}
-
-		.home-genres {
-			margin-top: 0px;
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
-		}
-
-		.genre-listx {
-			padding-left: 18px;
-		}
-
-		.genre-listx a {
-			color: black !important;
-			font-size: 14px !important;
-			background-color: transparent;
-			transition: background-color 0.3s ease;
-		}
-
-		.genre-listx a:hover {
-			background-color: rgba(0, 0, 0, 0.20);
-		}
-
-
-
-		@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap');
-
-
-
-		div.swiper-slide div a div p {
-			font-size: 13px !important;
-			font-family: 'Poppins', sans-serif !important;
-			line-height: 150% !important;
-			text-shadow: none;
-			font-weight: 400;
-		}
-
-
-		div.swiper-slide>div>div>div>div>a>span {
-			font-weight: 700 !important;
-			font-size: 40px !important;
-			text-shadow: none !important;
-			letter-spacing: -1.5px !important;
-			margin-bottom: 3px !important;
-			font-family: 'Inter', sans-serif !important;
-
-		}
-
-		.popularslider {
-			background: #0c0c0c;
-		}
-
-		div.bixbox {
-			background: #0c0c0c;
-		}
-
-		.hothome>div:nth-child(1)>h2:nth-child(1) {
-			background: #0c0c0c;
-		}
-
-
-		a:hover {
-			color: #366ad3;
-			text-decoration: none;
-		}
-
-		.releases {
-			border-bottom: 1px solid #913fe2;
-		}
-
-		.tbookmark {
-			display: inline-block;
-			padding: 8px 16px;
-			background-color: #913fe2;
-			color: #fff !important;
-			text-decoration: none;
-			border-radius: 4px;
-			float: right;
-			margin: 16px 0px 16px 16px;
-			position: relative;
-			line-height: 1.2;
-			text-decoration: none;
-			transition: background-color .3s cubic-bezier(.165, .84, .44, 1), box-shadow .3s cubic-bezier(.165, .84, .44, 1);
-			transition-duration: 0.3s, 0.3s;
-			box-shadow: 0 4px 4px rgba(8, 8, 8, .08), 0 1px 2px rgba(8, 8, 8, .2), inset 0 6px 12px rgba(255, 255, 255, .12), inset 0 1px 1px rgba(255, 255, 255, .2);
-		}
-
-
-		.tbookmark:hover {
-			background-color: #1f2122;
-			cursor: pointer;
-			color: #fff;
-			border-radius: 4px;
-			transition-duration: .15s;
-		}
-
-		.tt:hover {
-			color: #fff !important;
-
-		}
-
-		.tt {
-			direction: ltr !important;
-			text-align: left !important;
-		}
-
-		.tt>a:hover {
-			color: #fff !important;
-		}
-
-		.bs .bsx .limit img,
-		.uta .imgu img {
-			border-radius: 5px;
-		}
-
-		.full .bs:hover {
-			transform: translate(0, -3%);
-			transition: 0.2s
-		}
-
-		.full .bs {
-			transition: 0.2s
-		}
-
-		.bs:hover {
-			transition: 0.3s;
-			transform: scale(1.05);
-		}
-
-		.listupd .utao .uta .imgu img:hover {
-			filter: brightness(20%);
-			transform: scale(1.1) !important;
-			transition: 0.3s !important;
-
-		}
-
-		@media screen and (min-width: 768px) {
-			.bs .bsx .limit::before {
-				content: '';
-
-				position: absolute;
-
-				top: 0;
-
-				left: 0;
-
-				z-index: 1;
-
-				display: block;
-
-				width: 0;
-
-				height: 100%;
-
-				filter: blur(10px);
-
-				background: linear-gradient(to right, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, .3) 100%);
-
-				transform: skewX(-25deg);
-
-				transition: width 0.8s;
-
-			}
-		}
-
-
-		@media screen and (min-width: 768px) {
-			.bs .bsx .limit:hover::before {
-				width: 200%;
-
-			}
-		}
-
-		h2 a.series:hover {
-			color: #fff !important;
-		}
-
-		.serieslist li {
-			border-color: #0c0c0c !important;
-		}
-
-		#sidebar .section {
-			background-color: #0c0c0c !important;
-		}
-
-		@media only screen and (max-width: 600px) {
-			.tbookmark:nth-of-type(2) {
-				display: none;
-			}
-
-		}
-
-		@media only screen and (max-width: 600px) {
-			.tbookmark span {
-				display: none;
-			}
-
-			.logos {
-				padding-top: 5px;
-			}
-
-			.srcmob {
-				font-size: 16px;
-				padding-top: 5px;
-			}
-
-			.searchx {
-				padding-top: 64px;
-				z-index: 1000;
-			}
-
-			.searchx #s {
-				font-size: 14px !important;
-				height: 40px !important;
-				padding-bottom: 5px !important;
-			}
-
-			.searchx #s:hover {
-				width: 95vw !important;
-
-			}
-
-			.mainslider {
-				width: 92vw;
-				margin: 0 auto;
-				border-radius: 8px;
-			}
-
-			.mainslider .limit:first-of-type,
-			.slideinfo,
-			.sliderinfolimit {
-				height: 250px !important;
-			}
-
-
-			.start-reading {
-				z-index: 3000 !important;
-				margin-top: 120px !important;
-			}
-
-			.start-reading span {
-				width: 92vw !important;
-				padding-top: 8px !important;
-				padding-bottom: 8px !important;
-			}
-
-			.sliderinfolimit .name {
-				display: none !important;
-			}
-
-			.sliderinfolimit .desc {
-				display: none !important;
-			}
-
-			.limit .slidtrithumb {
-				width: 100vw !important;
-				margin-left: -20px !important;
-				z-index: 3 !important;
-				margin-top: -120px !important;
-				height: 400px !important;
-				opacity: 0.9;
-			}
-
-			.mailslider .limit {
-				overflow: visible !important;
-
-			}
-
-			.bigbanner {
-				display: none !important;
-				filter: none !important;
-				opacity: 1 !important;
-
-			}
-
-			@media only screen and (max-width: 650px) {
-				.main-info .info-left .thumb {
-					max-width: 400px !important;
-				}
-
-				#menu-header li a span {
-					font-size: 18px !important;
-
-				}
-
-				#menu-header li a span i {
-					margin-right: 10px !important;
-				}
-			}
-
-
-		}
-
-		.info-left-margin .bookmark {
-			background-color: #fff !important;
-		}
-
-		.copyright .txt p {
-			display: none !important;
-		}
-
-		.bigcover .bigbanner {
-			filter: blur(3px) !important;
-		}
-
-		#content h2 {
-			color: #fff !important;
-		}
-
-		.allc a {
-			color: #fff !important;
-		}
-
-		.centernav .tbookmark {
-			color: black;
-		}
-
-		@keyframes new {
-			0% {
-				opacity: 1;
-			}
-
-			25% {
-				opacity: 0;
-			}
-
-			50% {
-				opacity: 1;
-			}
-
-			75% {
-				opacity: 0;
-			}
-
-			100% {
-				opacity: 1;
-			}
-		}
-
-		/* .neww {
-    position: relative;
-}
-
-.neww::before {
-    content: '';  
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-		border: solid;
-    border-color: #fff;
-    border-width: 2px;
-		animation: new 2s infinite;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: new; 
-} */
-
-		.status-new {
-			float: right;
-			display: inline-block;
-			position: relative;
-			animation: new 2s infinite;
-			animation-duration: 2s;
-			animation-timing-function: ease;
-			animation-delay: 0s;
-			animation-iteration-count: infinite;
-			animation-direction: normal;
-			animation-fill-mode: none;
-			animation-play-state: running;
-			animation-name: new;
-		}
-
-		.bs.stylefiv .bsx .chfiv li a i {
-			float: right;
-			font-size: 11px;
-			font-weight: 400;
-		}
-
-		.footercopyright {
-			display: none;
-
-		}
-
-		.eph-num a:hover {
-			color: #fff !important;
-		}
-
-		.eph-num a:visited {
-			color: grey !important;
-		}
-
-		.imptdt a:hover {
-			color: #fff !important;
-
-		}
-
-
-		.tbookmark:hover {
-			background-color: grey !important;
-			color: white !important;
-		}
-
-		.mgen a:hover {
-			color: #fff !important;
-		}
-
-		.ts-breadcrumb a:hover {
-			color: #fff !important;
-		}
-
-		.nav-tabs a:hover {
-			color: #fff !important;
-		}
-
-		.bs .bsx a:hover {
-			color: #fff !important;
-		}
-
-		.chfiv li a span:visited {
-			color: white !important;
-		}
-
-		.leftseries span a:hover {
-			color: #fff !important;
-		}
-
-		element {}
-
-
-		@media screen and (min-width: 768px) {
-			.slidernom3 .mainslider .slidtrithumb:hover {
-				position: absolute;
-				top: -25px;
-				right: 12%;
-				z-index: 9;
-				width: 280px;
-				transform: rotate(0deg);
-				transition-duration: .2s;
-				box-shadow: 0 30px 30px rgba(0, 0, 0, .2);
-			}
-		}
-
-		.fivchap {
-			color: white !important;
-		}
-
-		.fivhap:visited {
-			color: #fff !important;
-		}
-
-		.info-left-margin .bookmark {
-			background-color: #000000 !important;
-		}
-
-		.boookmark {
-			background-color: #9140e2 !important;
-		}
-
-		.asura-container {
-			margin: 20px 0px;
-			display: flex;
-			justify-content: space-between;
-			max-width: 100%;
-			min-width: 500px;
-			height: 160px;
-			background-color: #ffffff;
-			border-radius: 10px;
-			overflow: hidden;
-		}
-
-		.asura-left-section {
-			padding: 20px;
-			padding-left: 5vw;
-			display: flex;
-			align-items: center;
-			flex: 1;
-			background-color: transparent;
-			font-size: clamp(10px, 3vw, 26px);
-			line-height: 1;
-		}
-
-		.asura-right-section {
-			flex: 2;
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-			overflow: hidden;
-		}
-
-		.asura-right-section img {
-			height: 100%;
-			width: auto;
-		}
-
-
-		@media (max-width: 800px) {
-			.asura-container {
-				margin: 10px !important;
-				min-width: 94%;
-				height: auto;
-			}
-
-			.asura-right-section img {
-				width: 100%;
-				height: auto;
-			}
-		}
-
-
-		.pop_login {
-			display: none;
-			/* Initially hide the popup */
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			z-index: 999;
-			border-radius: 10px;
-			background-color: #3f4341;
-			width: 80%;
-			max-width: 400px;
-			overflow: hidden;
-			animation: fadeInOut 0.5s ease forwards;
-			/* Apply fade in/out animation */
-		}
-
-		.pop_login.active {
-			display: block;
-			/* Override display property when active */
-		}
-
-		@keyframes fadeInOut {
-			0% {
-				opacity: 0;
-			}
-
-			100% {
-				opacity: 1;
-			}
-		}
-
-		.pop_close_btn {
-			position: absolute;
-			top: 10px;
-			right: 10px;
-			cursor: pointer;
-			color: white;
-			font-size: 20px;
-			z-index: 1000;
-			/* Ensure it's above the image */
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-			/* Add shadow effect */
-		}
-
-		.pop_image_wrapper,
-		.pop_flex_container {
-			position: relative;
-		}
-
-		.pop_image_wrapper {
-			position: relative;
-			width: 100%;
-			/* Fit within the borders */
-			overflow: hidden;
-			/* Ensures no overflow */
-		}
-
-		.pop_image_wrapper img {
-			width: 100%;
-			display: block;
-			position: relative;
-			/* Adjust image to fit */
-		}
-
-		.pop_flex_container {
-			display: flex;
-			/* Establishes a flexbox container */
-			justify-content: space-between;
-			/* Distributes space between and around content items */
-			padding: 0 30px;
-			/* Padding on both sides */
-		}
-
-		.pop_content {
-			font-family: 'Oswald', sans-serif;
-			/* Oswald font */
-			color: white;
-			font-size: 45px;
-			/* Larger text */
-			line-height: 1;
-			/* Compact line height */
-		}
-
-		.pop_title {
-			margin-bottom: 40px;
-			/* Space below title */
-		}
-
-		.pop_buttons {
-			display: flex;
-			/* Enable flexbox */
-			justify-content: center;
-			/* Horizontally center the content */
-			align-items: center;
-			/* Vertically center the content */
-			background-color: white;
-			height: 85px;
-			width: 85px;
-			border-radius: 12px;
-			margin-top: 5px;
-		}
-
-		.pop_register {
-			font-family: 'Oswald', sans-serif;
-			color: #333;
-			text-decoration: none;
-			font-size: 25px;
-			line-height: 0.9;
-			/* Compact line height */
-			font-weight: 600;
-			padding: 12px;
-			display: flex;
-			/* Use flexbox to align text */
-			flex-direction: column;
-			/* Stack children vertically */
-			justify-content: center;
-			/* Center content vertically */
-			align-items: center;
-			/* Center content horizontally */
-			height: 100%;
-			/* Take full height of parent */
-		}
-
-
-		.pop_register span {
-			font-size: 33px;
-		}
-
-
-		.pop_register:hover i {
-			display: block;
-			/* Shows the arrow icon on hover, changed to block to ensure it centers */
-			font-size: 25px;
-			/* Maintain font size consistency */
-			margin: auto;
-			/* Centers the icon within the button */
-		}
-
-		.fa-arrow-right {
-			font-size: 25px;
-			/* Adjusts the size of the arrow to fit the button */
-			vertical-align: middle;
-			/* Aligns arrow vertically */
-			width: 100%;
-			/* Ensures the icon uses full width for centering */
-		}
-
-		/* Styles for screens wider than 450px (default styles outside media queries can go here) */
-
-		/* Styles for screens between 450px and 301px */
-		@media (min-width: 401px) and (max-width: 450px) {
-			.pop_content {
-				font-size: 32px;
-				/* Adjusted font size for medium-small screens */
-			}
-		}
-
-		/* Styles for screens smaller than 300px */
-		@media (max-width: 400px) {
-			.pop_content {
-				font-size: 32px;
-				/* Smaller font size for very small screens */
-			}
-
-			.pop_buttons {
-				padding: 20px;
-				/* Adjust padding for very small screens */
-			}
-		}
-
-
-		.overlay {
-			display: none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.6);
-			/* Dark semi-transparent background */
-			z-index: 998;
-			/* Below the popup but above other content */
-		}
-
-
-
-
-
-		.um-field-area input[type="text"] {
-			border-radius: 8px !important;
-			height: 50px !important;
-		}
-
-		.um-field-area-password input[type="password"] {
-			border-radius: 8px !important;
-			height: 50px !important;
-		}
-
-		.um-toggle-password {
-			padding-top: 8px;
-
-		}
-
-		.con_log {
-			margin-right: 10px;
-			margin-left: 10px;
-		}
-
-
-		#menu-item-16448>a>span[itemprop="name"] {
-			color: #bd8bed !important;
-		}
-
-
-		#menu-item-16452>a>span[itemprop="name"] {
-			color: #bd8bed !important;
-		}
-
-		.um-center .um-button {
-			width: 320px !important;
-			background-color: #282355 !important;
-			color: white !important;
-			border: none !important;
-			padding: 10px 0 !important;
-			height: 55px !important;
-			margin-top: 30px !important;
-
-		}
-
-		.boookmark {
-			text-align: center;
-			background: black;
-			font-size: 14px;
-			color: #fff;
-			border-radius: 5px;
-			padding: 8px 5px;
-			cursor: pointer;
-			font-weight: 600;
-		}
-
-		.lazy-loaded {
-			opacity: 0;
-			transition: opacity 0.3s ease;
-		}
-
-		.lazy-loaded.is-visible {
-			opacity: 1;
-		}
-
-
-		#thememode {
-			display: none;
-
-		}
-
-		.report-issue {
-			text-align: center;
-			color: #EE4B2B;
-			margin: 20px 0;
-			cursor: pointer;
-			text-transform: lowercase;
-			font-weight: 600;
-		}
-
-		/* Modal Styles */
-		.modal {
-			display: none;
-			position: fixed;
-			z-index: 1000;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			overflow: auto;
-			background-color: rgba(0, 0, 0, 0.7);
-		}
-
-		.modal-content {
-			background-color: #1c1c1c;
-			margin: auto;
-			padding: 20px;
-			border: 1px solid #888;
-			width: 80%;
-			max-width: 500px;
-			border-radius: 10px;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-
-		.modal-content div {
-			font-size: 1.5rem;
-			color: #EE4B2B;
-			font-weight: 600;
-			margin-bottom: 25px;
-		}
-
-		#report-issue-form label {
-			color: white;
-			font-size: 1rem;
-			margin-bottom: 5px;
-
-		}
-
-		#report-issue-form select,
-		#report-issue-form textarea {
-			width: 100%;
-			background-color: #333;
-			color: white;
-			border: 1px solid #555;
-			border-radius: 8px;
-			padding: 10px;
-			margin-bottom: 15px;
-		}
-
-		#report-issue-form button {
-			background-color: #EE4B2B;
-			color: white;
-			border: none;
-			border-radius: 8px;
-			padding: 10px 20px;
-			cursor: pointer;
-			width: 100%;
-			font-size: 1rem;
-			font-weight: 600;
-		}
-
-		#report-issue-form button:hover {
-			background-color: #1c91c0;
-		}
-
-		.modal {
-			display: none;
-			position: fixed;
-			z-index: 1000;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			overflow: auto;
-			background-color: rgba(0, 0, 0, 0.7);
-		}
-
-		.modal-content {
-			background-color: #1c1c1c;
-			margin: auto;
-			padding: 20px;
-			border: 1px solid #888;
-			width: 80%;
-			max-width: 500px;
-			border-radius: 10px;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-
-		.modal-content div {
-			font-size: 1.5rem;
-			color: #EE4B2B;
-			font-weight: 600;
-			margin-bottom: 25px;
-		}
-
-		#report-issue-form label {
-			color: white;
-			font-size: 1rem;
-			margin-bottom: 5px;
-			display: block;
-		}
-
-		#report-issue-form select,
-		#report-issue-form textarea,
-		#report-issue-form input[type="text"],
-		#report-issue-form input[type="file"] {
-			width: 100%;
-			background-color: #333;
-			color: white;
-			border: 1px solid #555;
-			border-radius: 8px;
-			padding: 10px;
-			margin-bottom: 15px;
-		}
-
-		#report-issue-form button {
-			background-color: #EE4B2B;
-			color: white;
-			border: none;
-			border-radius: 8px;
-			padding: 10px 20px;
-			cursor: pointer;
-			width: 100%;
-			font-size: 1rem;
-			font-weight: 600;
-		}
-
-		#report-issue-form button:hover {
-			background-color: #1c91c0;
-		}
-
-		.spinner {
-			border: 4px solid rgba(255, 255, 255, 0.3);
-			border-radius: 50%;
-			border-top: 4px solid #fff;
-			width: 30px;
-			height: 30px;
-			-webkit-animation: spin 1s linear infinite;
-			/* Safari */
-			animation: spin 1s linear infinite;
-			margin: 0 auto;
-		}
-
-		@-webkit-keyframes spin {
-			0% {
-				-webkit-transform: rotate(0deg);
-			}
-
-			100% {
-				-webkit-transform: rotate(360deg);
-			}
-		}
-
-		@keyframes spin {
-			0% {
-				transform: rotate(0deg);
-			}
-
-			100% {
-				transform: rotate(360deg);
-			}
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comics Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: rgb(13, 13, 13);
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgb(13, 13, 13);
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .comics-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .comic-card {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .comic-cover {
+            width: 120px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .comic-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .comic-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .comic-original-title {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+        }
+
+        .comic-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+        }
+
+        .chapters {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .chapters::before {
+            content: "📄";
+            font-size: 0.875rem;
+        }
+
+        .status {
+            background-color: rgb(22, 101, 52);
+            color: rgb(74, 222, 128);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .comic-description {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-logo {
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+
+        button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        @media (min-width: 768px) {
+            .comics-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .comic-card {
+                gap: 1.5rem;
+            }
+
+            .comic-cover {
+                width: 180px;
+                height: 240px;
+            }
+
+            .comic-title {
+                font-size: 1.25rem;
+            }
+
+            header {
+                padding: 1rem 2rem;
+            }
+
+            main {
+                padding: 2rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            .comic-description {
+                -webkit-line-clamp: 3;
+            }
+        }
+
+        .logo {
+            width: 32px;
+            height: 32px;
+        }
+
+        .chapter-count {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .chapter-count {
+                display: inline;
+            }
+        }
+    </style>
 </head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <img src="img/intruder.png" alt="Logo" class="logo">
+                <a href="#">Homepage</a>
+                <a href="#">Series</a>
+            </div>
+        </nav>
+    </header>
 
-<body class="darkmode" itemscope="itemscope" itemtype="http://schema.org/WebPage">
-	<script>
-		ts_darkmode.init();
-	</script>
+    <main>
+        <h1>All comics</h1>
+        <div class="comics-container" id="comicsContainer">
+            <!-- Comics will be inserted here by JavaScript -->
+        </div>
+    </main>
 
-	<div class="mainholder">
-		<div class="th headtree">
-			<div class="centernav bound">
+    <footer>
+        <img src="/api/placeholder/32/32" alt="Footer Logo" class="footer-logo">
+        <p>© 2024 Reaper Scans</p>
+    </footer>
 
-				<div class="shme"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    <script>
+        const comics = [
+            {
+                title: "Regressing as the Reincarnated Bastard of the Sword Clan",
+                originalTitle: "화귀검가의 서자가 사는 법 | How to Survive as the Bastard of the Regression Sword Clan",
+                chapters: 23,
+                status: "ONGOING",
+                description: "The Great Northern Wall. The Dragon Knights. The Lords of the Winter Mountains. The Descendants of the Primordial Dragon. These are the various titles of the Grand Ducal Clan Ragnar, which boasted a rich, thousand...",
+                image: "img/1.png" // Path to your image
+            },
+            {
+                title: "Reincarnated as a Genius Prodigy of a Prestigious Family",
+                originalTitle: "명가의 영대로 재능천재로 환생했다 | Reborn as the Greatest Talent of the Noble Family",
+                chapters: 24,
+                status: "ONGOING",
+                description: "His talent was forged on the battlefield, but before he could fully develop it, he died. However, when he opened his eyes again, he realized he had been reborn as Dane Sogres, the youngest son of a prestigious count...",
+                image: "img/1.png" // Path to your image
+            },
+            {
+                title: "Regressing as the Reincarnated Bastard of the Sword Clan",
+                originalTitle: "화귀검가의 서자가 사는 법 | How to Survive as the Bastard of the Regression Sword Clan",
+                chapters: 23,
+                status: "ONGOING",
+                description: "The Great Northern Wall. The Dragon Knights. The Lords of the Winter Mountains. The Descendants of the Primordial Dragon. These are the various titles of the Grand Ducal Clan Ragnar, which boasted a rich, thousand...",
+                image: "img/1.png" // Path to your image
+            },
+            {
+                title: "Reincarnated as a Genius Prodigy of a Prestigious Family",
+                originalTitle: "명가의 영대로 재능천재로 환생했다 | Reborn as the Greatest Talent of the Noble Family",
+                chapters: 24,
+                status: "ONGOING",
+                description: "His talent was forged on the battlefield, but before he could fully develop it, he died. However, when he opened his eyes again, he realized he had been reborn as Dane Sogres, the youngest son of a prestigious count...",
+                image: "img/1.png" // Path to your image
+            }
+        ];
 
-				<header role="banner" itemscope itemtype="http://schema.org/WPHeader">
-					<div class="site-branding logox">
-						<span class="logos">
-							<a title="0xFTP" itemprop="url" href="index.html"><img src="assets/images/intruder.png" width="195" height="50" alt="0xFTP"><span class="hdl">0xFTP</span></a>
-						</span>
-						<meta itemprop="name" content="0xFTP" />
-					</div>
-				</header>
+        function createComicCard(comic) {
+            return `
+                <div class="comic-card">
+                    <img src="${comic.image}" alt="${comic.title}" class="comic-cover">
+                    <div class="comic-info">
+                        <h2 class="comic-title">${comic.title}</h2>
+                        <p class="comic-original-title">${comic.originalTitle}</p>
+                        <div class="comic-meta">
+                            <span class="stars">★★★★★</span>
+                            <span class="status">${comic.status}</span>
+                        </div>
+                        <p class="comic-description">${comic.description}</p>
+                    </div>
+                </div>
+            `;
+        }
 
-				<nav id="main-menu" class="mm">
-					<span itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-						<ul id="menu-header" class="menu">
-							<li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-25"><a href="index.html" aria-current="page" itemprop="url"><span itemprop="name"><i class="_mi _before fa fa-home" aria-hidden="true" style="font-size:1.3em;"></i> Home</span></a></li>
-
-							<li id="menu-item-26" class="menu-item menu-item-type-post_type_archive menu-item-object-manga menu-item-26"><a href="index.html" itemprop="url"><span itemprop="name"><i class="_mi _before fa fa-book" aria-hidden="true" style="font-size:1.23em;"></i> Manhwa</span></a></li>
-
-							<li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="index.html" itemprop="url"><span itemprop="name"><i class="_mi _before fa fa-ghost" aria-hidden="true" style="font-size:1.3em;"></i> Manga</span></a></li>
-
-							<li id="menu-item-59" class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-59"><a href="index.html" itemprop="url"><span itemprop="name"><i class="_mi _before fa fa-eye" aria-hidden="true" style="font-size:1.3em;"></i> Anime</span></a></li>
-
-							<li id="menu-item-28" class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-28"><a href="index.html" itemprop="url"><span itemprop="name"><i class="_mi _before fa fa-film" aria-hidden="true" style="font-size:1.3em;"></i> Movies</span></a></li>
-
-						</ul>
-					</span>
-					<div class="clear"></div>
-				</nav>
-			</div>
-			<div class="clear"></div>
-		</div>
-
-		<div id="content">
-				<div class="postbody">
-					<div class="bixbox">
-						<div class="releases">
-							<h2>My List</h2>
-						</div>
-						<div class="listupd">
-							<!-- 1'st post -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-									<a href="pages/manhwa/logging.html" title="Logging 10,000 Years Into the Future">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> 
-											<span class="type Manhua"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/Logging.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" 
-											loading="lazy" 
-											title="Logging 10,000 Years Into the Future" 
-											alt="Logging 10,000 Years Into the Future" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="Logging 10,000 Years Into the Future">Logging 10,000 Years Into the Future</a>
-										</div>
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- 2'nd post -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link her" title="Swordmaster’s Youngest Son">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<img src="assets/imgcover/swordmasters-youngest-son.jpg" class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" title="Swordmaster’s Youngest Son" alt="Swordmaster’s Youngest Son" width="720" height="972" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="Swordmaster’s Youngest Son">Swordmaster’s Youngest Son</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- 3'rd post -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link her" title="Academy&#8217;s Genius Swordmaster">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<img src="assets/imgcover/academys-genius-swordmaster.jpg" class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" title="Academy&#8217;s Genius Swordmaster" alt="Academy&#8217;s Genius Swordmaster" width="800" height="1163" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="Academy&#8217;s Genius Swordmaster">Academy&#8217;s Genius Swordmaster</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- -Template blank- -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- - -->
-							<div class="bs styletere stylefiv">
-								<div class="bsx">
-
-									<a href="#page link here" title="--manhwa name here--">
-										<div class="limit">
-											<div class="ply"></div>
-											<span class="status Completed">Ongoing</span> <span class="type Manhwa"></span>
-											<span class="colored"><i class="fas fa-palette"></i> Color</span>
-											<span class="hotx"><i class="fab fa-hotjar"></i></span> 
-											<img src="assets/imgcover/comingsoon.png" 
-											class="ts-post-image wp-post-image attachment-post-thumbnail size-post-thumbnail" loading="lazy" 
-											title="--manhwa name here--" 
-											alt="--manhwa name here--" 
-											width="300" height="450" />
-										</div>
-									</a>
-									<div class="bigor">
-										<div class="tt">
-											<a title="--manhwa name here--">--manhwa name here--</a>
-										</div>
-
-										<ul class="chfiv">
-											<li><a href="https://duckduckgo.com/?t=h_&q=logging+10+000+years+into+the+future+chapter+151&ia=web" target="_blank"><span class="fivchap">Ch. 150</span><span class="fivtime">01-09-2024</span></a></li>
-											<li><a><span class="fivchap">New Ch Every 2nd Day </span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- end -->
-						</div>
-					</div>
-				</div>
-				<!-- planning section start   -->
-				<div id="sidebar">
-					<div class="section">
-						<div class="releases">
-							<h3>Planned</h3>
-						</div>
-						<div id="wpop-items">
-							<div class='serieslist'>
-								<ul>
-									<!-- 1st -->
-									<li>
-										<div class="ctr">1</div>
-										<div class="imgseries">
-											<a class="series" href="manga/the-greatest-estate-developer/index.html" rel="23003">
-												<img src="assets/imgcover/the-greatest-estate-developer.jpg" 
-												class="ts-post-image wp-post-image attachment-medium size-medium" 
-												loading="lazy" title="The Greatest Estate Developer" 
-												alt="The Greatest Estate Developer" 
-												width="800" height="1160" /> 
-											</a>
-										</div>
-										<div class="leftseries">
-											<h2>
-												<a class="series" rel="23003">The Greatest Estate Developer</a>
-											</h2>
-											<span>
-												<b>Genres</b>: <a  rel="tag">Action</a>, 
-												<a rel="tag">Adventure</a>, 
-												<a rel="tag">Comedy</a>, 
-												<a rel="tag">Fantasy</a>
-											</span>
-										</div>
-									</li>
-									<!-- 2nd -->
-									<li>
-										<div class="ctr">2</div>
-										<div class="imgseries">
-											<a class="series" href="manga/trash-of-the-counts-family/index.html" rel="22945">
-												<img 
-												src="assets/imgcover/the-ancient-sovereign-of-eternity.jpg" 
-												class="ts-post-image wp-post-image attachment-medium size-medium" 
-												loading="lazy" 
-												title="The Ancient Sovereign of Eternity" 
-												alt="The Ancient Sovereign of Eternity" width="1000" height="1431" /> 
-											</a>
-										</div>
-										<div class="leftseries">
-											<h2>
-												<a class="series" rel="22945">The Ancient Sovereign of Eternity</a>
-											</h2>
-											<span><b>Genres</b>: <a  rel="tag">Action</a>, 
-												<a rel="tag">Adventure</a>, 
-												<a rel="tag">Comedy</a>, 
-												<a rel="tag">Fantasy</a>, 
-												<a rel="tag">Seinen</a>, 
-												<a rel="tag">Supernatural</a>
-											</span>
-										</div>
-									</li>
-									<!-- 3rd -->
-									<li>
-										<div class="ctr">3</div>
-										<div class="imgseries">
-											<a class="series" rel="22945">
-												<img 
-												src="assets/imgcover/the-story-of-a-low-rank-soldier-becoming-a-monarch.jpg" 
-												class="ts-post-image wp-post-image attachment-medium size-medium" 
-												loading="lazy" 
-												title="The Story of a Low-Rank Soldier Becoming a Monarch"
-												width="1000" height="1431" /> 
-											</a>
-										</div>
-										<div class="leftseries">
-											<h2>
-												<a class="series" rel="22945">The Story of a Low-Rank Soldier Becoming a Monarch</a>
-											</h2>
-											<span><b>Genres</b>: <a  rel="tag">Action</a>, 
-												<a rel="tag">Adventure</a>, 
-												<a rel="tag">Comedy</a>, 
-												<a rel="tag">Fantasy</a>, 
-												<a rel="tag">Seinen</a>, 
-												<a rel="tag">Supernatural</a>
-											</span>
-										</div>
-									</li>
-									<!--  end  -->
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- planning section end  -->
-					<!-- ------------------------------ -->
-					<!-- Droped section start  -->
-					<div class="section">
-						<div class="releases">
-							<h3>Dropped</h3>
-						</div>
-						<div class='serieslist'>
-							<ul>
-								<!-- 1st -->
-								<li>
-									<div class="imgseries">
-										<a class="series" rel="38775">
-											<img src="assets/imgcover/i-took-over-the-academy-with-a-single-sashimi-knife.jpg" 
-											class="ts-post-image wp-post-image attachment-medium size-medium" 
-											loading="lazy" title="I Took over The Academy With a Single Sashimi Knife" 
-											alt="I Took over The Academy With a Single Sashimi Knife" 
-											width="720" height="934" />
-										</a>
-									</div>
-									<div class="leftseries">
-										<h2>
-											<a class="series" rel="38775">I Took over The Academy With a Single Sashimi Knife</a>
-										</h2>
-										<span><b>Genres</b>: <a rel="tag">Action</a>, <a rel="tag">Drama</a>, <a rel="tag">Fantasy</a>, <a  rel="tag">School Life</a>, <a rel="tag">Seinen</a></span>
-									</div>
-								</li>
-								<!-- 2nd -->
-								<li>
-									<div class="imgseries">
-										<a class="series" rel="38588">
-											<img src="assets/imgcover/god-of-blackfield.jpg" 
-											class="ts-post-image wp-post-image attachment-medium size-medium" 
-											loading="lazy" 
-											title="God of Blackfield" 
-											alt="God of Blackfield" 
-											width="720" height="972" />
-										</a>
-									</div>
-									<div class="leftseries">
-										<h2>
-											<a class="series" rel="38588">God of Blackfield</a>
-										</h2>
-										<span><b>Genres</b>: <a  rel="tag">Action</a>, <a href="genres/martial-arts/index.html" rel="tag">Martial Arts</a></span> 
-										<!-- <span>2020</span> -->
-									</div>
-								</li>
-								<!-- end -->
-							</ul>
-						</div>
-					</div>
-					<!-- Droped section end  -->
-				</div>
-			</div>
-		</div>
-		<!-- ----- footer start here ----- -->
-		<div id="footer">
-			<footer id="colophon" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter" role="contentinfo">
-				<div class="footermenu">
-					<div class="menu-footer-container">
-						<ul id="menu-footer" class="menu">
-							<p class="footer-text">&copy; 2024 0xFTP All rights reserved.</p>
-						</ul>
-					</div>
-				</div>
-			</footer>
-		</div>
-		<!-- ----- footer end here ----- -->
-	</div>
-	<span class="scrollToTop"><span class="fas fa-angle-up"></span></span>
-	<script>
-		ts_darkmode.listen();
-	</script>
-
-	<script>
-		jQuery.event.special.touchstart = {
-			setup: function (_, ns, handle) {
-				this.addEventListener("touchstart", handle, {
-					passive: !ns.includes("noPreventDefault")
-				});
-			}
-		};
-		jQuery.event.special.touchmove = {
-			setup: function (_, ns, handle) {
-				this.addEventListener("touchmove", handle, {
-					passive: !ns.includes("noPreventDefault")
-				});
-			}
-		};
-		jQuery.event.special.wheel = {
-			setup: function (_, ns, handle) {
-				this.addEventListener("wheel", handle, {
-					passive: true
-				});
-			}
-		};
-		jQuery.event.special.mousewheel = {
-			setup: function (_, ns, handle) {
-				this.addEventListener("mousewheel", handle, {
-					passive: true
-				});
-			}
-		};
-	</script>
-	<link rel='stylesheet' id='fontawesome-css' href='assets/css/font-awesome.mincc91.css?ver=2.1.8' type='text/css' media='all' />
-	<link rel='stylesheet' id='owl-carousel-css' href='assets/css/owl.carouselcc91.css?ver=2.1.8' type='text/css' media='all' />
-	<script type="text/javascript" src="assets/js/filtercc91.js?ver=2.1.8" id="filter-js"></script>
-	<script type="text/javascript" src="assets/js/search-V2b6a4.js?ver=6.6.1" id="ts-search-js"></script>
-	<script type="text/javascript" src="assets/js/owl.carousel.min531b.js?ver=2.3.4" id="owl-carousel-js"></script>
+        const comicsContainer = document.getElementById('comicsContainer');
+        comics.forEach(comic => {
+            comicsContainer.innerHTML += createComicCard(comic);
+        });
+    </script>
 </body>
 </html>
