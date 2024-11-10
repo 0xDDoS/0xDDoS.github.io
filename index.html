@@ -38,11 +38,6 @@
             gap: 2rem;
         }
 
-        .nav-right {
-            display: flex;
-            gap: 0.5rem;
-        }
-
         nav a {
             color: white;
             text-decoration: none;
@@ -107,12 +102,6 @@
             gap: 0.5rem;
         }
 
-        .stars {
-            color: #ffd700;
-            font-size: 0.875rem;
-            letter-spacing: 1px;
-        }
-
         .chapters {
             color: rgba(255, 255, 255, 0.6);
             font-size: 0.875rem;
@@ -127,42 +116,72 @@
         }
 
         .status {
-            background-color: rgb(22, 101, 52);
-            color: rgb(74, 222, 128);
             padding: 0.25rem 0.5rem;
             border-radius: 4px;
             font-size: 0.75rem;
             font-weight: 500;
         }
 
-        .comic-description {
-            color: rgba(255, 255, 255, 0.6);
+        /* Status Colors */
+        .status-ongoing {
+            background-color: rgb(22, 101, 52);
+            color: rgb(74, 222, 128);
+        }
+
+        .status-paused {
+            background-color: rgb(153, 101, 21);
+            color: rgb(255, 193, 7);
+        }
+
+        .status-completed {
+            background-color: rgb(28, 58, 106);
+            color: rgb(129, 178, 255);
+        }
+
+        .status-dropped {
+            background-color: rgb(252, 3, 19);
+            color: rgb(242, 240, 240);
+        }
+
+        .comic-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        /* New Button Styles */
+        .action-button {
+            background-color: rgba(30, 41, 59, 0.5);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .action-button:hover {
+            background-color: rgba(51, 65, 85, 0.5);
+        }
+
+        .button-logo {
+            width: 16px;
+            height: 16px;
+        }
+
+        .button-text {
+            color: rgb(209, 213, 219);
             font-size: 0.875rem;
-            line-height: 1.5;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+            font-weight: 500;
         }
 
         footer {
             text-align: center;
             padding: 2rem;
             color: rgba(255, 255, 255, 0.6);
-        }
-
-        .footer-logo {
-            margin-bottom: 1rem;
-            opacity: 0.7;
-        }
-
-        button {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            padding: 0.5rem;
-            font-size: 1.25rem;
         }
 
         @media (min-width: 768px) {
@@ -197,24 +216,11 @@
                 font-size: 1rem;
             }
 
-            .comic-description {
-                -webkit-line-clamp: 3;
-            }
         }
 
         .logo {
             width: 32px;
             height: 32px;
-        }
-
-        .chapter-count {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .chapter-count {
-                display: inline;
-            }
         }
     </style>
 </head>
@@ -223,8 +229,10 @@
         <nav>
             <div class="nav-left">
                 <img src="img/intruder.png" alt="Logo" class="logo">
-                <a href="#">Homepage</a>
-                <a href="#">Series</a>
+                <a href="#">🏠</a>
+                <a href="#">🔞</a>
+                <a href="#">📽️</a>
+                <a href="#">🛑</a>
             </div>
         </nav>
     </header>
@@ -237,67 +245,110 @@
     </main>
 
     <footer>
-        <img src="/api/placeholder/32/32" alt="Footer Logo" class="footer-logo">
-        <p>© 2024 Reaper Scans</p>
+        <p>© 2024 FSOCIETY</p>
     </footer>
 
     <script>
         const comics = [
             {
-                title: "Regressing as the Reincarnated Bastard of the Sword Clan",
-                originalTitle: "화귀검가의 서자가 사는 법 | How to Survive as the Bastard of the Regression Sword Clan",
-                chapters: 23,
+                title: "Solo Leveling",
+                originalTitle: "Solo Leveling | 나 혼자만 레벨업 | I Alone Level-Up | ",
+                chapters: 179,
                 status: "ONGOING",
-                description: "The Great Northern Wall. The Dragon Knights. The Lords of the Winter Mountains. The Descendants of the Primordial Dragon. These are the various titles of the Grand Ducal Clan Ragnar, which boasted a rich, thousand...",
-                image: "img/1.png" // Path to your image
+                image: "img/cover/Solo_Leveling.jpg",  // Replace with your image URL
+                readLink: "https://page.kakao.com/content/50866481?utm_source=comick",
+                favLink: "https://example.com/favorites",
+                rawIcon: "img/icons/kakao.png",  // Replace with your RAW icon image
+                engIcon: "img/icons/comick.webp"   // Replace with your ENG icon image
             },
             {
                 title: "Reincarnated as a Genius Prodigy of a Prestigious Family",
                 originalTitle: "명가의 영대로 재능천재로 환생했다 | Reborn as the Greatest Talent of the Noble Family",
                 chapters: 24,
-                status: "ONGOING",
-                description: "His talent was forged on the battlefield, but before he could fully develop it, he died. However, when he opened his eyes again, he realized he had been reborn as Dane Sogres, the youngest son of a prestigious count...",
-                image: "img/1.png" // Path to your image
+                status: "PAUSED",
+                image: "img/1.png",  // Replace with your image URL
+                readLink: "https://example.com/comic/2",
+                favLink: "https://example.com/favorites",
+                rawIcon: "img/icons/tapas.png",  // Replace with your RAW icon image
+                engIcon: "img/icons/webtoon.png"   // Replace with your ENG icon image
             },
             {
-                title: "Regressing as the Reincarnated Bastard of the Sword Clan",
-                originalTitle: "화귀검가의 서자가 사는 법 | How to Survive as the Bastard of the Regression Sword Clan | 명가의 영대로 재능천재로 환생했다",
-                chapters: 23,
-                status: "ONGOING",
-                description: "The Great Northern Wall. The Dragon Knights. The Lords of the Winter Mountains. The Descendants of the Primordial Dragon. These are the various titles of the Grand Ducal Clan Ragnar, which boasted a rich, thousand...",
-                image: "img/1.png" // Path to your image
+                title: "The Completed Adventure of the Reincarnated Sword Master",
+                originalTitle: "환생 검술가의 완결된 모험기 | The Completed Adventure of the Reincarnated Sword Master",
+                chapters: 3024,
+                status: "COMPLETED",
+                image: "img/1.png",
+                readLink: "https://example.com/comic/3",
+                favLink: "https://example.com/favorites",
+                rawIcon: "img/icons/tapas.png",  // Replace with your RAW icon image
+                engIcon: "img/icons/webtoon.png"   // Replace with your ENG icon image
             },
             {
-                title: "Reincarnated as a Genius Prodigy of a Prestigious Family",
-                originalTitle: "명가의 영대로 재능천재로 환생했다 | Reborn as the Greatest Talent of the Noble Family",
-                chapters: 24,
-                status: "ONGOING",
-                description: "His talent was forged on the battlefield, but before he could fully develop it, he died. However, when he opened his eyes again, he realized he had been reborn as Dane Sogres, the youngest son of a prestigious count...",
-                image: "img/1.png" // Path to your image
+                title: "The Completed Adventure of the Reincarnated Sword Master",
+                originalTitle: "환생 검술가의 완결된 모험기 | The Completed Adventure of the Reincarnated Sword Master",
+                chapters: 3024,
+                status: "DROPPED",
+                image: "img/1.png",
+                readLink: "https://example.com/comic/4",
+                favLink: "https://example.com/favorites",
+                rawIcon: "img/icons/tapas.png",  // Replace with your RAW icon image
+                engIcon: "img/icons/webtoon.png"   // Replace with your ENG icon image
             }
         ];
 
-        function createComicCard(comic) {
-            return `
-                <div class="comic-card">
-                    <img src="${comic.image}" alt="${comic.title}" class="comic-cover">
-                    <div class="comic-info">
-                        <h2 class="comic-title">${comic.title}</h2>
-                        <p class="comic-original-title">${comic.originalTitle}</p>
-                        <div class="comic-meta">
-                            <span class="stars">★★★★★</span>
-                            <span class="status">${comic.status}</span>
-                        </div>
-                        <p class="comic-description">${comic.description}</p>
-                    </div>
-                </div>
-            `;
+    function createComicCard(comic) {
+        let statusClass;
+        switch (comic.status) {
+            case "ONGOING":
+                statusClass = "status-ongoing";
+                break;
+            case "PAUSED":
+                statusClass = "status-paused";
+                break;
+            case "COMPLETED":
+                statusClass = "status-completed";
+                break;
+            case "DROPPED":
+                statusClass = "status-dropped";
+                break;
+            default:
+                statusClass = "";
         }
 
+        return `
+            <div class="comic-card">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="${comic.image}">
+                    <img src="${comic.image}" alt="${comic.title}" class="comic-cover">
+                </picture>
+                <div class="comic-info">
+                    <h2 class="comic-title">${comic.title}</h2>
+                    <p class="comic-original-title">${comic.originalTitle}</p>
+                    <div class="comic-meta">
+                        <span class="chapters">${comic.chapters} Ch</span>
+                        <span class="status ${statusClass}">${comic.status}</span>
+                    </div>
+                    <div class="comic-actions">
+                        <a href="${comic.readLink}" class="action-button" target="_blank">
+                            <img src="${comic.rawIcon}" alt="Raw" class="button-logo">
+                            <span class="button-text">Raw</span>
+                        </a>
+                        <a href="${comic.favLink}" class="action-button" target="_blank">
+                            <img src="${comic.engIcon}" alt="Eng" class="button-logo">
+                            <span class="button-text">Eng</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    function displayComics(comics) {
         const comicsContainer = document.getElementById('comicsContainer');
-        comics.forEach(comic => {
-            comicsContainer.innerHTML += createComicCard(comic);
-        });
-    </script>
+        comicsContainer.innerHTML = comics.map(createComicCard).join('');
+    }
+
+    displayComics(comics);
+</script>
 </body>
 </html>
