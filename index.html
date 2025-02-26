@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +12,35 @@
             font-family: system-ui, -apple-system, sans-serif;
         }
 
+        :root {
+            --bg-primary: rgb(13, 13, 13);
+            --bg-secondary: rgba(30, 41, 59, 0.5);
+            --bg-hover: rgba(51, 65, 85, 0.5);
+            --text-primary: white;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        html[data-theme="light"] {
+            --bg-primary: rgb(240, 240, 240);
+            --bg-secondary: rgba(226, 232, 240, 0.8);
+            --bg-hover: rgba(203, 213, 225, 0.8);
+            --text-primary: rgb(15, 15, 15);
+            --text-secondary: rgba(15, 15, 15, 0.6);
+            --border-color: rgba(15, 15, 15, 0.1);
+        }
+
         body {
-            background-color: rgb(13, 13, 13);
-            color: white;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
             min-height: 100vh;
+            transition: all 0.3s ease;
         }
 
         header {
-            background-color: rgb(13, 13, 13);
+            background-color: var(--bg-primary);
             padding: 0.75rem 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid var(--border-color);
         }
 
         nav {
@@ -38,8 +57,14 @@
             gap: 2rem;
         }
 
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
         nav a {
-            color: white;
+            color: var(--text-primary);
             text-decoration: none;
             font-size: 0.9rem;
         }
@@ -84,7 +109,7 @@
         .comic-title {
             font-size: 1rem;
             font-weight: 600;
-            color: white;
+            color: var(--text-primary);
             display: -webkit-box;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
@@ -92,7 +117,7 @@
         }
 
         .comic-original-title {
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--text-secondary);
             font-size: 0.8rem;
         }
 
@@ -103,7 +128,7 @@
         }
 
         .chapters {
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--text-secondary);
             font-size: 0.875rem;
             display: flex;
             align-items: center;
@@ -122,7 +147,7 @@
             font-weight: 500;
         }
 
-        /* Status Colors */
+        /* Status Colors - These remain the same in both light/dark mode */
         .status-ongoing {
             background-color: rgb(22, 101, 52);
             color: rgb(74, 222, 128);
@@ -149,9 +174,9 @@
             margin-top: 0.5rem;
         }
 
-        /* New Button Styles */
+        /* Button Styles */
         .action-button {
-            background-color: rgba(30, 41, 59, 0.5);
+            background-color: var(--bg-secondary);
             border: none;
             padding: 0.5rem 1rem;
             border-radius: 6px;
@@ -164,7 +189,7 @@
         }
 
         .action-button:hover {
-            background-color: rgba(51, 65, 85, 0.5);
+            background-color: var(--bg-hover);
         }
 
         .button-logo {
@@ -173,7 +198,7 @@
         }
 
         .button-text {
-            color: rgb(209, 213, 219);
+            color: var(--text-primary);
             font-size: 0.875rem;
             font-weight: 500;
         }
@@ -181,7 +206,136 @@
         footer {
             text-align: center;
             padding: 2rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--text-secondary);
+        }
+
+        /* Search Bar Styles */
+        .search-container {
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--text-secondary);
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .logo {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        
+        /* Mobile nav styles */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-primary);
+            z-index: 1000;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .close-menu {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-nav-links a {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-primary); /* This adds the text color */
+            text-decoration: none; /* This removes the underline */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 767px) {
+            .nav-left a {
+                display: none;
+            }
+            
+            .hamburger-menu {
+                display: flex;
+                margin-right: 1rem;
+            }
         }
 
         @media (min-width: 768px) {
@@ -216,11 +370,14 @@
                 font-size: 1rem;
             }
 
-        }
-
-        .logo {
-            width: 32px;
-            height: 32px;
+            .search-container {
+                max-width: 600px;
+                margin: 0 auto 2rem auto;
+            }
+            
+            .mobile-nav {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -228,16 +385,43 @@
     <header>
         <nav>
             <div class="nav-left">
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <img src="img/intruder.png" alt="Logo" class="logo">
                 <a href="#">🏠</a>
                 <a href="#">🔞</a>
                 <a href="#">📽️</a>
                 <a href="#">🛑</a>
             </div>
+            <div class="nav-right">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+            </div>
         </nav>
     </header>
 
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <img src="img/intruder.png" alt="Logo" class="logo">
+            <button class="close-menu" id="closeMenu" aria-label="Close navigation menu">✖</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#">🏠 Home</a>
+            <a href="#">🔞 Adults</a>
+            <a href="#">📽️ Movies</a>
+            <a href="#">🛑 Blocked</a>
+        </div>
+    </div>
+
     <main>
+        <div class="search-container">
+            <input type="text" id="searchBar" class="search-bar" placeholder="Search comics by title, original title or status..." aria-label="Search comics">
+        </div>
         <h1>All comics</h1>
         <div class="comics-container" id="comicsContainer">
             <!-- Comics will be inserted here by JavaScript -->
@@ -249,6 +433,57 @@
     </footer>
 
     <script>
+        // Theme toggle functionality
+        const htmlElement = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        // Check for saved theme preference or use device preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        } else {
+            // Use device preference if available
+            const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initialTheme = prefersDarkMode ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', initialTheme);
+            updateThemeIcon(initialTheme);
+        }
+
+        // Toggle theme function
+        function toggleTheme() {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+
+        // Update theme icon based on current theme
+        function updateThemeIcon(theme) {
+            themeIcon.textContent = theme === 'dark' ? '🌙' : '☀️';
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+
+        // Mobile menu functionality
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const mobileNav = document.getElementById('mobileNav');
+        const closeMenu = document.getElementById('closeMenu');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+
+        // Comics data
         const comics = [
             {
                 title: "Solo Leveling",
@@ -267,8 +502,8 @@
                 chapters: 24,
                 status: "PAUSED",
                 image: "img/1.png",  // Replace with your image URL
-                readLink: "https://example.com/comic/2",
-                favLink: "https://example.com/favorites",
+                readLink: "",
+                favLink: "",
                 rawIcon: "img/icons/tapas.png",  // Replace with your RAW icon image
                 engIcon: "img/icons/webtoon.png"   // Replace with your ENG icon image
             },
@@ -277,7 +512,7 @@
                 originalTitle: "환생 검술가의 완결된 모험기 | The Completed Adventure of the Reincarnated Sword Master",
                 chapters: 3024,
                 status: "COMPLETED",
-                image: "img/1.png",
+                image: "img/1.png",  // Replace with your image URL
                 readLink: "https://example.com/comic/3",
                 favLink: "https://example.com/favorites",
                 rawIcon: "img/icons/tapas.png",  // Replace with your RAW icon image
@@ -288,7 +523,7 @@
                 originalTitle: "환생 검술가의 완결된 모험기 | The Completed Adventure of the Reincarnated Sword Master",
                 chapters: 3024,
                 status: "DROPPED",
-                image: "img/1.png",
+                image: "img/1.png",  // Replace with your image URL
                 readLink: "https://example.com/comic/4",
                 favLink: "https://example.com/favorites",
                 rawIcon: "img/icons/tapas.png",  // Replace with your RAW icon image
@@ -296,59 +531,105 @@
             }
         ];
 
-    function createComicCard(comic) {
-        let statusClass;
-        switch (comic.status) {
-            case "ONGOING":
-                statusClass = "status-ongoing";
-                break;
-            case "PAUSED":
-                statusClass = "status-paused";
-                break;
-            case "COMPLETED":
-                statusClass = "status-completed";
-                break;
-            case "DROPPED":
-                statusClass = "status-dropped";
-                break;
-            default:
-                statusClass = "";
-        }
+        function createComicCard(comic) {
+            let statusClass;
+            switch (comic.status) {
+                case "ONGOING":
+                    statusClass = "status-ongoing";
+                    break;
+                case "PAUSED":
+                    statusClass = "status-paused";
+                    break;
+                case "COMPLETED":
+                    statusClass = "status-completed";
+                    break;
+                case "DROPPED":
+                    statusClass = "status-dropped";
+                    break;
+                default:
+                    statusClass = "";
+            }
 
-        return `
-            <div class="comic-card">
-                <picture>
-                    <source media="(min-width: 768px)" srcset="${comic.image}">
-                    <img src="${comic.image}" alt="${comic.title}" class="comic-cover">
-                </picture>
-                <div class="comic-info">
-                    <h2 class="comic-title">${comic.title}</h2>
-                    <p class="comic-original-title">${comic.originalTitle}</p>
-                    <div class="comic-meta">
-                        <span class="chapters">${comic.chapters} Ch</span>
-                        <span class="status ${statusClass}">${comic.status}</span>
-                    </div>
-                    <div class="comic-actions">
-                        <a href="${comic.readLink}" class="action-button" target="_blank">
-                            <img src="${comic.rawIcon}" alt="Raw" class="button-logo">
-                            <span class="button-text">Raw</span>
-                        </a>
-                        <a href="${comic.favLink}" class="action-button" target="_blank">
-                            <img src="${comic.engIcon}" alt="Eng" class="button-logo">
-                            <span class="button-text">Eng</span>
-                        </a>
+            // Check if links exist before creating action buttons
+            let actionButtons = '';
+            if (comic.readLink && comic.rawIcon) {
+                actionButtons += `
+                    <a href="${comic.readLink}" class="action-button" target="_blank">
+                        <img src="${comic.rawIcon}" alt="Raw" class="button-logo">
+                        <span class="button-text">Raw</span>
+                    </a>
+                `;
+            }
+            
+            if (comic.favLink && comic.engIcon) {
+                actionButtons += `
+                    <a href="${comic.favLink}" class="action-button" target="_blank">
+                        <img src="${comic.engIcon}" alt="Eng" class="button-logo">
+                        <span class="button-text">Eng</span>
+                    </a>
+                `;
+            }
+
+            return `
+                <div class="comic-card">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="${comic.image}">
+                        <img src="${comic.image}" alt="${comic.title}" class="comic-cover">
+                    </picture>
+                    <div class="comic-info">
+                        <h2 class="comic-title">${comic.title}</h2>
+                        <p class="comic-original-title">${comic.originalTitle}</p>
+                        <div class="comic-meta">
+                            <span class="chapters">${comic.chapters} Ch</span>
+                            <span class="status ${statusClass}">${comic.status}</span>
+                        </div>
+                        <div class="comic-actions">
+                            ${actionButtons}
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-    }
+            `;
+        }
 
-    function displayComics(comics) {
+        // Search functionality
+        const searchBar = document.getElementById('searchBar');
         const comicsContainer = document.getElementById('comicsContainer');
-        comicsContainer.innerHTML = comics.map(createComicCard).join('');
-    }
 
-    displayComics(comics);
-</script>
+        function filterComics(searchTerm) {
+            searchTerm = searchTerm.toLowerCase().trim();
+            
+            const filteredComics = comics.filter(comic => {
+                const titleMatch = comic.title.toLowerCase().includes(searchTerm);
+                const originalTitleMatch = comic.originalTitle.toLowerCase().includes(searchTerm);
+                const statusMatch = comic.status.toLowerCase().includes(searchTerm);
+                
+                return titleMatch || originalTitleMatch || statusMatch;
+            });
+            
+            if (filteredComics.length === 0) {
+                comicsContainer.innerHTML = '<div class="no-results">No comics found matching your search.</div>';
+            } else {
+                comicsContainer.innerHTML = filteredComics.map(createComicCard).join('');
+            }
+        }
+
+        // Initial display of all comics
+        function displayAllComics() {
+            comicsContainer.innerHTML = comics.map(createComicCard).join('');
+        }
+
+        // Event listener for search input
+        searchBar.addEventListener('input', (e) => {
+            const searchTerm = e.target.value;
+            if (searchTerm === '') {
+                displayAllComics();
+            } else {
+                filterComics(searchTerm);
+            }
+        });
+
+        // Display all comics when page loads
+        displayAllComics();
+    </script>
 </body>
 </html>
