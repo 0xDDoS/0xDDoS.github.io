@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comics Website</title>
+    <title>DDoS</title>
     <style>
         * {
             margin: 0;
@@ -124,6 +124,7 @@
         .comic-meta {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: 0.5rem;
         }
 
@@ -145,6 +146,7 @@
             border-radius: 4px;
             font-size: 0.75rem;
             font-weight: 500;
+            margin-right: 0.25rem;
         }
 
         /* Status Colors - These remain the same in both light/dark mode */
@@ -166,6 +168,15 @@
         .status-dropped {
             background-color: rgb(252, 3, 19);
             color: rgb(242, 240, 240);
+        }
+        /* Tag button color */
+        .status-manhwa {
+            background-color: rgb(220, 38, 38);
+            color: rgb(254, 226, 226);
+        }
+        .status-manhua {
+            background-color: rgb(220, 38, 38);
+            color: rgb(254, 226, 226);
         }
 
         .comic-actions {
@@ -420,16 +431,16 @@
 
     <main>
         <div class="search-container">
-            <input type="text" id="searchBar" class="search-bar" placeholder="Search comics by title, original title or status..." aria-label="Search comics">
+            <input type="text" id="searchBar" class="search-bar" placeholder="Search a series by title, alternative name or Type..." aria-label="Search comics">
         </div>
-        <h1>All comics</h1>
+        <h1>All series</h1>
         <div class="comics-container" id="comicsContainer">
             <!-- Comics will be inserted here by JavaScript -->
         </div>
     </main>
 
     <footer>
-        <p>© 2024 FSOCIETY</p>
+        <p>© 2025 FSOCIETY</p>
     </footer>
 
     <script>
@@ -483,82 +494,866 @@
             document.body.style.overflow = 'auto'; // Restore scrolling
         });
 
-        // Comics data
-        const comics = [
-            {
-                title: "Solo Leveling",
-                originalTitle: "Solo Leveling | 나 혼자만 레벨업 | I Alone Level-Up | ",
-                chapters: 179,
-                status: "ONGOING",
-                image: "img/cover/Solo_Leveling.jpg",  // Replace with your image URL
-                readLink: "https://page.kakao.com/content/50866481?utm_source=comick",
-                favLink: "https://example.com/favorites",
-                rawIcon: "img/icons/kakao.png",  // Replace with your RAW icon image
-                engIcon: "img/icons/comick.webp"   // Replace with your ENG icon image
-            },
-            {
-                title: "Reincarnated as a Genius Prodigy of a Prestigious Family",
-                originalTitle: "명가의 영대로 재능천재로 환생했다 | Reborn as the Greatest Talent of the Noble Family",
-                chapters: 24,
-                status: "PAUSED",
-                image: "img/1.png",  // Replace with your image URL
-                readLink: "",
-                favLink: "",
-                rawIcon: "img/icons/tapas.png",  // Replace with your RAW icon image
-                engIcon: "img/icons/webtoon.png"   // Replace with your ENG icon image
-            },
-            {
-                title: "The Completed Adventure of the Reincarnated Sword Master",
-                originalTitle: "환생 검술가의 완결된 모험기 | The Completed Adventure of the Reincarnated Sword Master",
-                chapters: 3024,
-                status: "COMPLETED",
-                image: "img/1.png",  // Replace with your image URL
-                readLink: "https://example.com/comic/3",
-                favLink: "https://example.com/favorites",
-                rawIcon: "img/icons/tapas.png",  // Replace with your RAW icon image
-                engIcon: "img/icons/webtoon.png"   // Replace with your ENG icon image
-            },
-            {
-                title: "Solo Leveling",
-                originalTitle: "Solo Leveling | 나 혼자만 레벨업 | I Alone Level-Up | ",
-                chapters: 179,
-                status: "ONGOING",
-                image: "img/cover/Solo_Leveling.jpg",  // Replace with your image URL
-                readLink: "https://page.kakao.com/content/50866481?utm_source=comick",
-                favLink: "https://example.com/favorites",
-                rawIcon: "img/icons/kakao.png",  // Replace with your RAW icon image
-                engIcon: "img/icons/comick.webp"   // Replace with your ENG icon image
-            },
-            {
-                title: "The Completed Adventure of the Reincarnated Sword Master",
-                originalTitle: "환생 검술가의 완결된 모험기 | The Completed Adventure of the Reincarnated Sword Master",
-                chapters: 3024,
-                status: "DROPPED",
-                image: "img/1.png",  // Replace with your image URL
-                readLink: "https://example.com/comic/4",
-                favLink: "https://example.com/favorites",
-                rawIcon: "img/icons/tapas.png",  // Replace with your RAW icon image
-                engIcon: "img/icons/webtoon.png"   // Replace with your ENG icon image
-            }
-        ];
+    // Comics data
+    const comics = [
+    {
+        title: "Solo Leveling",
+        originalTitle: "Solo Leveling | 나 혼자만 레벨업 | I Alone Level-Up | ",
+        chapters: 179,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg", // Replace with your image URL
+        readLink: "https://page.kakao.com/content/50866481?utm_source=comick",
+        favLink: "https://example.com/favorites",
+        rawIcon: "img/icons/kakao.png", // Replace with your RAW icon image
+        engIcon: "img/icons/comick.webp" // Replace with your ENG icon image
+      },
+      {
+        title: "Logging 10000 Years into the Future",
+        originalTitle: "",
+        chapters: 196,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/1.png",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Disastrous Necromancer",
+        originalTitle: "",
+        chapters: 158,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Writers Legacy",
+        originalTitle: "",
+        chapters: 12,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The Game That I Came From",
+        originalTitle: "",
+        chapters: 324,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Ranker’s Return (Remake)",
+        originalTitle: "",
+        chapters: 155,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Standard of Reincarnation",
+        originalTitle: "",
+        chapters: 118,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "To Hell With Being A Saint, I’m A Doctor",
+        originalTitle: "",
+        chapters: 119,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Solo Necromancy",
+        originalTitle: "",
+        chapters: 119,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Boundless Necromancer",
+        originalTitle: "",
+        chapters: 91,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Dragon-Devouring Mage",
+        originalTitle: "",
+        chapters: 89,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Dungeon Reset",
+        originalTitle: "",
+        chapters: 146,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Archmage Streamer",
+        originalTitle: "",
+        chapters: 96,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Level 1 Player",
+        originalTitle: "",
+        chapters: 84,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Player from Today Onwards",
+        originalTitle: "",
+        chapters: 127,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The World After the Fall",
+        originalTitle: "",
+        chapters: 88,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Past Life Returner",
+        originalTitle: "",
+        chapters: 67,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Player Who Returned 10,000 Years Later",
+        originalTitle: "",
+        chapters: 103,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "I Can Copy Talents",
+        originalTitle: "",
+        chapters: 91,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Academy’s Genius Swordmaster",
+        originalTitle: "",
+        chapters: 75,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Transcension Academy",
+        originalTitle: "",
+        chapters: 121,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Murim Login",
+        originalTitle: "",
+        chapters: 185,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Overgeared",
+        originalTitle: "",
+        chapters: 228,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The Advanced Player of the Tutorial Tower",
+        originalTitle: "",
+        chapters: 204,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Swordmaster’s Youngest Son",
+        originalTitle: "",
+        chapters: 94,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The Dark Magician Transmigrates After 66666 Years",
+        originalTitle: "",
+        chapters: 112,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Solo Login",
+        originalTitle: "",
+        chapters: 179,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The Great Mage Returns After 4000 Years",
+        originalTitle: "",
+        chapters: 189,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Nano Machine",
+        originalTitle: "",
+        chapters: 245,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "A Returner’s Magic Should Be Special",
+        originalTitle: "",
+        chapters: 249,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Magic Level 99990000 All Attribute Great Sage",
+        originalTitle: "",
+        chapters: 44,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The Previous Life Murim Ranker",
+        originalTitle: "",
+        chapters: 105,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Seoul Station Necromancer",
+        originalTitle: "",
+        chapters: 50,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Kill The Hero",
+        originalTitle: "",
+        chapters: 153,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Versatile Mage",
+        originalTitle: "",
+        chapters: 1091,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Return of The Frozen Player",
+        originalTitle: "",
+        chapters: 109,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The Strongest God King",
+        originalTitle: "",
+        chapters: 300,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Sleeping Ranker",
+        originalTitle: "",
+        chapters: 86,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Tower of God",
+        originalTitle: "",
+        chapters: 194,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The Legendary Moonlight Sculptor",
+        originalTitle: "",
+        chapters: 152,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Demonic Emperor",
+        originalTitle: "",
+        chapters: 465,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The Player Who Can’t Level Up",
+        originalTitle: "",
+        chapters: 122,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "I Am a Cultivation Bigshot",
+        originalTitle: "",
+        chapters: 330,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Rebirth of the Urban Immortal Cultivator",
+        originalTitle: "",
+        chapters: 811,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Solo Spell Caster",
+        originalTitle: "",
+        chapters: 110,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The Ten Great Emperors At The Beginning Are All My Apprentices",
+        originalTitle: "",
+        chapters: 186,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Rebirth of the 8th-Circle Mage",
+        originalTitle: "",
+        chapters: 160,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "I Obtained a Mythic Item",
+        originalTitle: "",
+        chapters: 96,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "The Beginning After the End",
+        originalTitle: "",
+        chapters: 113,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "SSS-Rank Lone Summoner",
+        originalTitle: "",
+        chapters: 108,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Invincible At The Start",
+        originalTitle: "",
+        chapters: 118,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Tomb Raider King",
+        originalTitle: "",
+        chapters: 0, // Unknown chapter count
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Astral Pet Store",
+        originalTitle: "",
+        chapters: 143,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Omniscient Reader's Viewpoint",
+        originalTitle: "",
+        chapters: 186,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Reality Quest",
+        originalTitle: "",
+        chapters: 118,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "I’ll be Taking a Break for Personal Reasons",
+        originalTitle: "",
+        chapters: 92,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Solo Max-Level Newbie / I’m the Max-Level Newbie",
+        originalTitle: "",
+        chapters: 155,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Leveling With The Gods",
+        originalTitle: "",
+        chapters: 105,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "SSS-Class Suicide Hunter",
+        originalTitle: "",
+        chapters: 83,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "God Of Martial Arts",
+        originalTitle: "",
+        chapters: 690,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Strongest Leveling",
+        originalTitle: "",
+        chapters: 300,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Eternal Club",
+        originalTitle: "",
+        chapters: 277,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "My Little Brother Is The Academy’s Hotshot",
+        originalTitle: "",
+        chapters: 53,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Global Martial Arts",
+        originalTitle: "",
+        chapters: 257,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Above Ten Thousand People",
+        originalTitle: "",
+        chapters: 314,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Martial Arts Reigns",
+        originalTitle: "",
+        chapters: 623,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Against The Gods",
+        originalTitle: "",
+        chapters: 625,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Shenwu Tianzun",
+        originalTitle: "",
+        chapters: 603,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Divine Soul Emperor",
+        originalTitle: "",
+        chapters: 354,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Hardcore Leveling Warrior",
+        originalTitle: "",
+        chapters: 193,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Apocalypse Online",
+        originalTitle: "",
+        chapters: 252,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Devil Sword King",
+        originalTitle: "",
+        chapters: 166,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      },
+      {
+        title: "Necromancer Academy and the Genius Summoner",
+        originalTitle: "",
+        chapters: 90,
+        statuses: ["ONGOING", "MANHWA"],
+        image: "img/cover/Solo_Leveling.jpg",
+        readLink: "",
+        favLink: "",
+        rawIcon: "img/icons/tapas.png",
+        engIcon: "img/icons/webtoon.png"
+      }
+    ];
 
         function createComicCard(comic) {
-            let statusClass;
-            switch (comic.status) {
-                case "ONGOING":
-                    statusClass = "status-ongoing";
-                    break;
-                case "PAUSED":
-                    statusClass = "status-paused";
-                    break;
-                case "COMPLETED":
-                    statusClass = "status-completed";
-                    break;
-                case "DROPPED":
-                    statusClass = "status-dropped";
-                    break;
-                default:
-                    statusClass = "";
+            // Create status elements for each status in the array
+            let statusElements = '';
+            
+            if (Array.isArray(comic.statuses)) {
+                statusElements = comic.statuses.map(status => {
+                    let statusClass = '';
+                    switch (status) {
+                        case "ONGOING":
+                            statusClass = "status-ongoing";
+                            break;
+                        case "PAUSED":
+                            statusClass = "status-paused";
+                            break;
+                        case "COMPLETED":
+                            statusClass = "status-completed";
+                            break;
+                        case "DROPPED":
+                            statusClass = "status-dropped";
+                            break;
+                        case "MANHWA":
+                            statusClass = "status-manhwa";
+                            break;
+                        case "MANHUA":
+                            statusClass = "status-manhua";
+                            break;
+                        default:
+                            statusClass = "";
+                    }
+                    
+                    return `<span class="status ${statusClass}">${status}</span>`;
+                }).join('');
+            } else if (comic.status) {
+                // For backward compatibility with existing data
+                let statusClass = '';
+                switch (comic.status) {
+                    case "ONGOING":
+                        statusClass = "status-ongoing";
+                        break;
+                    case "PAUSED":
+                        statusClass = "status-paused";
+                        break;
+                    case "COMPLETED":
+                        statusClass = "status-completed";
+                        break;
+                    case "DROPPED":
+                        statusClass = "status-dropped";
+                        break;
+                    default:
+                        statusClass = "";
+                }
+                
+                statusElements = `<span class="status ${statusClass}">${comic.status}</span>`;
             }
 
             // Check if links exist before creating action buttons
@@ -592,7 +1387,7 @@
                         <p class="comic-original-title">${comic.originalTitle}</p>
                         <div class="comic-meta">
                             <span class="chapters">${comic.chapters} Ch</span>
-                            <span class="status ${statusClass}">${comic.status}</span>
+                            ${statusElements}
                         </div>
                         <div class="comic-actions">
                             ${actionButtons}
@@ -612,7 +1407,17 @@
             const filteredComics = comics.filter(comic => {
                 const titleMatch = comic.title.toLowerCase().includes(searchTerm);
                 const originalTitleMatch = comic.originalTitle.toLowerCase().includes(searchTerm);
-                const statusMatch = comic.status.toLowerCase().includes(searchTerm);
+                
+                // Check statuses array if it exists
+                let statusMatch = false;
+                if (Array.isArray(comic.statuses)) {
+                    statusMatch = comic.statuses.some(status => 
+                        status.toLowerCase().includes(searchTerm)
+                    );
+                } else if (comic.status) {
+                    // For backward compatibility
+                    statusMatch = comic.status.toLowerCase().includes(searchTerm);
+                }
                 
                 return titleMatch || originalTitleMatch || statusMatch;
             });
@@ -624,11 +1429,6 @@
             }
         }
 
-        // Initial display of all comics
-        function displayAllComics() {
-            comicsContainer.innerHTML = comics.map(createComicCard).join('');
-        }
-
         // Event listener for search input
         searchBar.addEventListener('input', (e) => {
             const searchTerm = e.target.value;
@@ -638,6 +1438,11 @@
                 filterComics(searchTerm);
             }
         });
+
+        // Display all comics when page loads
+        function displayAllComics() {
+            comicsContainer.innerHTML = comics.map(createComicCard).join('');
+        }
 
         // Display all comics when page loads
         displayAllComics();
