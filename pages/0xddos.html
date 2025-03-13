@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0xDDoS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --bg-primary: rgb(13, 13, 13);
+            --bg-secondary: rgba(30, 41, 59, 0.5);
+            --bg-hover: rgba(51, 65, 85, 0.5);
+            --text-primary: white;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        html[data-theme="light"] {
+            --bg-primary: rgb(240, 240, 240);
+            --bg-secondary: rgba(226, 232, 240, 0.8);
+            --bg-hover: rgba(203, 213, 225, 0.8);
+            --text-primary: rgb(15, 15, 15);
+            --text-secondary: rgba(15, 15, 15, 0.6);
+            --border-color: rgba(15, 15, 15, 0.1);
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            background-color: var(--bg-primary);
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .comics-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .comic-card {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .comic-cover {
+            width: 120px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .comic-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .comic-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .comic-original-title {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        .comic-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .chapters {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .chapters::before {
+            content: "📄";
+            font-size: 0.875rem;
+        }
+
+        .status {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.25rem;
+        }
+
+        /* Status Colors - These remain the same in both light/dark mode */
+        .status-Ongoing {
+            background-color: rgb(22, 101, 52);
+            color: rgb(74, 222, 128);
+        }
+
+        .status-paused {
+            background-color: rgb(153, 101, 21);
+            color: rgb(255, 193, 7);
+        }
+
+        .status-completed {
+            background-color: rgb(28, 58, 106);
+            color: rgb(129, 178, 255);
+        }
+        .status-Planning {
+            background-color: rgb(28, 58, 106);
+            color: rgb(129, 178, 255);
+        }
+        .status-Cancelled {
+            background-color: rgb(252, 3, 19);
+            color: rgb(242, 240, 240);
+        }
+        .status-dropped {
+            background-color: rgb(252, 3, 19);
+            color: rgb(242, 240, 240);
+        }
+        .status-Prequel {
+            background-color: rgb(252, 3, 19);
+            color: rgb(242, 240, 240);
+        }
+        .status-Sequel {
+            background-color: rgb(252, 3, 19);
+            color: rgb(242, 240, 240);
+        }
+        /* Tag button color */
+        .status-Manhwa {
+            background-color: rgb(220, 38, 38);
+            color: rgb(254, 226, 226);
+        }
+        .status-manhua {
+            background-color: rgb(127, 34, 126);
+            color: rgb(254, 226, 226);
+        }
+        .status-Manga {
+            background-color: rgb(255, 197, 197);
+            color: rgb(255, 128, 128);
+        }
+        .comic-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Button Styles */
+        .action-button {
+            background-color: var(--bg-secondary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .action-button:hover {
+            background-color: var(--bg-hover);
+        }
+
+        .button-logo {
+            width: 16px;
+            height: 16px;
+        }
+
+        .button-text {
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+
+        /* Search Bar Styles */
+        .search-container {
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--text-secondary);
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .logo {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        
+        /* Mobile nav styles */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-primary);
+            z-index: 1000;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .close-menu {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-nav-links a {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-primary); /* This adds the text color */
+            text-decoration: none; /* This removes the underline */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 767px) {
+            .nav-left a {
+                display: none;
+            }
+            
+            .hamburger-menu {
+                display: flex;
+                margin-right: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .comics-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .comic-card {
+                gap: 1.5rem;
+            }
+
+            .comic-cover {
+                width: 180px;
+                height: 240px;
+            }
+
+            .comic-title {
+                font-size: 1.25rem;
+            }
+
+            header {
+                padding: 1rem 2rem;
+            }
+
+            main {
+                padding: 2rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            .search-container {
+                max-width: 600px;
+                margin: 0 auto 2rem auto;
+            }
+            
+            .mobile-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <img src="../../img/icons/logo.png" alt="Logo" class="logo">
+                <a href="../../index.html">🏠</a>
+                <a href="#">🔞</a>
+                <a href="#">📽️</a>
+                <a href="#">🛑</a>
+            </div>
+            <div class="nav-right">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <img src="../../img/icons/logo.png" alt="Logo" class="logo">
+            <button class="close-menu" id="closeMenu" aria-label="Close navigation menu">✖</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#">🏠 Home</a>
+            <a href="#">🔞 NSFW</a>
+            <a href="#">📽️ Movies</a>
+            <a href="#">🛑 Blocked</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchBar" class="search-bar" placeholder="Search a series by Title, alternative name or Type..." aria-label="Search comics">
+        </div>
+        <h1>All series</h1>
+        <div class="comics-container" id="comicsContainer">
+            <!-- Comics will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 FSOCIETY</p>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const htmlElement = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        // Check for saved theme preference or use device preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        } else {
+            // Use device preference if available
+            const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initialTheme = prefersDarkMode ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', initialTheme);
+            updateThemeIcon(initialTheme);
+        }
+
+        // Toggle theme function
+        function toggleTheme() {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+
+        // Update theme icon based on current theme
+        function updateThemeIcon(theme) {
+            themeIcon.textContent = theme === 'dark' ? '🌙' : '☀️';
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+
+        // Mobile menu functionality
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const mobileNav = document.getElementById('mobileNav');
+        const closeMenu = document.getElementById('closeMenu');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+
+    // Comics data
+    const comics = [
+      {
+        title: "Hyeonjung’s Residence",
+        originalTitle: "현정의 저택 | The Mansion",
+        chapters: 60,
+        statuses: ["COMPLETED", "Manhwa"],// Replace with [ Ongoing, PAUSED, COMPLETED, Cancelled, DROPPED,Planned | Manhwa, Manhua, Manga ]
+        image: "../../img/cover/18plus/Hyeonjung_Residence.jpeg", // Replace with your image URL
+        RawLink: "", // Replace with your RAW URL
+        EngLink: "https://omegascans.org/series/hyeonjungs-residence", // Replace with your ENG URL
+        rawIcon: "../../img/icons/omega.webp", // Replace with your RAW icon image
+        engIcon: "../../img/icons/omega.webp" // Replace with your ENG icon image
+      },
+      {
+        title: "I Ended Up in the World of Murim",
+        originalTitle: "무협지 안으로 들어와버렸다",
+        chapters: 37,
+        statuses: ["Ongoing", "Manhwa"],
+        image: "../../img/cover/18plus/I_Ended_Up_in_the_World_of_Murim.jpeg",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/i-ended-up-in-the-world-of-murim",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Locked UP",
+        originalTitle: "빵녀 | Prison Girl | Girls In Prison",
+        chapters: 30,
+        statuses: ["Ongoing", "Manhwa"],
+        image: "../../img/cover/18plus/Locked_Up.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/locked-up",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Milf Hunting in Another World",
+        originalTitle: "이세계 밀프 헌터 | MILF Hunter In Another World",
+        chapters: 22,
+        statuses: ["Ongoing", "Manhwa"],
+        image: "../../img/cover/18plus/Milf_Hunting_in_Another_World.png",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/milf-hunting-in-another-world",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Rooftop Sex King",
+        originalTitle: "옥탑방 야스킹",
+        chapters: 7,
+        statuses: ["Ongoing", "Manhwa"],
+        image: "../../img/cover/18plus/Rooftop_Sex_king.jpg",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/rooftop-sex-king",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Sex Stopwatch",
+        originalTitle: "섹톱워치 | Sextopwatch",
+        chapters: 16,
+        statuses: ["Ongoing", "Manhwa"],
+        image: "../../img/cover/18plus/Sex_Stopwatch.jpeg",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/sex-stopwatch",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "How to Conquer Women with Hypnosis",
+        originalTitle: "최면으로 그녀들을 함락시키는 법",
+        chapters: 21,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/how-to-conquer-women-with-hypnosis.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/how-to-conquer-women-with-hypnosis",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Pay with Sperm Pay",
+        originalTitle: "정자페이로 결제하세요 | You Can Pay With Sperm Pay",
+        chapters: 69,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/pay-with-sperm-pay.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/pay-with-sperm-pay",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Supervisor Access",
+        originalTitle: "직장관리자 권한",
+        chapters: 38,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/Supervisor_Access.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/supervisor-access",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Is There No Goddess in My College?",
+        originalTitle: "공대엔 여신이 없다? | Engineering Beauties | 誰說理組沒正妹? | 谁说理组没正妹?",
+        chapters: 13,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/is-there-no-goddess-in-my-college.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/is-there-no-goddess-in-my-college",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "A Guy and a Girl Stuck in an Elevator",
+        originalTitle: "엘리베이터에 갇힌 두 남녀",
+        chapters: 17,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/a-guy-and-a-girl-stuck-in-an-elevator.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/a-guy-and-a-girl-stuck-in-an-elevator",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Playing a game with my Busty Manager",
+        originalTitle: "가슴 큰 과장님과 게임을 | A Game With My Boss",
+        chapters: 6,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/playing-a-game-with-my-busty-manager.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/playing-a-game-with-my-busty-manager",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "A Wonderful New World",
+        originalTitle: "Wonderful New World | Amazing New World | Brave New World | Subarashi kishin sekai | すばらしき新世界 | 美丽新世界 | 美麗新世界 | 멋진 신세계",
+        chapters: 56,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/a-wonderful-new-world.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/a-wonderful-new-world",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Private Tutoring in These Difficult Times",
+        originalTitle: "이 시국에 개인교습 | Fatal Lessons in This Pandemic | Private Tutoring in These Trying Times",
+        chapters: 17,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/private-tutoring-in-these-difficult-times.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/private-tutoring-in-these-difficult-times",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Mother-son Island Survival",
+        originalTitle: "무인도 모자 생존기 | Island Survival with Stepmom",
+        chapters: 14,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/mother-son-island-survival.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/mother-son-island-survival",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "The Chairman's Wife",
+        originalTitle: "사장의 아내",
+        chapters: 0,
+        statuses: ["Ongoing", "Manhwa"],
+        image: "../../img/cover/18plus/the-chairmans-wife.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/the-chairmans-wife",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Women's University Student who Served in the Military",
+        originalTitle: "군필 여대생",
+        chapters: 14,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/womens-university-student-who-served-in-the-military.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/womens-university-student-who-served-in-the-military",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Intern Haenyeo",
+        originalTitle: "인턴 해녀 | Intern Diver",
+        chapters: 15,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/Intern_Haenyeo.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/intern-haenyeo",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Succubus System",
+        originalTitle: "서큐버스 시스템",
+        chapters: 53,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/Succubus_System.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/succubus-system",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Beyond Imagination",
+        originalTitle: "상상 그 이상 | Sangsang Geu Isang",
+        chapters: 14,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/Beyond_Imagination.jpg",
+        RawLink: "",
+        EngLink: "https://www.toongod.org/webtoon/beyond-imagination/",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/ToonGod.png"
+      },
+      {
+        title: "The Student Council President’s Hidden Task Is the (Sexual) Development of Female Students",
+        originalTitle: "학생회장의 숨겨진 업무는 여학우들의 성(性)적 향상입니다",
+        chapters: 15,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/the-student-council-presidents-hidden-task-is-the-sexual-development-of-female-students.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/the-student-council-presidents-hidden-task-is-the-sexual-development-of-female-students",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "My New Family Treats Me Well",
+        originalTitle: "새 가족이 너무 잘해준다 | My New Family Is Too Nice to Me",
+        chapters: 17,
+        statuses: ["Ongoing", "Manhwa"],
+        image: "../../img/cover/18plus/my-new-family-treats-me-well.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/my-new-family-treats-me-well",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Moby Dick",
+        originalTitle: "모비딕",
+        chapters: 0,
+        statuses: ["Ongoing", "Manhwa"],
+        image: "../../img/cover/18plus/Moby_Dick.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/moby-dick",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "Mother-in-Law Bends To My Will",
+        originalTitle: "내 맘대로 장모님 | Dominating My Mother-In-Law",
+        chapters: 1,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/mother-in-law-bends-to-my-will.webp",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/mother-in-law-bends-to-my-will",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      },
+      {
+        title: "I’m The Leader Of A Cult",
+        originalTitle: "나는 사이비 교주다",
+        chapters: 0,
+        statuses: ["Ongoing", "COMPLETED"],
+        image: "../../img/cover/18plus/I-m-The-Leader-Of-A-Cult.jpg",
+        RawLink: "",
+        EngLink: "https://www.toongod.org/webtoon/im-the-leader-of-a-cult/",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/ToonGod.png"
+      },
+      {
+        title: "I’ll Eat Your Mom First",
+        originalTitle: "Go Ahead, Mom | 엄마 먼저 드세요",
+        chapters: 0,
+        statuses: ["Ongoing", "Manhwa"],
+        image: "../../img/cover/18plus/Go-Ahead-Mom.webp",
+        RawLink: "",
+        EngLink: "https://www.toongod.org/webtoon/go-ahead-mom/",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/ToonGod.png"
+      },
+      {
+        title: "Friend’s Mom is Mine",
+        originalTitle: "친구엄마와 친구먹기",
+        chapters: 16,
+        statuses: ["Ongoing", "Manhwa"],
+        image: "../../img/cover/18plus/Friends_Mom_is_Mine.jpeg",
+        RawLink: "",
+        EngLink: "https://omegascans.org/series/friends-mom-is-mine",
+        rawIcon: "../../img/icons/omega.webp",
+        engIcon: "../../img/icons/omega.webp"
+      }
+    ];
+
+        function createComicCard(comic) {
+            // Create status elements for each status in the array
+            let statusElements = '';
+            
+            if (Array.isArray(comic.statuses)) {
+                statusElements = comic.statuses.map(status => {
+                    let statusClass = '';
+                    switch (status) {
+                        case "Ongoing": statusClass = "status-Ongoing"; break;
+                        case "PAUSED": statusClass = "status-paused"; break;
+                        case "COMPLETED": statusClass = "status-completed"; break;
+                        case "Cancelled": statusClass = "status-Cancelled"; break;
+                        case "DROPPED": statusClass = "status-dropped"; break;
+                        case "Sequel": statusClass = "status-Sequel"; break;
+                        case "Prequel": statusClass = "status-Prequel"; break;
+                        case "Manhwa": statusClass = "status-Manhwa"; break;
+                        case "Manhua": statusClass = "status-manhua"; break;
+                        case "Manga": statusClass = "status-Manga"; break;
+                        case "Planning": statusClass = "status-Planning"; break;
+                        default: statusClass = "";
+                    }
+                    
+                    return `<span class="status ${statusClass}">${status}</span>`;
+                }).join('');
+            } else if (comic.status) {
+                // For backward compatibility with existing data
+                let statusClass = '';
+                switch (comic.status) {
+                    case "Ongoing": statusClass = "status-Ongoing"; break;
+                    case "PAUSED": statusClass = "status-paused"; break;
+                    case "COMPLETED": statusClass = "status-completed"; break;
+                    case "Cancelled": statusClass = "status-Cancelled"; break;
+                    case "DROPPED": statusClass = "status-dropped"; break;
+                    case "Sequel": statusClass = "status-Sequel"; break;
+                    case "Prequel": statusClass = "status-Prequel"; break;
+                    case "Planning": statusClass = "status-Planning"; break;
+                    default: statusClass = "";
+                }
+                
+                statusElements = `<span class="status ${statusClass}">${comic.status}</span>`;
+            }
+
+            // Check if links exist before creating action buttons
+            let actionButtons = '';
+            if (comic.RawLink && comic.rawIcon) {
+                actionButtons += `
+                    <a href="${comic.RawLink}" class="action-button" target="_blank">
+                        <img src="${comic.rawIcon}" alt="Raw" class="button-logo">
+                        <span class="button-text">Raw</span>
+                    </a>
+                `;
+            }
+            
+            if (comic.EngLink && comic.engIcon) {
+                actionButtons += `
+                    <a href="${comic.EngLink}" class="action-button" target="_blank">
+                        <img src="${comic.engIcon}" alt="Eng" class="button-logo">
+                        <span class="button-text">Eng</span>
+                    </a>
+                `;
+            }
+
+            return `
+                <div class="comic-card">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="${comic.image}">
+                        <img src="${comic.image}" alt="${comic.title}" class="comic-cover">
+                    </picture>
+                    <div class="comic-info">
+                        <h2 class="comic-title">${comic.title}</h2>
+                        <p class="comic-original-title">${comic.originalTitle}</p>
+                        <div class="comic-meta">
+                            <span class="chapters">${comic.chapters} Ch</span>
+                            ${statusElements}
+                        </div>
+                        <div class="comic-actions">
+                            ${actionButtons}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Search functionality
+        const searchBar = document.getElementById('searchBar');
+        const comicsContainer = document.getElementById('comicsContainer');
+
+        function filterComics(searchTerm) {
+            searchTerm = searchTerm.toLowerCase().trim();
+            
+            const filteredComics = comics.filter(comic => {
+                const titleMatch = comic.title.toLowerCase().includes(searchTerm);
+                const originalTitleMatch = comic.originalTitle.toLowerCase().includes(searchTerm);
+                
+                // Check statuses array if it exists
+                let statusMatch = false;
+                if (Array.isArray(comic.statuses)) {
+                    statusMatch = comic.statuses.some(status => 
+                        status.toLowerCase().includes(searchTerm)
+                    );
+                } else if (comic.status) {
+                    // For backward compatibility
+                    statusMatch = comic.status.toLowerCase().includes(searchTerm);
+                }
+                
+                return titleMatch || originalTitleMatch || statusMatch;
+            });
+            
+            if (filteredComics.length === 0) {
+                comicsContainer.innerHTML = '<div class="no-results">No comics found matching your search.</div>';
+            } else {
+                comicsContainer.innerHTML = filteredComics.map(createComicCard).join('');
+            }
+        }
+
+        // Event listener for search input
+        searchBar.addEventListener('input', (e) => {
+            const searchTerm = e.target.value;
+            if (searchTerm === '') {
+                displayAllComics();
+            } else {
+                filterComics(searchTerm);
+            }
+        });
+
+        // Display all comics when page loads
+        function displayAllComics() {
+            comicsContainer.innerHTML = comics.map(createComicCard).join('');
+        }
+
+        // Display all comics when page loads
+        displayAllComics();
+    </script>
+</body>
+</html>
