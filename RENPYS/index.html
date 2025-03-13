@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>(●'◡'●)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <!-- GOOGLE FONTS CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            font: 16px sans-serif;
+            list-style: none;
+            text-decoration: none;
+            transition: 0.2s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #111927;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* HEADER STYLES */
+        header {
+            position: relative;
+            width: 100%;
+            height: 60px;
+            background-color: #fff;
+            box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        header .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logoArea img {
+            width: 60px;
+        }
+
+        header .logoArea img:hover {
+            opacity: 80%;
+        }
+
+        header .logoArea .siteName {
+            display: none;
+        }
+
+        header .logoArea .siteName h1 {
+            font-size: 28px;
+            color: black;
+            font-weight: bold;
+            line-height: 60px;
+        }
+
+        header .logoArea .siteName h1 .highlight {
+            color: #ffa500;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        header .navBar ul li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        header .navBar ul li a {
+            color: black;
+            font-size: 16px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        header .navBar ul li a.active {
+            color: #ffa500;
+        }
+
+        header .navBar ul li a:hover {
+            color: #57cb9b;
+        }
+
+        header .menuArea {
+            display: none;
+        }
+
+        header .menuArea .menuBtn {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+
+        header .menuArea .menuBtn span {
+            background-color: black;
+            width: 100%;
+            height: 5px;
+            border-radius: 5px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        header .menuArea .menuBtn .line-1 {
+            transform: translate(-50%, -13px);
+        }
+
+        header .menuArea .menuBtn .line-3 {
+            transform: translate(-50%, 8px);
+        }
+
+        header .menuArea .menuBtn.openmenu .line-1 {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        header .menuArea .menuBtn.openmenu .line-3 {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        header .menuArea .menuBtn.openmenu .line-2 {
+            width: 0;
+        }
+
+        /* MAIN CONTENT STYLES */
+        main {
+            width: 100%;
+            max-width: 1920px;
+            height: auto;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        main .main-container {
+            width: 85%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 70% 25%;
+            column-gap: 5%;
+        }
+
+        /* SECTION STYLES */
+        section .article-area {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+
+        section .buttonArea {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        /* ARTICLE STYLES */
+        article {
+            background-color: #fff;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        article .article-container {
+            width: 85%;
+            margin: auto;
+            padding: 8px 0;
+        }
+
+        article img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        article img:hover {
+            opacity: 85%;
+        }
+
+        article h1 {
+            color: black;
+        }
+
+        article hr {
+            border: 2px solid #e0e0e0;
+            margin-bottom: 4px;
+        }
+
+        article h1 a {
+            color: #000;
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+        }
+
+        article h1 a:hover {
+            color: #57cb9b;
+        }
+
+        article h2 {
+            margin-bottom: 10px;
+            color: #aaaaaa;
+            font-size: 16px;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        article h2 a {
+            color: #aaaaaa;
+        }
+
+        article h2 a:hover {
+            color: #57cb9b;
+        }
+
+        article p {
+            font-size: 16px;
+            color: #65656a;
+            margin-bottom: 15px;
+            font-family: "Open Sans", sans-serif;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        /* ASIDE STYLES */
+        aside .box {
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        aside .box .container {
+            width: 85%;
+            margin: auto;
+            padding: 10px 0;
+        }
+
+        aside .box h1 {
+            color: #57cb9b;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: "Poppins", sans-serif;
+        }
+
+        aside hr {
+            border: 2px solid #e0e0e0;
+            margin-bottom: 10px;
+        }
+
+        aside .popularPost .post {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            column-gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        aside .popularPost .post img {
+            width: 100%;
+            height: 60px;
+            border-radius: 6px;
+        }
+
+        aside .popularPost .post img:hover {
+            opacity: 80%;
+        }
+
+        aside .popularPost .post h2 {
+            color: black;
+            font-size: 18px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+        }
+
+        aside .popularPost .post h2:hover {
+            color: #57cb9b;
+        }
+
+        /* FOOTER STYLES */
+        footer {
+            width: 100%;
+            height: auto;
+            background-color: #1f2024;
+            margin-top: auto;
+        }
+
+        footer .textArea {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 10px 0 30px;
+        }
+
+        footer .textArea h1 {
+            color: #fff;
+            margin: 5px 15px;
+        }
+
+        footer .textArea .red {
+            color: #ff0000;
+        }
+
+        footer .textArea .colored {
+            color: #57cb9b;
+        }
+
+        /* RESPONSIVE STYLES */
+        @media screen and (max-width: 1120px) {
+            main .main-container {
+                width: 95%;
+            }
+
+            header .menuArea {
+                display: block;
+            }
+
+            header .logoArea .image {
+                display: none;
+            }
+
+            header .logoArea .siteName {
+                display: block;
+                width: 220px;
+            }
+
+            header .navBar {
+                width: 100%;
+                background-color: #1f2024;
+                max-height: 0px;
+                overflow: hidden;
+                visibility: hidden;
+                transition: all 0.5s ease;
+            }
+
+            header .navBar.open {
+                visibility: visible;
+            }
+
+            header .navBar ul {
+                padding: 0 30px;
+            }
+
+            header .navBar ul li {
+                display: block;
+                margin: 15px 0;
+            }
+
+            header .navBar ul li a {
+                color: #fff;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            main .main-container {
+                grid-template-columns: 100%;
+            }
+
+            aside .popularPost .post {
+                grid-template-columns: 1fr 3.5fr;
+            }
+
+            aside .popularPost .post h2 {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 620px) {
+            section .article-area {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logoArea">
+                <a class="image"><img src="./img/logo2.png"></a>
+                <a class="siteName">
+                    <h1><span class="highlight">^_^</span> ^_~</h1>
+                </a>
+            </div>
+            <div class="menuArea">
+                <div class="menuBtn">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="index.html" class="active">🏠Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="main-container">
+            <section>
+                <div class="article-area">
+                    <article>
+                        <a href="#"><img src="./img/p9.jpg" alt=""></a>
+                        <div class="article-container">
+                            <h1><a href="https://google.com" target="_blank">OUTLAST 2 </a></h1>
+                            <hr>
+                            <h2><i class="fas fa-download"></i><a href="https://google.com" target="_blank"> 📂 Muki </a>🕔🔞 July 22,2023</h2>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="#"><img src="./img/p10.jpg" alt=""></a>
+                        <div class="article-container">
+                            <h1><a href="#">RESIDENT EVIL 7</a></h1>
+                            <hr>
+                            <h2><i class="fas fa-user"></i><a href="">Muki </a><i class="far fa-clock"></i> July 22,2023</h2>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="#"><img src="./img/p11.jpg" alt=""></a>
+                        <div class="article-container">
+                            <h1><a href="#">FORZA HORIZON 5</a></h1>
+                            <hr>
+                            <h2><i class="fas fa-user"></i><a href="">Muki </a><i class="far fa-clock"></i> July
+                                22,2023</h2>
+                            <p>Forza Horizon 5 is a 2021 racing video game developed by Playground Games and published
+                                by Xbox Game Studios.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="#"><img src="./img/p12.jpg" alt=""></a>
+                        <div class="article-container">
+                            <h1><a href="#">THIEF SIMUATOR</a></h1>
+                            <hr>
+                            <h2><i class="fas fa-user"></i><a href="">Muki </a><i class="far fa-clock"></i> July
+                                22,2023</h2>
+                            <p>Thief Simulator is an open-world stealth video game developed by Polish video game
+                                development [1][2][3]</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="buttonArea">
+                </div>
+            </section>
+
+            <aside>
+                <div class="box popularPost">
+                    <div class="container">
+                        <h1>Popular Games</h1>
+                        <hr>
+                        <div class="post">
+                            <a href="#"><img src="./img/p6.jpg"></a>
+                            <a href="#">
+                                <h2>ROCKET LEAGUE</h2>
+                            </a>
+                        </div>
+                        <div class="post">
+                            <a href="#"><img src="./img/p7.jpg"></a>
+                            <a href="#">
+                                <h2>GOD OF WAR</h2>
+                            </a>
+                        </div>
+                        <div class="post">
+                            <a href="#"><img src="./img/p8.jpg"></a>
+                            <a href="#">
+                                <h2>RESIDENT EVIL VILLAGE</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="textArea">
+                <h1>Designed with<span class="red"> ❤</span> by
+                    <a><span class="colored">0xFTP</span></a>
+                </h1>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector(".menuBtn");
+        const navBar = document.querySelector(".navBar");
+        menuBtn.addEventListener("click", navToggle);
+        function navToggle() {
+            menuBtn.classList.toggle("openmenu");
+            navBar.classList.toggle("open");
+            if (navBar.classList.contains("open")) {
+                navBar.style.maxHeight = navBar.scrollHeight + "px";
+            } else {
+                navBar.removeAttribute("style");
+            }
+        }
+    </script>
+</body>
+
+</html>
