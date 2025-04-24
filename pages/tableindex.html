@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #2a2a2a;
+            color: #f5f5f5;
+        }
+        
+        /* Purple top stripe */
+        .top-stripe {
+            height: 4px;
+            background: linear-gradient(90deg, #8c2cb4, #5e1b87);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+        }
+        
+        /* Header */
+        .header {
+            background-color: #212121;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-box {
+            background-color: white;
+            color: #212121;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 4px 6px;
+            border-radius: 2px;
+            margin-right: 20px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        
+        .nav-item {
+            color: #999;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-right: 25px;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-item::after {
+            content: '';
+        }
+        
+        .nav-item:hover {
+            color: #fff;
+        }
+        
+        /* Reddit icon */
+        .reddit-icon {
+            --reddit-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286A.72.72 0 0 0 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0m4.388 3.199a1.999 1.999 0 1 1-1.947 2.46v.002a2.37 2.37 0 0 0-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363a2.802 2.802 0 1 1 2.908 4.753c-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87a2.8 2.8 0 0 1 1.189-5.34c.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01a3.23 3.23 0 0 1 2.88-3.207 2 2 0 0 1 1.959-1.595m-8.085 8.376c-.784 0-1.459.78-1.506 1.797s.64 1.429 1.426 1.429 1.371-.369 1.418-1.385-.553-1.841-1.338-1.841m7.406 0c-.786 0-1.385.824-1.338 1.841s.634 1.385 1.418 1.385c.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797m-3.703 4.013c-.974 0-1.907.048-2.77.135a.222.222 0 0 0-.183.305 3.2 3.2 0 0 0 2.953 1.964 3.2 3.2 0 0 0 2.953-1.964a.222.222 0 0 0-.184-.305 28 28 0 0 0-2.769-.135'/%3E%3C/svg%3E");
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            background-color: #999;
+            mask-image: var(--reddit-svg);
+            -webkit-mask-image: var(--reddit-svg);
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            vertical-align: middle;
+            transition: background-color 0.2s ease;
+        }
+        
+        .reddit-icon:hover {
+            background-color: #fff;
+        }
+        
+        /* NSFW icon */
+        .nsfw-icon {
+            --nsfw-svg: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='-2.64 -2.64 29.28 29.28' fill='none' xmlns='http://www.w3.org/2000/svg' transform='rotate(180)' stroke='%23999' stroke-width='.12'%3E%3Cg stroke-width='0'/%3E%3Cg stroke-linecap='round' stroke-linejoin='round' stroke-width='.144'/%3E%3Cg fill='%23999'%3E%3Cpath d='M13.222 3.322A5.5 5.5 0 0 1 21 11.1l-3.535 3.536a5.5 5.5 0 0 1-8.32-.628c-.242-.328-.174-.778.114-1.066.473-.473 1.307-.286 1.765.201q.037.04.077.079a3.5 3.5 0 0 0 4.95 0l3.535-3.536a3.5 3.5 0 0 0-4.95-4.95l-1.06 1.061a1 1 0 1 1-1.415-1.414z'/%3E%3Cpath d='M6.858 9.686c2.044-2.044 5.368-2.085 7.491-.263.383.328.352.906-.005 1.262-.419.42-1.112.355-1.602.022-1.344-.914-3.256-.82-4.47.393l-3.535 3.536a3.5 3.5 0 0 0 4.95 4.95l1.06-1.06a1 1 0 0 1 1.414 1.413L11.101 21a5.5 5.5 0 1 1-7.779-7.778z'/%3E%3C/g%3E%3C/svg%3E");
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            background-color: #f44336;
+            mask-image: var(--nsfw-svg);
+            -webkit-mask-image: var(--nsfw-svg);
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            vertical-align: middle;
+            transition: background-color 0.2s ease;
+        }
+        
+        .nsfw-icon:hover {
+            background-color: #ff7961;
+        }
+        
+        /* Main content */
+        .main-content {
+            padding-top: 70px; /* Height of header + extra space */
+            padding-bottom: 1rem;
+            min-height: calc(100vh - 130px);
+        }
+        
+        /* Table Sections */
+        .table-section {
+            margin-bottom: 20px;
+            border: 1px solid #3a3a3a;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: #333;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-bottom: 1px solid #3a3a3a;
+        }
+        
+        /* Game Table */
+        .game-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .index-row {
+            border-bottom: 1px solid #3a3a3a;
+        }
+        
+        .index-row:last-child {
+            border-bottom: none;
+        }
+        
+        .index-cell {
+            padding: 15px 10px;
+        }
+        
+        /* Title links */
+        .index-cell a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: normal;
+            transition: color 0.2s;
+            margin-right: 10px;
+        }
+        
+        .index-cell a:hover {
+            color: #90caf9;
+            text-decoration: underline;
+        }
+        
+        /* Download count */
+        .index-badge {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        
+        /* Languages */
+        .info-badge {
+            display: inline-block;
+            background-color: #009688;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        /* NSFW Section */
+        #nsfw-section {
+            display: none;
+        }
+        
+        /* Category sections */
+        .category-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #212121;
+            color: #999;
+            padding: 15px 0;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+        
+        .footer .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+        }
+        
+        .nsfw-link {
+            color: #f44336;
+            cursor: pointer;
+            text-decoration: none;
+            display: none; /* Hide by default */
+        }
+        
+        .nsfw-link:hover {
+            color: #ff7961;
+        }
+
+        /* Footer NSFW icon */
+        .footer-nsfw-icon {
+            --footer-nsfw-svg: url("data:image/svg+xml,%3Csvg width='130' height='130' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' stroke='%23999' stroke-width='0'%3E%3Cg/%3E%3Cg stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='m4.614 8.545-.426 1.705H2a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5h-2.187l-.427-1.705c-.546-2.183-.818-3.274-1.632-3.91C16.94 4 15.815 4 13.565 4h-3.13c-2.25 0-3.375 0-4.189.635-.814.636-1.087 1.727-1.632 3.91M6.5 21a3.5 3.5 0 0 0 3.384-2.604l1.11-.555a2.25 2.25 0 0 1 2.012 0l1.11.555A3.501 3.501 0 0 0 21 17.5a3.5 3.5 0 0 0-6.91-.794l-.413-.206a3.75 3.75 0 0 0-3.354 0l-.413.206A3.501 3.501 0 0 0 3 17.5 3.5 3.5 0 0 0 6.5 21' fill='%23f44336' stroke='none'/%3E%3C/svg%3E");
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background-color: transparent;
+            mask-image: var(--footer-nsfw-svg);
+            -webkit-mask-image: var(--footer-nsfw-svg);
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            vertical-align: middle;
+            transition: background-color 0.2s ease;
+        }
+        
+        .footer-nsfw-icon-container {
+            display: none; /* Hide by default */
+        }
+        
+        .footer-nsfw-icon-container:hover .footer-nsfw-icon {
+            background-color: #ff7961;
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .header .container {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .logo {
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+            
+            .nav-menu {
+                width: auto;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 5px;
+                margin-left: 10px;
+            }
+            
+            .nav-item {
+                font-size: 12px;
+                margin-right: 15px;
+                flex-shrink: 0;
+            }
+            
+            /* Game cell content layout */
+            .index-cell {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 5px;
+                align-items: center;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 10px 5px;
+            }
+            
+            .index-badge, .info-badge {
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+            
+            /* Footer mobile layout */
+            .footer .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .footer-content {
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 5px;
+                justify-content: center;
+                gap: 30px;
+            }
+            
+            .footer-links {
+                flex-shrink: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+            
+            .nav-item {
+                font-size: 11px;
+                margin-right: 10px;
+            }
+            
+            .index-cell {
+                padding: 10px 5px;
+                font-size: 13px;
+            }
+            
+            .index-badge, .info-badge {
+                font-size: 10px;
+                padding: 2px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-stripe"></div>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-box">0xDDoS</div>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="#miscellaneous-section" class="nav-item">M</a>
+                <a href="#privacy-section" class="nav-item"><span class="reddit-icon"></span></a>
+                <a href="#repacks-section" class="nav-item">R</a>
+                <a href="#linux-section" class="nav-item">L</a>
+                <a href="#torrenting-section" class="nav-item">T</a>
+                <a href="#" class="nav-item" id="nsfw-toggle-link"><span class="nsfw-icon"></span></a>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <div class="container">
+            <div class="category-sections" id="main-content-container">
+                <!-- Sections will be dynamically inserted here -->
+            </div>
+        </div>
+        
+        <!-- NSFW Section (Hidden by default) -->
+        <div class="container">
+            <div class="table-section" id="nsfw-section">
+                <div class="section-header">NSFW Content</div>
+                <table class="game-table" id="nsfw-content-table">
+                    <!-- NSFW content will be dynamically inserted here -->
+                </table>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">0xDDoS</a>
+                    <a href="#">😊</a>
+                    <a href="#" class="footer-nsfw-icon-container" id="footer-nsfw-toggle">
+                        <span class="footer-nsfw-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Data structure for sections
+        const sections = [
+            {
+                id: "miscellaneous-section",
+                title: "Miscellaneous",
+                items: [
+                    { 
+                        index: "01", 
+                        title: "Community Resources", 
+                        info: "Multi Languages",
+                        link: "https://example.com/community"
+                    },
+                    { 
+                        index: "02", 
+                        title: "Site Announcements", 
+                        info: "English",
+                        link: "https://example.com/announcements"
+                    }
+                ]
+            },
+            {
+                id: "privacy-section",
+                title: "Adblocking / Privacy",
+                items: [
+                    { 
+                        index: "432", 
+                        title: "uBlock Origin", 
+                        info: "EN-FR-DE-ES",
+                        link: "https://example.com/ublock"
+                    },
+                    { 
+                        index: "267", 
+                        title: "Privacy Guide 2025", 
+                        info: "EN-JP-KR",
+                        link: "https://example.com/privacy-guide"
+                    }
+                ]
+            },
+            {
+                id: "streaming-section",
+                title: "Streaming",
+                items: [
+                    { 
+                        index: "189", 
+                        title: "Streaming Services Guide", 
+                        info: "English",
+                        link: "https://example.com/streaming"
+                    },
+                    { 
+                        index: "311", 
+                        title: "Media Player Collection", 
+                        info: "Multi Languages",
+                        link: "https://example.com/media-players"
+                    }
+                ]
+            },
+            {
+                id: "downloading-section",
+                title: "Downloading",
+                items: [
+                    { 
+                        index: "1", 
+                        title: "SiNiSistar2 ver.1.01", 
+                        info: "JP-EN-CH",
+                        extraInfo: "(Win/Mac)",
+                        link: "https://example.com/sinisistar2"
+                    },
+                    { 
+                        index: "2", 
+                        title: "Runaway Girl Simulator ver.1.1.0", 
+                        info: "Multi Languages",
+                        link: "https://example.com/runaway-girl"
+                    }
+                ]
+            },
+            {
+                id: "torrenting-section",
+                title: "Torrenting",
+                items: [
+                    { 
+                        index: "523", 
+                        title: "BitTorrent Client Comparison", 
+                        info: "EN-DE-FR",
+                        link: "https://example.com/bittorrent-clients"
+                    },
+                    { 
+                        index: "348", 
+                        title: "Beginner's Guide to Torrenting", 
+                        info: "English",
+                        link: "https://example.com/torrenting-guide"
+                    }
+                ]
+            },
+            {
+                id: "linux-section",
+                title: "Linux",
+                items: [
+                    { 
+                        index: "167", 
+                        title: "Linux Gaming Guide 2025", 
+                        info: "EN-FR-DE-ES",
+                        link: "https://example.com/linux-gaming"
+                    },
+                    { 
+                        index: "426", 
+                        title: "Ubuntu Gaming Collection", 
+                        info: "Multi Languages",
+                        link: "https://example.com/ubuntu-gaming"
+                    }
+                ]
+            },
+            {
+                id: "repacks-section",
+                title: "Repacks",
+                items: [
+                    { 
+                        index: "312", 
+                        title: "Cyber Fantasy 2077 Ultimate Edition", 
+                        info: "Multi Languages",
+                        link: "https://example.com/cyberfantasy2077"
+                    },
+                    { 
+                        index: "178", 
+                        title: "Final Chronicle XVI Deluxe", 
+                        info: "EN-JP-KR-RU",
+                        link: "https://example.com/finalchronicle16"
+                    }
+                ]
+            }
+        ];
+        
+        // NSFW data
+        const nsfwData = [
+            { 
+                index: "212", 
+                title: "Adult Game Collection Vol.1", 
+                info: "EN-JP",
+                link: "https://example.com/nsfw/collection1"
+            },
+            { 
+                index: "193", 
+                title: "Adult Game Collection Vol.2", 
+                info: "EN-JP",
+                link: "https://example.com/nsfw/collection2"
+            },
+            { 
+                index: "157", 
+                title: "Eroge Selection 2025", 
+                info: "JP-EN",
+                link: "https://example.com/nsfw/eroge2025"
+            }
+        ];
+        
+        // Function to create a table row for an item
+        function createTableRow(item) {
+            return `
+                <tr class="index-row">
+                    <td class="index-cell">
+                        <span class="index-badge">${item.index}</span>
+                        <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.title}</a>
+                        <span class="info-badge">${item.info}</span>
+                        ${item.extraInfo ? `<span class="info-badge">${item.extraInfo}</span>` : ''}
+                    </td>
+                </tr>
+            `;
+        }
+        
+        // Function to create a section with its items
+        function createSection(section) {
+            let itemsHTML = '';
+            
+            section.items.forEach(item => {
+                itemsHTML += createTableRow(item);
+            });
+            
+            return `
+                <div class="table-section" id="${section.id}">
+                    <div class="section-header">${section.title}</div>
+                    <table class="game-table">
+                        <tbody>
+                            ${itemsHTML}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        }
+        
+        // Function to initialize the page
+        function initPage() {
+            // Generate main content sections
+            const mainContentContainer = document.getElementById('main-content-container');
+            let sectionsHTML = '';
+            
+            sections.forEach(section => {
+                sectionsHTML += createSection(section);
+            });
+            
+            mainContentContainer.innerHTML = sectionsHTML;
+            
+            // Generate NSFW content
+            const nsfwContentTable = document.getElementById('nsfw-content-table');
+            let nsfwHTML = '<tbody>';
+            
+            nsfwData.forEach(item => {
+                nsfwHTML += createTableRow(item);
+            });
+            
+            nsfwHTML += '</tbody>';
+            nsfwContentTable.innerHTML = nsfwHTML;
+        }
+        
+        // NSFW Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize page content
+            initPage();
+            
+            const nsfwToggleLink = document.getElementById('nsfw-toggle-link');
+            const footerNsfwToggle = document.getElementById('footer-nsfw-toggle');
+            const nsfwSection = document.getElementById('nsfw-section');
+            
+            // Variable to track footer visibility state
+            let footerLinkVisible = false;
+            
+            // Function to toggle NSFW content
+            function toggleNsfwContent() {
+                if (nsfwSection.style.display === 'none' || nsfwSection.style.display === '') {
+                    nsfwSection.style.display = 'block';
+                } else {
+                    nsfwSection.style.display = 'none';
+                }
+            }
+            
+            // Navbar NSFW icon click - toggles footer link visibility
+            nsfwToggleLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (!footerLinkVisible) {
+                    // If footer link is hidden, show it
+                    footerNsfwToggle.style.display = 'inline-block';
+                    footerLinkVisible = true;
+                } else {
+                    // If footer link is visible, hide it
+                    footerNsfwToggle.style.display = 'none';
+                    footerLinkVisible = false;
+                    
+                    // Also hide NSFW content if it's visible
+                    if (nsfwSection.style.display === 'block') {
+                        nsfwSection.style.display = 'none';
+                    }
+                }
+            });
+            
+            // Footer NSFW link click
+            footerNsfwToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleNsfwContent();
+            });
+        });
+    </script>
+</body>
+</html>
