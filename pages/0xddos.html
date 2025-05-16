@@ -451,7 +451,7 @@
         <div class="search-container">
             <input type="text" id="searchBar" class="search-bar" placeholder="Search a series by Title, alternative name or Type..." aria-label="Search comics">
         </div>
-        <h1>All series</h1>
+        <h1>All series (<span id="comicCounter">0</span>)</h1>
         <div class="comics-container" id="comicsContainer">
             <!-- Comics will be inserted here by JavaScript -->
         </div>
@@ -921,6 +921,8 @@
                 return titleMatch || originalTitleMatch || statusMatch;
             });
             
+            document.getElementById('comicCounter').textContent = filteredComics.length;
+            
             if (filteredComics.length === 0) {
                 comicsContainer.innerHTML = '<div class="no-results">No comics found matching your search.</div>';
             } else {
@@ -941,6 +943,7 @@
         // Display all comics when page loads
         function displayAllComics() {
             comicsContainer.innerHTML = comics.map(createComicCard).join('');
+            document.getElementById('comicCounter').textContent = comics.length;
         }
 
         // Display all comics when page loads
