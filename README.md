@@ -1,4 +1,4 @@
-````markdown
+
 # 📚 Comics List ✨
 
 ### 🟢 Ongoing
