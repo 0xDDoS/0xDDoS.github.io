@@ -1,3 +1,4 @@
+````markdown
 # 📚 Comics List ✨
 
 ### 🟢 Ongoing
@@ -95,7 +96,10 @@
 [ 199] Super Gene
 [  81] Reborn Rich
 [ 134] Infinite Level Up in Murim
+````
 ### ⛔ Manhwa Completed or Dropped
+```text
+
 [ 103] Leveling Beyond the Max
 [ 163] [Completed] Return Survival
 [ 160] [Completed] Rebirth of the 8th-Circle Mage
@@ -106,4 +110,4 @@
 [ 141] [Dropped] Evolution Frenzy
 [  26] [Dropped] Latna Saga: Survival of a Sword King
 [ 144] [Dropped] I Have a Mansion In The Post-Apocalyptic World
-
+````
