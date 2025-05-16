@@ -10,7 +10,7 @@
 [ 167] Log in With Max Level
 
 [  54] The Return of The Disaster-Class Hero
-[    ]Regressor Instruction Manual | How to Use a Returner
+[    ] Regressor Instruction Manual | How to Use a Returner
 
 [ 108] The Reincarnation of the Forbidden Archmage
 [ 176] Archane Sniper
