@@ -1,4 +1,8 @@
 // Comics data array
+//
+//
+//
+//
 const comics = [{
     title: "Logging 10000 Years into the Future",
     originalTitle: "Leveling Up into the Future | Apex Future Martial Arts | Martial Art: Future's Ten Thousand Years | Log into the Future",
