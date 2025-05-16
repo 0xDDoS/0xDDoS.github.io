@@ -11,6 +11,7 @@
 [ 167] Log in With Max Level
 [  54] The Return of The Disaster-Class Hero
 [  99] I Have 999 Abilities
+[    ] Second Life Ranker
 [   9] Superhuman Battlefield
 [  66] Mercenary Enrollment
 [    ] Regressor Instruction Manual | How to Use a Returner
