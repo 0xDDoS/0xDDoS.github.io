@@ -98,7 +98,7 @@
 ````
 ### ⛔ Manhwa Completed or Dropped
 ```text
-[ 103] Leveling Beyond the Max
+[ 103] [Completed] Leveling Beyond the Max
 [ 163] [Completed] Return Survival
 [ 160] [Completed] Rebirth of the 8th-Circle Mage
 [ 101] [Completed] Is This Hero For Real?
