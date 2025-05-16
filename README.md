@@ -7,8 +7,8 @@
 [ 203] Logging 10000 Years into the Future — _Updated every Thursday and Sunday_
 [ 158] Disastrous Necromancer
 [ 128] Returned from Hell
-[ 167] Log in With Max Level
 
+[ 167] Log in With Max Level
 [  54] The Return of The Disaster-Class Hero
 [  99] I Have 999 Abilities
 [   9] Superhuman Battlefield
