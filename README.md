@@ -1,4 +1,4 @@
-# Comics List✨:
+# 📚 Comics List ✨:
 
 [x] :- [ 203] Logging 10000 Years into the Future [ updated every Thursday and Sunday ]
 [x] :- [ 158] Disastrous Necromancer
@@ -96,7 +96,7 @@ https://en-thunderscans.com/the-reincarnation-of-the-forbidden-archmage-chapter-
 [x] :- [  81] Reborn Rich
 [x] :- [ 134] Infinite Level Up in Murim
 
-∆ Manhwa Completed or Dropped ∆
+# Manhwa Completed or Dropped ✨:
 [x] :- [ 103] Leveling Beyond the Max
 [x] :- [0163] [Completed] Return Survival
 [x] :- [0160] [Completed] Rebirth of the 8th-Circle Mage
