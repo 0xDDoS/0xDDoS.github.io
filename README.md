@@ -9,8 +9,7 @@
 [ 128] Returned from Hell
 [ 167] Log in With Max Level
 [  54] The Return of The Disaster-Class Hero
-[ 108] The Reincarnation of the Forbidden Archmage  
-  [Read here](https://en-thunderscans.com/the-reincarnation-of-the-forbidden-archmage-chapter-107/)
+[ 108] The Reincarnation of the Forbidden Archmage
 [ 176] Archane Sniper
 [  78] Life of a Quack Healer
 [  96] The SSS-Rank Hunter's Lucky Draw
