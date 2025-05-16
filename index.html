@@ -449,7 +449,7 @@
         <div class="search-container">
             <input type="text" id="searchBar" class="search-bar" placeholder="Search a series by Title, alternative name or Type..." aria-label="Search comics">
         </div>
-        <h1>All series (<span id="totalComics">0</span>)</h1>
+        <h1>All series</h1>
         <div class="comics-container" id="comicsContainer">
             <!-- Comics will be inserted here by JavaScript -->
         </div>
@@ -464,9 +464,6 @@
         const htmlElement = document.documentElement;
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
-        
-        // Update total comics count
-        document.getElementById('totalComics').textContent = comics.length;
 
         // Check for saved theme preference or use device preference
         const savedTheme = localStorage.getItem('theme');
