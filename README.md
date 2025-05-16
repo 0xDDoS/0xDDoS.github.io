@@ -2,7 +2,6 @@
 
 ### 🟢 Ongoing
 
-```text
 * [ 203] **Logging 10000 Years into the Future** — _Updated every Thursday and Sunday_
 * [ 158] **Disastrous Necromancer**
 * [ 128] **Returned from Hell**
@@ -95,7 +94,11 @@
 * [ 199] **Super Gene**
 * [  81] **Reborn Rich**
 * [ 134] **Infinite Level Up in Murim**
+
+---
+
 ### ⛔ Manhwa Completed or Dropped
+
 * [ 103] **Leveling Beyond the Max**
 * [ 163] **[Completed] Return Survival**
 * [ 160] **[Completed] Rebirth of the 8th-Circle Mage**
@@ -106,4 +109,3 @@
 * [ 141] **[Dropped] Evolution Frenzy**
 * [  26] **[Dropped] Latna Saga: Survival of a Sword King**
 * [ 144] **[Dropped] I Have a Mansion In The Post-Apocalyptic World**
-
