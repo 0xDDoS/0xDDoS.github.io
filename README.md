@@ -18,6 +18,7 @@
 [  66] Mercenary Enrollment
 [  73] It All Starts with Playing Game Seriously
 [ 133] Regressor Instruction Manual | How to Use a Returner
+[   5] It Turns Out That I Have Been Invincible For A Long Time
 
 [ 108] The Reincarnation of the Forbidden Archmage
 [ 176] Archane Sniper
