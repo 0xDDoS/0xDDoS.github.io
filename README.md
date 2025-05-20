@@ -12,6 +12,7 @@
 [  54] The Return of The Disaster-Class Hero
 [  99] I Have 999 Abilities
 [ 479] It Starts With a Kingpin Account
+[ 172] The First Sequence
 [    ] Second Life Ranker
 [   9] Superhuman Battlefield
 [  66] Mercenary Enrollment
