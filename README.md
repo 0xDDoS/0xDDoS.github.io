@@ -16,7 +16,7 @@
 [   9] Superhuman Battlefield
 [  66] Mercenary Enrollment
 [  73] It All Starts with Playing Game Seriously
-[    ] Regressor Instruction Manual | How to Use a Returner
+[ 133] Regressor Instruction Manual | How to Use a Returner
 
 [ 108] The Reincarnation of the Forbidden Archmage
 [ 176] Archane Sniper
