@@ -14,6 +14,7 @@
 [ 479] It Starts With a Kingpin Account
 [ 172] The First Sequence
 [ 207] Second Life Ranker
+Clever Cleaning Life of the Returned Genius Hunter
 [   9] Superhuman Battlefield
 [  66] Mercenary Enrollment
 [  73] It All Starts with Playing Game Seriously
