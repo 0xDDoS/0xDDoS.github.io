@@ -45,7 +45,7 @@ Clever Cleaning Life of the Returned Genius Hunter
 [  91] I Can Copy Talents
 [  75] Academy’s Genius Swordmaster
 [ 121] Transcension Academy
-[ 223] Murim Login
+[ 226] Murim Login
 [ 228] Overgeared
 [ 204] The Advanced Player of the Tutorial Tower
 [  94] Swordmaster’s Youngest Son
