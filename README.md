@@ -52,7 +52,7 @@ Clever Cleaning Life of the Returned Genius Hunter
 [ 112] The Dark Magician Transmigrates After 66666 Years
 [ 179] Solo Login
 [ 189] The Great Mage Returns After 4000 Years
-[ 258] Nano Machine
+[ 263] Nano Machine
 [ 249] A Returner’s Magic Should Be Special
 [  44] Magic Level 99990000 All Attribute Great Sage
 [ 105] The Previous Life Murim Ranker
