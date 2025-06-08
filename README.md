@@ -4,7 +4,7 @@
 ### 🟢 Ongoing
 
 ```text
-[ 203] Logging 10000 Years into the Future — _Updated every Thursday and Sunday_
+[ 225] Logging 10000 Years into the Future — _Updated every Thursday and Sunday_
 [ 158] Disastrous Necromancer
 [ 128] Returned from Hell
 
