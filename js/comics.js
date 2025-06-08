@@ -6,8 +6,8 @@
 const comics = [{
     title: "Logging 10000 Years into the Future",
     originalTitle: "Leveling Up into the Future | Apex Future Martial Arts | Martial Art: Future's Ten Thousand Years | Log into the Future",
-    chapters: 203,
-    origChapter: 216, // Orginal chapter Available
+    chapters: 225,
+    origChapter: 225, // Orginal chapter Available
     statuses: ["Ongoing", "Manhua"], // Replace with [ Ongoing, PAUSED, COMPLETED, Cancelled, DROPPED | Manhwa, Manhua, Manga ]
     image: "img/cover/Logging-10000-Years-into-the-Future.webp", // Replace with your image URL
     RawLink: "https://www.kuaikanmanhua.com/web/topic/17161/", // Replace with your RAW URL
