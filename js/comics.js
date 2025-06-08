@@ -30,8 +30,8 @@ const comics = [{
   {
     title: "Murim Login",
     originalTitle: "Log-in Murim",
-    chapters: 223,
-    origChapter: 223,
+    chapters: 226,
+    origChapter: 226,
     statuses: ["Ongoing", "Manhwa"],
     image: "img/cover/Murim_Login.webp",
     RawLink: "https://page.kakao.com/content/54872059",
