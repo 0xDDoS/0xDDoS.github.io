@@ -18,6 +18,7 @@ Clever Cleaning Life of the Returned Genius Hunter
 [   9] Superhuman Battlefield
 [  66] Mercenary Enrollment
 [  73] It All Starts with Playing Game Seriously
+[  71] The Dungeon Cleaning Life of a Once Genius Hunter
 [ 133] Regressor Instruction Manual | How to Use a Returner
 [   5] It Turns Out That I Have Been Invincible For A Long Time
 
