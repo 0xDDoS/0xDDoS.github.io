@@ -138,7 +138,7 @@
 [x] :- [ 069] Pay with Sperm Pay
 [x] :- [ 038] Supervisor Access
 [x] :- [ 013] Is There No Goddess in My College? 
-[x] :- [ 017] A Guy and a Girl Stuck in an Elevator
+[x] :- [  20] A Guy and a Girl Stuck in an Elevator
 [x] :- [ 017] Playing a game with my Busty Manager
 [x] :- [ 056] A Wonderful New World
 [x] :- [ 017] Private Tutoring in These Difficult Times
