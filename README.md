@@ -126,5 +126,35 @@
 ### 🔞 18+ 
 ```text
 [   ?] ?
+[x] :- [ 037] I Ended Up in the World of Murim
+
+[x] :- [   33] The Billionaire's Monster Cock Son-In-Law
+
+[x] :- [ 030] Locked Up
+[x] :- [   ?] Milf Hunting in Another World
+[x] :- [ 016] Friend’s Mom is Mine
+[x] :- [ 060] Hyeonjung’s Residence [Complete]
+[x] :- [  07] Rooftop Sex King
+[x] :- [ 016] Sex Stopwatch 
+[x] :- [ 021] How to Conquer Women with Hypnosis
+[x] :- [ 069] Pay with Sperm Pay
+[x] :- [ 038] Supervisor Access
+[x] :- [ 013] Is There No Goddess in My College? 
+[x] :- [ 017] A Guy and a Girl Stuck in an Elevator
+[x] :- [ 017] Playing a game with my Busty Manager
+[x] :- [ 056] A Wonderful New World
+[x] :- [ 017] Private Tutoring in These Difficult Times
+[x] :- [ 014] Mother-son Island Survival
+[x] :- [ 000] The Chairman's Wife
+[x] :- [ 014] Women's University Student who Served in the Military
+[x] :- [ 015] Intern Haenyeo
+[x] :- [ 053] Succubus System
+[x] :- [ 014] Beyond Imagination
+[x] :- [ 015] The Student Council President’s Hidden Task Is the (Sexual) Development of Female Students
+[x] :- [ 000] Moby Dick
+[x] :- [ 017] My New Family Treats Me Well
+[x] :- [  01] Mother-in-Law Bends To My Will
+[x] :- [  00] I’m The Leader Of A Cult
+[x] :- [  00] I’ll Eat Your Mom First 
 ````
 
