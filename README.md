@@ -123,3 +123,8 @@
 [  26] [ Dropped ] Latna Saga: Survival of a Sword King
 [ 144] [ Dropped ] I Have a Mansion In The Post-Apocalyptic World
 ````
+### ⛔ Manhwa 
+```text
+[   ?] ?
+````
+
