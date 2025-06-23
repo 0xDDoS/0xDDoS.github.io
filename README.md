@@ -21,7 +21,7 @@
 [ 133] Regressor Instruction Manual | How to Use a Returner
 [   5] It Turns Out That I Have Been Invincible For A Long Time
 [ 229] I'm Destined for Greatness!
-[ 112] The Celestial Returned from Hell
+[ 158] The Celestial Returned from Hell
 
 [ 108] The Reincarnation of the Forbidden Archmage
 [ 176] Archane Sniper
