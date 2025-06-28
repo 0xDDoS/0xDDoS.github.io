@@ -19,7 +19,7 @@
 [  73] It All Starts with Playing Game Seriously
 [  73] The Dungeon Cleaning Life of a Once Genius Hunter
 [ 133] Regressor Instruction Manual | How to Use a Returner
-[   5] It Turns Out That I Have Been Invincible For A Long Time
+[  19] It Turns Out That I Have Been Invincible For A Long Time
 [ 229] I'm Destined for Greatness!
 [ 210] The Celestial Returned from Hell
 
