@@ -47,7 +47,7 @@
 [  91] I Can Copy Talents
 [  75] Academy’s Genius Swordmaster
 [ 121] Transcension Academy
-[ 226] Murim Login
+[ 229] Murim Login
 [ 228] Overgeared
 [ 204] The Advanced Player of the Tutorial Tower
 [  94] Swordmaster’s Youngest Son
