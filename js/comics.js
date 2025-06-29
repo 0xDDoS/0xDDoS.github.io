@@ -11,7 +11,7 @@ const comics = [{
     statuses: ["Ongoing", "Manhua"], // Replace with [ Ongoing, PAUSED, COMPLETED, Cancelled, DROPPED | Manhwa, Manhua, Manga ]
     image: "img/cover/Logging-10000-Years-into-the-Future.webp", // Replace with your image URL
     RawLink: "https://www.kuaikanmanhua.com/web/topic/17161/", // Replace with your RAW URL
-    EngLink: "https://comick.io/comic/apex-future-martial-arts", // Replace with your ENG URL
+    EngLink: "https://comick.io/comic/00-apex-future-martial-arts", // Replace with your ENG URL
     rawIcon: "img/icons/kuaikan.png", // Replace with your RAW icon image
     engIcon: "img/icons/comick.webp" // Replace with your ENG icon image
   },
