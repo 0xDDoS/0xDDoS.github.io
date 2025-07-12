@@ -55,7 +55,6 @@
 [ 179] Solo Login
 [ 189] The Great Mage Returns After 4000 Years
 [ 266] Nano Machine
-[ 269] A Returner’s Magic Should Be Special
 [  44] Magic Level 99990000 All Attribute Great Sage
 [ 105] The Previous Life Murim Ranker
 [ 109] Seoul Station Necromancer
@@ -113,6 +112,7 @@
 ### ⛔ Manhwa Completed or Dropped
 ```text
 [ 103] [Completed] Leveling Beyond the Max
+[ 269] [Completed] A Returner’s Magic Should Be Special
 [ 163] [Completed] Return Survival
 [ 160] [Completed] Rebirth of the 8th-Circle Mage
 [ 101] [Completed] Is This Hero For Real?
