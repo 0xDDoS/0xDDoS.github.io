@@ -151,7 +151,7 @@ const comics = [{
     title: "Writers Legacy",
     originalTitle: "‎ ",
     chapters: 12,
-    origChapter: 21,
+    origChapter: 32,
     statuses: ["Ongoing", "Manhwa"],
     image: "img/cover/Writers_Legacy.jpg",
     RawLink: "https://www.webtoons.com/en/action/writers-legacy/list?title_no=7255",
