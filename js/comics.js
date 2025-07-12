@@ -450,9 +450,9 @@ const comics = [{
   {
     title: "A Returner’s Magic Should Be Special",
     originalTitle: "Magician who Reversing Time | Returner’s Special Magic",
-    chapters: 249,
-    origChapter: 268,
-    statuses: ["Ongoing", "COMPLETED", "Manhwa"],
+    chapters: 269,
+    origChapter: 269,
+    statuses: ["COMPLETED", "Manhwa"],
     image: "img/cover/A-Returners-Magic-Should-Be-Special.jpg",
     RawLink: "https://page.kakao.com/content/51185123",
     EngLink: "https://comick.io/comic/01-a-returner-s-magic-should-be-special",
