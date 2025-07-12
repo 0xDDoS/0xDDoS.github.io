@@ -55,7 +55,7 @@
 [ 179] Solo Login
 [ 189] The Great Mage Returns After 4000 Years
 [ 266] Nano Machine
-[ 249] A Returner’s Magic Should Be Special
+[ 269] A Returner’s Magic Should Be Special
 [  44] Magic Level 99990000 All Attribute Great Sage
 [ 105] The Previous Life Murim Ranker
 [ 109] Seoul Station Necromancer
