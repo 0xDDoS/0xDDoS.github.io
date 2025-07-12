@@ -23,7 +23,7 @@ const comics = [{
     statuses: ["Ongoing", "Manhua"],
     image: "img/cover/Disastrous_Necromancer.png",
     RawLink: "https://www.kuaikanmanhua.com/web/topic/18819/",
-    EngLink: "https://comick.io/comic/catastrophic-necromancer",
+    EngLink: "https://comick.io/comic/00-catastrophic-necromancer",
     rawIcon: "img/icons/kuaikan.png",
     engIcon: "img/icons/comick.webp"
   },
