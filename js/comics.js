@@ -42,8 +42,8 @@ const comics = [{
   {
     title: "Nano Machine",
     originalTitle: "‎ ",
-    chapters: 266,
-    origChapter: 266,
+    chapters: 268,
+    origChapter: 268,
     statuses: ["Ongoing", "Manhwa"],
     image: "img/cover/Nano_Machine.jpg",
     RawLink: "https://comic.naver.com/webtoon/list?titleId=747271",
