@@ -18,8 +18,8 @@ const comics = [{
   {
     title: "Disastrous Necromancer",
     originalTitle: "Catastrophic Necromancer | Necromancer, the Ultimate Scourge! | Scourge Necromancer | Necromancer! I Am a Disaster | Necromancer: King of The Scourge",
-    chapters: 158,
-    origChapter: 196,
+    chapters: 197,
+    origChapter: 197,
     statuses: ["Ongoing", "Manhua"],
     image: "img/cover/Disastrous_Necromancer.png",
     RawLink: "https://www.kuaikanmanhua.com/web/topic/18819/",
