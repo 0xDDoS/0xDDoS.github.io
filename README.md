@@ -22,6 +22,7 @@
 [  19] It Turns Out That I Have Been Invincible For A Long Time
 [ 229] I'm Destined for Greatness!
 [ 210] The Celestial Returned from Hell
+[    ] The Lazy Swordmaster
 
 [ 108] The Reincarnation of the Forbidden Archmage
 [ 176] Archane Sniper
