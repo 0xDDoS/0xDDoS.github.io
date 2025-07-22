@@ -22,6 +22,7 @@
 [x] :- [  19] It Turns Out That I Have Been Invincible For A Long Time
 [x] :- [ 229] I'm Destined for Greatness!
 [x] :- [ 210] The Celestial Returned from Hell
+[x] :- [   0] The Jobless Guy Who Has Come to Slay
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
