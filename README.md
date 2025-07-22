@@ -22,7 +22,7 @@
 [x] :- [  19] It Turns Out That I Have Been Invincible For A Long Time
 [x] :- [ 229] I'm Destined for Greatness!
 [x] :- [ 210] The Celestial Returned from Hell
-[x] :- [  121] [Completed] The Lazy Swordmaster
+
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
@@ -113,6 +113,7 @@
 ### ⛔ Manhwa Completed or Dropped
 ```text
 [x] :- [ 141] [Cancelled] Extraordinary evolution
+[x] :- [ 121] [Completed] The Lazy Swordmaster
 
 [x] :- [ 103] [Completed] Leveling Beyond the Max
 [x] :- [ 269] [Completed] A Returner’s Magic Should Be Special
