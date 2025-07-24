@@ -81,32 +81,32 @@
             font-weight: 600;
         }
 
-        .comics-container {
+        .manhwas-container {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
         }
 
-        .comic-card {
+        .manhwa-card {
             display: flex;
             gap: 1rem;
         }
 
-        .comic-cover {
+        .manhwa-cover {
             width: 120px;
             height: 160px;
             object-fit: cover;
             border-radius: 4px;
         }
 
-        .comic-info {
+        .manhwa-info {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
 
-        .comic-title {
+        .manhwa-title {
             font-size: 1rem;
             font-weight: 600;
             color: var(--text-primary);
@@ -116,12 +116,12 @@
             overflow: hidden;
         }
 
-        .comic-original-title {
+        .manhwa-original-title {
             color: var(--text-secondary);
             font-size: 0.8rem;
         }
 
-        .comic-meta {
+        .manhwa-meta {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
@@ -197,7 +197,7 @@
             background-color: rgb(255, 197, 197);
             color: rgb(255, 128, 128);
         }
-        .comic-actions {
+        .manhwa-actions {
             display: flex;
             gap: 0.5rem;
             margin-top: 0.5rem;
@@ -236,6 +236,13 @@
             text-align: center;
             padding: 2rem;
             color: var(--text-secondary);
+        }
+
+        .no-results {
+            text-align: center;
+            color: var(--text-secondary);
+            font-style: italic;
+            padding: 2rem;
         }
 
         /* Search Bar Styles */
@@ -368,22 +375,22 @@
         }
 
         @media (min-width: 768px) {
-            .comics-container {
+            .manhwas-container {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 2rem;
             }
 
-            .comic-card {
+            .manhwa-card {
                 gap: 1.5rem;
             }
 
-            .comic-cover {
+            .manhwa-cover {
                 width: 180px;
                 height: 240px;
             }
 
-            .comic-title {
+            .manhwa-title {
                 font-size: 1.25rem;
             }
 
@@ -449,11 +456,11 @@
 
     <main>
         <div class="search-container">
-            <input type="text" id="searchBar" class="search-bar" placeholder="Search a series by Title, alternative name or Type..." aria-label="Search comics">
+            <input type="text" id="searchBar" class="search-bar" placeholder="Search a series by Title, alternative name or Type..." aria-label="Search manhwas">
         </div>
-        <h1>All series (<span id="comicCounter">0</span>)</h1>
-        <div class="comics-container" id="comicsContainer">
-            <!-- Comics will be inserted here by JavaScript -->
+        <h1>All series (<span id="manhwaCounter">0</span>)</h1>
+        <div class="manhwas-container" id="manhwasContainer">
+            <!-- Manhwas will be inserted here by JavaScript -->
         </div>
     </main>
 
@@ -461,6 +468,8 @@
         <p>© 2025 FSOCIETY</p>
     </footer>
 
+    <!-- Import manhwas data from external file -->
+    <script src="../js/manhwas-data.js"></script>
     <script>
         // Theme toggle functionality
         const htmlElement = document.documentElement;
@@ -512,442 +521,156 @@
             document.body.style.overflow = 'auto'; // Restore scrolling
         });
 
-    // Comics data
-    const comics = [
-      {
-        title: "Hyeonjung’s Residence",
-        originalTitle: "현정의 저택 | The Mansion",
-        chapters: 60,
-        statuses: ["COMPLETED", "Manhwa"],// Replace with [ Ongoing, PAUSED, COMPLETED, Cancelled, DROPPED,Planned | Manhwa, Manhua, Manga ]
-        image: "../img/cover/18plus/Hyeonjung_Residence.jpeg", // Replace with your image URL
-        RawLink: "", // Replace with your RAW URL
-        EngLink: "https://omegascans.org/series/hyeonjungs-residence", // Replace with your ENG URL
-        rawIcon: "../img/icons/omega.webp", // Replace with your RAW icon image
-        engIcon: "../img/icons/omega.webp" // Replace with your ENG icon image
-      },
-      {
-        title: "I Ended Up in the World of Murim",
-        originalTitle: "무협지 안으로 들어와버렸다",
-        chapters: 37,
-        statuses: ["Ongoing", "Manhwa"],
-        image: "../img/cover/18plus/I_Ended_Up_in_the_World_of_Murim.jpeg",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/i-ended-up-in-the-world-of-murim",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Locked UP",
-        originalTitle: "빵녀 | Prison Girl | Girls In Prison",
-        chapters: 30,
-        statuses: ["Ongoing", "Manhwa"],
-        image: "../img/cover/18plus/Locked_Up.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/locked-up",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Milf Hunting in Another World",
-        originalTitle: "이세계 밀프 헌터 | MILF Hunter In Another World",
-        chapters: 22,
-        statuses: ["Ongoing", "Manhwa"],
-        image: "../img/cover/18plus/Milf_Hunting_in_Another_World.png",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/milf-hunting-in-another-world",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Rooftop Sex King",
-        originalTitle: "옥탑방 야스킹",
-        chapters: 14,
-        statuses: ["Ongoing", "Manhwa"],
-        image: "../img/cover/18plus/Rooftop_Sex_king.jpg",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/rooftop-sex-king",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Sex Stopwatch",
-        originalTitle: "섹톱워치 | Sextopwatch",
-        chapters: 16,
-        statuses: ["Ongoing", "Manhwa"],
-        image: "../img/cover/18plus/Sex_Stopwatch.jpeg",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/sex-stopwatch",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "How to Conquer Women with Hypnosis",
-        originalTitle: "최면으로 그녀들을 함락시키는 법",
-        chapters: 21,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/how-to-conquer-women-with-hypnosis.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/how-to-conquer-women-with-hypnosis",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Pay with Sperm Pay",
-        originalTitle: "정자페이로 결제하세요 | You Can Pay With Sperm Pay",
-        chapters: 69,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/pay-with-sperm-pay.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/pay-with-sperm-pay",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Supervisor Access",
-        originalTitle: "직장관리자 권한",
-        chapters: 38,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/Supervisor_Access.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/supervisor-access",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Is There No Goddess in My College?",
-        originalTitle: "공대엔 여신이 없다? | Engineering Beauties | 誰說理組沒正妹? | 谁说理组没正妹?",
-        chapters: 13,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/is-there-no-goddess-in-my-college.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/is-there-no-goddess-in-my-college",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "A Guy and a Girl Stuck in an Elevator",
-        originalTitle: "엘리베이터에 갇힌 두 남녀",
-        chapters: 20,
-        statuses: ["COMPLETED"],
-        image: "../img/cover/18plus/a-guy-and-a-girl-stuck-in-an-elevator.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/a-guy-and-a-girl-stuck-in-an-elevator",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Playing a game with my Busty Manager",
-        originalTitle: "가슴 큰 과장님과 게임을 | A Game With My Boss",
-        chapters: 17,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/playing-a-game-with-my-busty-manager.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/playing-a-game-with-my-busty-manager",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "A Wonderful New World",
-        originalTitle: "Wonderful New World | Amazing New World | Brave New World | Subarashi kishin sekai | すばらしき新世界 | 美丽新世界 | 美麗新世界 | 멋진 신세계",
-        chapters: 56,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/a-wonderful-new-world.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/a-wonderful-new-world",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Private Tutoring in These Difficult Times",
-        originalTitle: "이 시국에 개인교습 | Fatal Lessons in This Pandemic | Private Tutoring in These Trying Times",
-        chapters: 17,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/private-tutoring-in-these-difficult-times.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/private-tutoring-in-these-difficult-times",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Mother-son Island Survival",
-        originalTitle: "무인도 모자 생존기 | Island Survival with Stepmom",
-        chapters: 14,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/mother-son-island-survival.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/mother-son-island-survival",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "The Chairman's Wife",
-        originalTitle: "사장의 아내",
-        chapters: 0,
-        statuses: ["Ongoing", "Manhwa"],
-        image: "../img/cover/18plus/the-chairmans-wife.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/the-chairmans-wife",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Women's University Student who Served in the Military",
-        originalTitle: "군필 여대생",
-        chapters: 14,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/womens-university-student-who-served-in-the-military.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/womens-university-student-who-served-in-the-military",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Intern Haenyeo",
-        originalTitle: "인턴 해녀 | Intern Diver",
-        chapters: 15,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/Intern_Haenyeo.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/intern-haenyeo",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Succubus System",
-        originalTitle: "서큐버스 시스템",
-        chapters: 53,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/Succubus_System.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/succubus-system",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Beyond Imagination",
-        originalTitle: "상상 그 이상 | Sangsang Geu Isang",
-        chapters: 14,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/Beyond_Imagination.jpg",
-        RawLink: "",
-        EngLink: "https://www.toongod.org/webtoon/beyond-imagination/",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/ToonGod.png"
-      },
-      {
-        title: "The Student Council President’s Hidden Task Is the (Sexual) Development of Female Students",
-        originalTitle: "학생회장의 숨겨진 업무는 여학우들의 성(性)적 향상입니다",
-        chapters: 15,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/the-student-council-presidents-hidden-task-is-the-sexual-development-of-female-students.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/the-student-council-presidents-hidden-task-is-the-sexual-development-of-female-students",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "My New Family Treats Me Well",
-        originalTitle: "새 가족이 너무 잘해준다 | My New Family Is Too Nice to Me",
-        chapters: 26,
-        statuses: ["Ongoing", "Manhwa"],
-        image: "../img/cover/18plus/my-new-family-treats-me-well.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/my-new-family-treats-me-well",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Moby Dick",
-        originalTitle: "모비딕",
-        chapters: 0,
-        statuses: ["Ongoing", "Manhwa"],
-        image: "../img/cover/18plus/Moby_Dick.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/moby-dick",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "Mother-in-Law Bends To My Will",
-        originalTitle: "내 맘대로 장모님 | Dominating My Mother-In-Law",
-        chapters: 1,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/mother-in-law-bends-to-my-will.webp",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/mother-in-law-bends-to-my-will",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      },
-      {
-        title: "I’m The Leader Of A Cult",
-        originalTitle: "나는 사이비 교주다",
-        chapters: 0,
-        statuses: ["Ongoing", "COMPLETED"],
-        image: "../img/cover/18plus/I-m-The-Leader-Of-A-Cult.jpg",
-        RawLink: "",
-        EngLink: "https://www.toongod.org/webtoon/im-the-leader-of-a-cult/",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/ToonGod.png"
-      },
-      {
-        title: "I’ll Eat Your Mom First",
-        originalTitle: "Go Ahead, Mom | 엄마 먼저 드세요",
-        chapters: 0,
-        statuses: ["Ongoing", "Manhwa"],
-        image: "../img/cover/18plus/Go-Ahead-Mom.webp",
-        RawLink: "",
-        EngLink: "https://www.toongod.org/webtoon/go-ahead-mom/",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/ToonGod.png"
-      },
-      {
-        title: "Friend’s Mom is Mine",
-        originalTitle: "친구엄마와 친구먹기",
-        chapters: 16,
-        statuses: ["Ongoing", "Manhwa"],
-        image: "../img/cover/18plus/Friends_Mom_is_Mine.jpeg",
-        RawLink: "",
-        EngLink: "https://omegascans.org/series/friends-mom-is-mine",
-        rawIcon: "../img/icons/omega.webp",
-        engIcon: "../img/icons/omega.webp"
-      }
-    ];
+        function createManhwaCard(manhwa) {
+            // Handle image source
+            let imageSrc;
+            if (manhwa.image && typeof manhwa.image === 'string') {
+                // Get base64 data from MANHWAS_BASE64_IMAGES using the image string as key
+                const base64Data = MANHWAS_BASE64_IMAGES[manhwa.image];
+                if (base64Data && base64Data.data) {
+                    imageSrc = base64Data.data;
+                }
+            } else if (manhwa.image && typeof manhwa.image === 'object') {
+                // Handle object format for backward compatibility
+                if (manhwa.image.type === 'base64' && manhwa.image.source) {
+                    const base64Data = MANHWAS_BASE64_IMAGES[manhwa.image.source];
+                    if (base64Data && base64Data.data) {
+                        imageSrc = base64Data.data;
+                    }
+                } else if (manhwa.image.type === 'url') {
+                    imageSrc = manhwa.image.source;
+                }
+            }
 
-        function createComicCard(comic) {
-            // Create status elements for each status in the array
+            // Helper function to get status CSS class
+            function getStatusClass(status) {
+                switch (status) {
+                    case "Ongoing": return "status-Ongoing";
+                    case "PAUSED": return "status-paused";
+                    case "COMPLETED": return "status-completed";
+                    case "Cancelled": return "status-Cancelled";
+                    case "DROPPED": return "status-dropped";
+                    case "Sequel": return "status-Sequel";
+                    case "Prequel": return "status-Prequel";
+                    case "Manhwa": return "status-Manhwa";
+                    case "Manhua": return "status-manhua";
+                    case "Manga": return "status-Manga";
+                    case "Planning": return "status-Planning";
+                    default: return "";
+                }
+            }
+
+            // Create status elements
             let statusElements = '';
             
-            if (Array.isArray(comic.statuses)) {
-                statusElements = comic.statuses.map(status => {
-                    let statusClass = '';
-                    switch (status) {
-                        case "Ongoing": statusClass = "status-Ongoing"; break;
-                        case "PAUSED": statusClass = "status-paused"; break;
-                        case "COMPLETED": statusClass = "status-completed"; break;
-                        case "Cancelled": statusClass = "status-Cancelled"; break;
-                        case "DROPPED": statusClass = "status-dropped"; break;
-                        case "Sequel": statusClass = "status-Sequel"; break;
-                        case "Prequel": statusClass = "status-Prequel"; break;
-                        case "Manhwa": statusClass = "status-Manhwa"; break;
-                        case "Manhua": statusClass = "status-manhua"; break;
-                        case "Manga": statusClass = "status-Manga"; break;
-                        case "Planning": statusClass = "status-Planning"; break;
-                        default: statusClass = "";
-                    }
-                    
-                    return `<span class="status ${statusClass}">${status}</span>`;
-                }).join('');
-            } else if (comic.status) {
+            if (Array.isArray(manhwa.statuses)) {
+                statusElements = manhwa.statuses.map(status => 
+                    `<span class="status ${getStatusClass(status)}">${status}</span>`
+                ).join('');
+            } else if (manhwa.status) {
                 // For backward compatibility with existing data
-                let statusClass = '';
-                switch (comic.status) {
-                    case "Ongoing": statusClass = "status-Ongoing"; break;
-                    case "PAUSED": statusClass = "status-paused"; break;
-                    case "COMPLETED": statusClass = "status-completed"; break;
-                    case "Cancelled": statusClass = "status-Cancelled"; break;
-                    case "DROPPED": statusClass = "status-dropped"; break;
-                    case "Sequel": statusClass = "status-Sequel"; break;
-                    case "Prequel": statusClass = "status-Prequel"; break;
-                    case "Planning": statusClass = "status-Planning"; break;
-                    default: statusClass = "";
-                }
-                
-                statusElements = `<span class="status ${statusClass}">${comic.status}</span>`;
+                statusElements = `<span class="status ${getStatusClass(manhwa.status)}">${manhwa.status}</span>`;
             }
 
             // Check if links exist before creating action buttons
             let actionButtons = '';
-            if (comic.RawLink && comic.rawIcon) {
+            if (manhwa.RawLink && manhwa.rawIcon) {
                 actionButtons += `
-                    <a href="${comic.RawLink}" class="action-button" target="_blank">
-                        <img src="${comic.rawIcon}" alt="Raw" class="button-logo">
+                    <a href="${manhwa.RawLink}" class="action-button" target="_blank">
+                        <img src="${manhwa.rawIcon}" alt="Raw" class="button-logo">
                         <span class="button-text">Raw</span>
                     </a>
                 `;
             }
             
-            if (comic.EngLink && comic.engIcon) {
+            if (manhwa.EngLink && manhwa.engIcon) {
                 actionButtons += `
-                    <a href="${comic.EngLink}" class="action-button" target="_blank">
-                        <img src="${comic.engIcon}" alt="Eng" class="button-logo">
+                    <a href="${manhwa.EngLink}" class="action-button" target="_blank">
+                        <img src="${manhwa.engIcon}" alt="Eng" class="button-logo">
                         <span class="button-text">Eng</span>
                     </a>
                 `;
             }
 
             return `
-                <div class="comic-card">
+                <div class="manhwa-card">
                     <picture>
-                        <source media="(min-width: 768px)" srcset="${comic.image}">
-                        <img src="${comic.image}" alt="${comic.title}" class="comic-cover">
+                        <source media="(min-width: 768px)" srcset="${imageSrc}">
+                        <img src="${imageSrc}" alt="${manhwa.title}" class="manhwa-cover">
                     </picture>
-                    <div class="comic-info">
-                        <h2 class="comic-title">${comic.title}</h2>
-                        <p class="comic-original-title">${comic.originalTitle}</p>
-                        <div class="comic-meta">
-                            <span class="chapters">${comic.chapters} Ch</span>
+                    <div class="manhwa-info">
+                        <h2 class="manhwa-title">${manhwa.title}</h2>
+                        <p class="manhwa-original-title">${manhwa.originalTitle}</p>
+                        <div class="manhwa-meta">
+                            <span class="chapters">${manhwa.chapters} Ch</span>
                             ${statusElements}
                         </div>
-                        <div class="comic-actions">
+                        <div class="manhwa-actions">
                             ${actionButtons}
                         </div>
                     </div>
                 </div>
             `;
         }
-
-        // Search functionality
-        const searchBar = document.getElementById('searchBar');
-        const comicsContainer = document.getElementById('comicsContainer');
-
-        function filterComics(searchTerm) {
-            searchTerm = searchTerm.toLowerCase().trim();
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("DOM loaded, manhwas data:", MANHWAS_DATA_BASE64);
             
-            const filteredComics = comics.filter(comic => {
-                const titleMatch = comic.title.toLowerCase().includes(searchTerm);
-                const originalTitleMatch = comic.originalTitle.toLowerCase().includes(searchTerm);
+            // Search functionality
+            const searchBar = document.getElementById('searchBar');
+            const manhwasContainer = document.getElementById('manhwasContainer');
+            const manhwaCounter = document.getElementById('manhwaCounter');
+
+            function filterManhwas(searchTerm) {
+                searchTerm = searchTerm.toLowerCase().trim();
                 
-                // Check statuses array if it exists
-                let statusMatch = false;
-                if (Array.isArray(comic.statuses)) {
-                    statusMatch = comic.statuses.some(status => 
-                        status.toLowerCase().includes(searchTerm)
-                    );
-                } else if (comic.status) {
-                    // For backward compatibility
-                    statusMatch = comic.status.toLowerCase().includes(searchTerm);
+                const filteredManhwas = MANHWAS_DATA_BASE64.filter(manhwa => {
+                    const titleMatch = manhwa.title.toLowerCase().includes(searchTerm);
+                    const originalTitleMatch = manhwa.originalTitle.toLowerCase().includes(searchTerm);
+                    
+                    // Check statuses array if it exists
+                    let statusMatch = false;
+                    if (Array.isArray(manhwa.statuses)) {
+                        statusMatch = manhwa.statuses.some(status => 
+                            status.toLowerCase().includes(searchTerm)
+                        );
+                    } else if (manhwa.status) {
+                        // For backward compatibility
+                        statusMatch = manhwa.status.toLowerCase().includes(searchTerm);
+                    }
+                    
+                    return titleMatch || originalTitleMatch || statusMatch;
+                });
+                
+                manhwaCounter.textContent = filteredManhwas.length;
+                
+                if (filteredManhwas.length === 0) {
+                    manhwasContainer.innerHTML = '<div class="no-results">No manhwas found matching your search.</div>';
+                } else {
+                    manhwasContainer.innerHTML = filteredManhwas.map(createManhwaCard).join('');
                 }
-                
-                return titleMatch || originalTitleMatch || statusMatch;
+            }
+
+            // Event listener for search input
+            searchBar.addEventListener('input', (e) => {
+                const searchTerm = e.target.value;
+                if (searchTerm === '') {
+                    displayAllManhwas();
+                } else {
+                    filterManhwas(searchTerm);
+                }
             });
-            
-            document.getElementById('comicCounter').textContent = filteredComics.length;
-            
-            if (filteredComics.length === 0) {
-                comicsContainer.innerHTML = '<div class="no-results">No comics found matching your search.</div>';
-            } else {
-                comicsContainer.innerHTML = filteredComics.map(createComicCard).join('');
-            }
-        }
 
-        // Event listener for search input
-        searchBar.addEventListener('input', (e) => {
-            const searchTerm = e.target.value;
-            if (searchTerm === '') {
-                displayAllComics();
-            } else {
-                filterComics(searchTerm);
+            // Display all manhwas when page loads
+            function displayAllManhwas() {
+                manhwasContainer.innerHTML = MANHWAS_DATA_BASE64.map(createManhwaCard).join('');
+                manhwaCounter.textContent = MANHWAS_DATA_BASE64.length;
             }
+
+            // Display all manhwas when page loads
+            displayAllManhwas();
         });
-
-        // Display all comics when page loads
-        function displayAllComics() {
-            comicsContainer.innerHTML = comics.map(createComicCard).join('');
-            document.getElementById('comicCounter').textContent = comics.length;
-        }
-
-        // Display all comics when page loads
-        displayAllComics();
     </script>
+    <script src="../js/manhwas-data.js"></script>
 </body>
 </html>
