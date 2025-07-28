@@ -8,6 +8,7 @@
 [x] :- [ 197] Disastrous Necromancer
 [x] :- [ 128] Returned from Hell
 
+[x] :- [ 173] The Jobless Guy Who Has Come to Slay
 [x] :- [ 167] Log in With Max Level
 [x] :- [  54] The Return of The Disaster-Class Hero
 [x] :- [  99] I Have 999 Abilities
@@ -22,7 +23,6 @@
 [x] :- [  19] It Turns Out That I Have Been Invincible For A Long Time
 [x] :- [ 229] I'm Destined for Greatness!
 [x] :- [ 210] The Celestial Returned from Hell
-[x] :- [ 173] The Jobless Guy Who Has Come to Slay
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
