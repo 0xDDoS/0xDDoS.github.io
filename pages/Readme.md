@@ -4,6 +4,7 @@
 ### 🔞 18+ 
 ```text
 [x] :- [   42] The Billionaire's Monster Cock Son-In-Law
+              Secret Class
 
 [x] :- [  37] I Ended Up in the World of Murim
 [x] :- [  30] Locked Up
