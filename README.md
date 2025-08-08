@@ -23,7 +23,7 @@
 [x] :- [  19] It Turns Out That I Have Been Invincible For A Long Time
 [x] :- [ 229] I'm Destined for Greatness!
 [x] :- [ 210] The Celestial Returned from Hell
-The Perfect Hybrid
+[x] :- [ 214] The Perfect Hybrid
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
