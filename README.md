@@ -50,7 +50,7 @@
 [x] :- [  91] I Can Copy Talents
 [x] :- [  75] Academy’s Genius Swordmaster
 [x] :- [ 121] Transcension Academy
-[x] :- [ 230] Murim Login
+[x] :- [ 233] Murim Login
 [x] :- [ 228] Overgeared
 [x] :- [ 204] The Advanced Player of the Tutorial Tower
 [x] :- [  94] Swordmaster’s Youngest Son
