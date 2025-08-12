@@ -5,6 +5,8 @@
 ```text
 [x] :- [   42] The Billionaire's Monster Cock Son-In-Law
 [x] :- [     ] Secret Class
+[x] :- [     ] Violet Romance
+
 
 [x] :- [  37] I Ended Up in the World of Murim
 [x] :- [  30] Locked Up
