@@ -57,7 +57,7 @@
 [x] :- [ 112] The Dark Magician Transmigrates After 66666 Years
 [x] :- [ 179] Solo Login
 [x] :- [ 189] The Great Mage Returns After 4000 Years
-[x] :- [ 268] Nano Machine
+[x] :- [ 272] Nano Machine
 [x] :- [  44] Magic Level 99990000 All Attribute Great Sage
 [x] :- [ 105] The Previous Life Murim Ranker
 [x] :- [ 109] Seoul Station Necromancer
