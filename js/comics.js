@@ -7,7 +7,7 @@ const comics = [{
     title: "Logging 10000 Years into the Future",
     originalTitle: "Leveling Up into the Future | Apex Future Martial Arts | Martial Art: Future's Ten Thousand Years | Log into the Future",
     chapters: 226,
-    origChapter: 235, // Orginal chapter Available
+    origChapter: 0, // Orginal chapter Available
     statuses: ["Ongoing", "Manhua"], // Replace with [ Ongoing, PAUSED, COMPLETED, Cancelled, DROPPED | Manhwa, Manhua, Manga ]
     image: "img/cover/Logging-10000-Years-into-the-Future.webp", // Replace with your image URL
     RawLink: "https://www.kuaikanmanhua.com/web/topic/17161/", // Replace with your RAW URL
@@ -19,7 +19,7 @@ const comics = [{
     title: "Disastrous Necromancer",
     originalTitle: "Catastrophic Necromancer | Necromancer, the Ultimate Scourge! | Scourge Necromancer | Necromancer! I Am a Disaster | Necromancer: King of The Scourge",
     chapters: 197,
-    origChapter: 197,
+    origChapter: 0,
     statuses: ["Ongoing", "Manhua"],
     image: "img/cover/Disastrous_Necromancer.png",
     RawLink: "https://www.kuaikanmanhua.com/web/topic/18819/",
