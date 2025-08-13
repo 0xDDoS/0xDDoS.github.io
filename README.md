@@ -6,6 +6,8 @@
 ```text
 [x] :- [ 226] Logging 10000 Years into the Future
 [x] :- [ 197] Disastrous Necromancer
+[x] :- [ 273] Nano Machine
+[x] :- [ 233] Murim Login
 [x] :- [ 128] Returned from Hell
 
 [x] :- [ 173] The Jobless Guy Who Has Come to Slay
@@ -52,14 +54,12 @@ Solo Bug Player
 [x] :- [  91] I Can Copy Talents
 [x] :- [  75] Academy’s Genius Swordmaster
 [x] :- [ 121] Transcension Academy
-[x] :- [ 233] Murim Login
 [x] :- [ 228] Overgeared
 [x] :- [ 204] The Advanced Player of the Tutorial Tower
 [x] :- [  94] Swordmaster’s Youngest Son
 [x] :- [ 112] The Dark Magician Transmigrates After 66666 Years
 [x] :- [ 179] Solo Login
 [x] :- [ 189] The Great Mage Returns After 4000 Years
-[x] :- [ 272] Nano Machine
 [x] :- [  44] Magic Level 99990000 All Attribute Great Sage
 [x] :- [ 105] The Previous Life Murim Ranker
 [x] :- [ 109] Seoul Station Necromancer
