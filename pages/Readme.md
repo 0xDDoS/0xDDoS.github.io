@@ -8,6 +8,8 @@
 [x] :- [   13] Violet Romance
 https://newtoki468.com/webtoon/50947758?toon=%EC%84%B1%EC%9D%B8%EC%9B%B9%ED%88%B0
 
+Sensual Lessons (UNCENSORED)
+
 [x] :- [  37] I Ended Up in the World of Murim
 [x] :- [  30] Locked Up
 [x] :- [  22] Milf Hunting in Another World
