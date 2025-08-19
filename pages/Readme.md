@@ -4,7 +4,7 @@
 ### 🔞 18+ 
 ```text
 [x] :- [   42] The Billionaire's Monster Cock Son-In-Law
-[x] :- [     ] Secret Class
+[x] :- [     ] Secret Class | https://theblank.net/manga/secret-class/chapter-1/
 [x] :- [   13] Violet Romance
 https://newtoki468.com/webtoon/50947758?toon=성인웹툰
 
