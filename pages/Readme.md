@@ -6,7 +6,7 @@
 [x] :- [   42] The Billionaire's Monster Cock Son-In-Law
 [x] :- [     ] Secret Class
 [x] :- [   13] Violet Romance
-https://newtoki468.com/webtoon/50947758?toon=%EC%84%B1%EC%9D%B8%EC%9B%B9%ED%88%B0
+https://newtoki468.com/webtoon/50947758?toon=성인웹툰
 
 [x] :- [  13]Sensual Lessons (UNCENSORED)
 https://hotcomics.io/en/sensual-lessons-uncensored-4F0Hw/episode-13-8htIta8D.html
