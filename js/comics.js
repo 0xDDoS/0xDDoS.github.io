@@ -42,7 +42,7 @@ const comics = [{
   {
     title: "Nano Machine",
     originalTitle: "‎ ",
-    chapters: 273,
+    chapters: 274,
     origChapter: 0,
     statuses: ["Ongoing", "Manhwa"],
     image: "img/cover/Nano_Machine.jpg",
