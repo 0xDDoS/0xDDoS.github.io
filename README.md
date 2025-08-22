@@ -27,8 +27,7 @@
 [x] :- [ 210] The Celestial Returned from Hell
 [x] :- [ 214] The Perfect Hybrid
 [x] :- [ 102] The Delivery Man From Martial World 
-
-Solo Bug Player
+[x] :- [ 160] Solo Bug Player
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
