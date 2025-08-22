@@ -7,7 +7,7 @@
 [x] :- [ 226] Logging 10000 Years into the Future
 [x] :- [ 197] Disastrous Necromancer
 [x] :- [ 273] Nano Machine
-[x] :- [ 233] Murim Login
+[x] :- [ 235] Murim Login
 [x] :- [ 128] Returned from Hell
 
 [x] :- [ 173] The Jobless Guy Who Has Come to Slay
