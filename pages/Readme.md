@@ -9,6 +9,8 @@
 [x] :- [  13] Sensual Lessons (UNCENSORED) | https://hotcomics.io/en/sensual-lessons-uncensored-4F0Hw/episode-13-8htIta8D.html
 [x] :- [  09] My Childhood Friend Can't Be This Big!
 
+savage Hero
+
 [x] :- [  37] I Ended Up in the World of Murim
 [x] :- [  30] Locked Up
 [x] :- [  22] Milf Hunting in Another World
