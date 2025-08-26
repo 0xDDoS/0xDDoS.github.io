@@ -119,7 +119,8 @@
 ```text
 [x] :- [ 141] [Cancelled] Extraordinary evolution
 [x] :- [ 121] [Completed] The Lazy Swordmaster
-[x] :- [65/107] [ Dropped ] Maxed Strength Necromancer
+[x] :- [65/107] [Dropped] Maxed Strength Necromancer
+[x] :- [  13] [ Dropped ] Super God System
 [x] :- [ 171] [PAUSED] I Became the Game's Biggest Villain
 
 [x] :- [ 103] [Completed] Leveling Beyond the Max
