@@ -10,7 +10,7 @@
 [x] :- [ 235] Murim Login
 [x] :- [ 128] Returned from Hell
 
-[x] :- [ 148] Absolute Sword Sense
+[x] :- [ 149] Absolute Sword Sense
 [x] :- [ 173] The Jobless Guy Who Has Come to Slay
 [x] :- [ 167] Log in With Max Level
 [x] :- [  54] The Return of The Disaster-Class Hero
