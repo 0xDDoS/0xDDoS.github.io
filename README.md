@@ -124,6 +124,7 @@
 [x] :- [65/107] [Dropped] Maxed Strength Necromancer
 [x] :- [  13] [ Dropped ] Super God System
 [x] :- [ 171] [PAUSED] I Became the Game's Biggest Villain
+[x] :- [  50] [Completed] How to Retire as the Disaster-Class Necromancer
 
 [x] :- [ 103] [Completed] Leveling Beyond the Max
 [x] :- [ 269] [Completed] A Returner’s Magic Should Be Special
