@@ -123,6 +123,7 @@
 [x] :- [ 121] [Completed] The Lazy Swordmaster
 [x] :- [65/107] [Dropped] Maxed Strength Necromancer
 [x] :- [  13] [ Dropped ] Super God System
+[x] :- [  35] [ Dropped ] Murim RPG Simulation
 [x] :- [ 171] [PAUSED] I Became the Game's Biggest Villain
 [x] :- [  50] [Completed] How to Retire as the Disaster-Class Necromancer
 
