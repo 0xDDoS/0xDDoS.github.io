@@ -8,8 +8,8 @@
 [x] :- [  13] Violet Romance | https://newtoki468.com/webtoon/50947758?toon=성인웹툰
 [x] :- [  13] Sensual Lessons (UNCENSORED) | https://hotcomics.io/en/sensual-lessons-uncensored-4F0Hw/episode-13-8htIta8D.html
 [x] :- [  09] My Childhood Friend Can't Be This Big!
-
-savage Hero
+[x] :- [  13] The New CEO's Management Diaries
+savage Hero | https://kagane.org/series/3MZWJS42J92MMEU47B06ABERU5
 
 [x] :- [  37] I Ended Up in the World of Murim
 [x] :- [  30] Locked Up
