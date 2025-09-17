@@ -31,7 +31,7 @@
 [x] :- [ 102] The Delivery Man From Martial World 
 [x] :- [ 160] Solo Bug Player
 [x] :- [  83] +99 Reinforced Wooden Stick
-[x] :- [    ] Revenge of the Baskerville Bloodhound
+[x] :- [ 100] Revenge of the Baskerville Bloodhound
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
