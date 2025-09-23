@@ -32,6 +32,7 @@
 [x] :- [ 160] Solo Bug Player
 [x] :- [  83] +99 Reinforced Wooden Stick
 [x] :- [ 100] Revenge of the Baskerville Bloodhound
+[x] :- [ 174] Legend of the Northern Blade
 [x] :- [ 215] With My Netherworld Trillions, Game On!
 
 
