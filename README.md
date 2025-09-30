@@ -33,7 +33,7 @@
 [x] :- [  83] +99 Reinforced Wooden Stick
 [x] :- [ 100] Revenge of the Baskerville Bloodhound
 [x] :- [ 174] Legend of the Northern Blade
-[x] :- [ 215] With My Netherworld Trillions, Game On!
+[x] :- [ 270] With My Netherworld Trillions, Game On!
 
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
