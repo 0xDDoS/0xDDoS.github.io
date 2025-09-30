@@ -4,7 +4,7 @@
 ### 🔞 18+ 
 ```text
 [x] :- [  42] The Billionaire's Monster Cock Son-In-Law
-[x] :- [  70] Secret Class | https://theblank.net/manga/secret-class
+[x] :- [  71] Secret Class | https://theblank.net/manga/secret-class
 [x] :- [  13] Violet Romance | https://newtoki468.com/webtoon/50947758?toon=성인웹툰
 [x] :- [  13] Sensual Lessons (UNCENSORED) | https://hotcomics.io/en/sensual-lessons-uncensored-4F0Hw/episode-13-8htIta8D.html
 [x] :- [  09] My Childhood Friend Can't Be This Big!
