@@ -113,7 +113,6 @@
 [x] :- [1110] Apotheosis – [x] :- [Original] 1110 *(ManhuaPlus version: 1118)*
 [x] :- [ 337] Global Freeze: I Created An Apocalypse Shelter
 [x] :- [  79] Apocalyptic Super System
-[x] :- [ 101] The Greatest Estate Developer
 [x] :- [  90] The World After The End
 [x] :- [  80] Limit Breaker
 [x] :- [ 199] Super Gene
@@ -129,6 +128,7 @@
 [x] :- [  35] [ Dropped ] Murim RPG Simulation
 [x] :- [ 171] [PAUSED] I Became the Game's Biggest Villain
 [x] :- [  50] [Completed] How to Retire as the Disaster-Class Necromancer
+[x] :- [ 210] [Completed] The Greatest Estate Developer
 
 [x] :- [ 103] [Completed] Leveling Beyond the Max
 [x] :- [ 269] [Completed] A Returner’s Magic Should Be Special
