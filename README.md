@@ -34,7 +34,7 @@
 [x] :- [ 100] Revenge of the Baskerville Bloodhound
 [x] :- [ 174] Legend of the Northern Blade
 [x] :- [ 270] With My Netherworld Trillions, Game On!
-
+[x] :- [ 122] The Hero Returns
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
