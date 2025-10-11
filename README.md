@@ -4,7 +4,7 @@
 ### 🟢 Ongoing
 
 ```text
-[x] :- [ 226] Logging 10000 Years into the Future
+[x] :- [ 237] Logging 10000 Years into the Future
 [x] :- [ 209] Disastrous Necromancer
 [x] :- [ 281] Nano Machine
 [x] :- [ 235] Murim Login
