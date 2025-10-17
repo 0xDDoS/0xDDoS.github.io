@@ -73,7 +73,6 @@
 [x] :- [1091] Versatile Mage
 [x] :- [ 109] Return of The Frozen Player
 [x] :- [ 300] The Strongest God King
-[x] :- [ 154] Sleeping Ranker
 [x] :- [ 194] Tower of God
 [x] :- [ 152] The Legendary Moonlight Sculptor
 [x] :- [ 465] Demonic Emperor
@@ -129,6 +128,7 @@
 [x] :- [ 171] [PAUSED] I Became the Game's Biggest Villain
 [x] :- [  50] [Completed] How to Retire as the Disaster-Class Necromancer
 [x] :- [ 210] [Completed] The Greatest Estate Developer
+[x] :- [ 154] [Completed] Sleeping Ranker
 
 [x] :- [ 103] [Completed] Leveling Beyond the Max
 [x] :- [ 269] [Completed] A Returner’s Magic Should Be Special
