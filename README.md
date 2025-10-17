@@ -73,7 +73,7 @@
 [x] :- [1091] Versatile Mage
 [x] :- [ 109] Return of The Frozen Player
 [x] :- [ 300] The Strongest God King
-[x] :- [  86] Sleeping Ranker
+[x] :- [ 154] Sleeping Ranker
 [x] :- [ 194] Tower of God
 [x] :- [ 152] The Legendary Moonlight Sculptor
 [x] :- [ 465] Demonic Emperor
