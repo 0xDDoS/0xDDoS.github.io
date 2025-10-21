@@ -51,7 +51,6 @@
 [x] :- [  91] Boundless Necromancer
 [x] :- [  89] Dragon-Devouring Mage
 [x] :- [ 146] Dungeon Reset
-[x] :- [  96] Archmage Streamer
 [x] :- [  84] Level 1 Player
 [x] :- [ 127] Player from Today Onwards
 [x] :- [  88] The World After the Fall
@@ -129,6 +128,7 @@
 [x] :- [  50] [Completed] How to Retire as the Disaster-Class Necromancer
 [x] :- [ 210] [Completed] The Greatest Estate Developer
 [x] :- [ 154] [Completed] Sleeping Ranker
+[x] :- [ 144] [Completed] Archmage Streamer
 
 [x] :- [ 103] [Completed] Leveling Beyond the Max
 [x] :- [ 269] [Completed] A Returner’s Magic Should Be Special
