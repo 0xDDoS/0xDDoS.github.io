@@ -6,7 +6,7 @@
 const comics = [{
     title: "Logging 10000 Years into the Future",
     originalTitle: "Leveling Up into the Future | Apex Future Martial Arts | Martial Art: Future's Ten Thousand Years | Log into the Future",
-    chapters: 226,
+    chapters: 264,
     origChapter: 0, // Orginal chapter Available
     statuses: ["Ongoing", "Manhua"], // Replace with [ Ongoing, PAUSED, COMPLETED, Cancelled, DROPPED | Manhwa, Manhua, Manga ]
     image: "img/cover/Logging-10000-Years-into-the-Future.webp", // Replace with your image URL
