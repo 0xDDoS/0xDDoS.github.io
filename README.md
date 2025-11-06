@@ -36,7 +36,8 @@
 [x] :- [ 270] With My Netherworld Trillions, Game On!
 [x] :- [ 122] The Hero Returns
 [x] :- [ 103] Reincarnator
-[x] :- [ 181]Return of The Unrivaled Spear Knight
+[x] :- [ 181] Return of The Unrivaled Spear Knight
+[x] :- [ 130] The Count's Youngest Son is A Player
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
