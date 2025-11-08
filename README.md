@@ -7,7 +7,7 @@
 [x] :- [ 265] Logging 10000 Years into the Future
 [x] :- [ 225] Disastrous Necromancer
 [x] :- [ 282] Nano Machine
-[x] :- [ 235] Murim Login
+[x] :- [ 240] Murim Login
 [x] :- [ 128] Returned from Hell
 
 [x] :- [ 149] Absolute Sword Sense
