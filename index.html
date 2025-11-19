@@ -195,6 +195,7 @@
         }
         .comic-actions {
             display: flex;
+            flex-wrap: wrap;
             gap: 0.5rem;
             margin-top: 0.5rem;
         }
@@ -203,7 +204,7 @@
         .action-button {
             background-color: var(--bg-secondary);
             border: none;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem;
             border-radius: 6px;
             cursor: pointer;
             display: flex;
@@ -217,15 +218,83 @@
             background-color: var(--bg-hover);
         }
 
+        /* Icon-only button styles for multiple English links */
+        .action-button.icon-only {
+            padding: 0.5rem;
+            min-width: 32px;
+            justify-content: center;
+            gap: 0;
+        }
+
         .button-logo {
             width: 16px;
             height: 16px;
+        }
+
+        /* Larger icons for icon-only buttons */
+        .action-button.icon-only .button-logo {
+            width: 20px;
+            height: 20px;
         }
 
         .button-text {
             color: var(--text-primary);
             font-size: 0.875rem;
             font-weight: 500;
+        }
+        
+        .button-arrow-img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        /* Collapsible button styles */
+        .show-more-btn {
+            background-color: var(--bg-secondary);
+            border: none;
+            padding: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            min-width: 32px;
+        }
+        
+        .show-more-btn:hover {
+            background-color: var(--bg-hover);
+        }
+        
+        .hidden-links-container {
+            display: none;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            width: 100%; /* Ensure it takes full width to go to next line */
+            order: 999; /* Ensure it comes after other elements */
+        }
+        
+        .hidden-links-container.expanded {
+            display: flex;
+        }
+        
+        /* Mobile-specific styles for the collapsible button */
+        @media (max-width: 767px) {
+            .show-more-btn {
+                margin-top: 0;
+                padding: 0.5rem;
+            }
+            
+            .hidden-links-container {
+                width: 100%;
+                justify-content: flex-start;
+            }
         }
 
         footer {
@@ -565,7 +634,61 @@
                 `;
             }
             
-            if (comic.EngLink && comic.engIcon) {
+            // Support for multiple English links with collapsible button
+            if (comic.EngLinks && Array.isArray(comic.EngLinks)) {
+                if (comic.EngLinks.length > 4) {
+                    // Create collapsible button when more than 3 links
+                    const visibleLinks = comic.EngLinks.slice(0, 4);
+                    const hiddenLinks = comic.EngLinks.slice(4);
+                    
+                    // Add visible links
+                    visibleLinks.forEach(engLink => {
+                        if (engLink.url && engLink.icon) {
+                            actionButtons += `
+                                <a href="${engLink.url}" class="action-button icon-only" target="_blank" title="${engLink.name || 'English'}">
+                                    <img src="${engLink.icon}" alt="${engLink.name || 'Eng'}" class="button-logo">
+                                </a>
+                            `;
+                        }
+                    });
+                    
+                    // Add collapsible button for remaining links
+                    if (hiddenLinks.length > 0) {
+                        let hiddenLinksHtml = '';
+                        hiddenLinks.forEach(engLink => {
+                            if (engLink.url && engLink.icon) {
+                                hiddenLinksHtml += `
+                                    <a href="${engLink.url}" class="action-button icon-only" target="_blank" title="${engLink.name || 'English'}">
+                                        <img src="${engLink.icon}" alt="${engLink.name || 'Eng'}" class="button-logo">
+                                    </a>
+                                `;
+                            }
+                        });
+                        
+                        actionButtons += `
+                            <button class="action-button show-more-btn" type="button" aria-label="Show more English links">
+                                <img src="img/icons/down_17879133.png" alt="Expand" class="button-arrow-img down-arrow">
+                                <img src="img/icons/up-arrow_17879146.png" alt="Collapse" class="button-arrow-img up-arrow hidden">
+                            </button>
+                            <div class="hidden-links-container">
+                                ${hiddenLinksHtml}
+                            </div>
+                        `;
+                    }
+                } else {
+                    // If 4 or fewer links, show all normally
+                    comic.EngLinks.forEach(engLink => {
+                        if (engLink.url && engLink.icon) {
+                            actionButtons += `
+                                <a href="${engLink.url}" class="action-button icon-only" target="_blank" title="${engLink.name || 'English'}">
+                                    <img src="${engLink.icon}" alt="${engLink.name || 'Eng'}" class="button-logo">
+                                </a>
+                            `;
+                        }
+                    });
+                }
+            } else if (comic.EngLink && comic.engIcon) {
+                // Backward compatibility for single EngLink - show text
                 actionButtons += `
                     <a href="${comic.EngLink}" class="action-button" target="_blank">
                         <img src="${comic.engIcon}" alt="Eng" class="button-logo">
@@ -640,6 +763,34 @@
         // Display all comics when page loads
         function displayAllComics() {
             comicsContainer.innerHTML = comics.map(createComicCard).join('');
+            // Initialize collapsible buttons after comics are loaded
+            initCollapsibleButtons();
+        }
+        
+        // Initialize collapsible buttons functionality
+        function initCollapsibleButtons() {
+            // Execute after a short delay to ensure DOM is fully rendered
+            setTimeout(() => {
+                const showMoreButtons = document.querySelectorAll('.show-more-btn');
+                showMoreButtons.forEach(button => {
+                    // On mobile, the button will naturally wrap to new line if needed due to flex-wrap
+                    button.addEventListener('click', function() {
+                        const container = this.nextElementSibling;
+                        const downArrow = this.querySelector('.down-arrow');
+                        const upArrow = this.querySelector('.up-arrow');
+                        
+                        if (container.classList.contains('expanded')) {
+                            container.classList.remove('expanded');
+                            downArrow.classList.remove('hidden');
+                            upArrow.classList.add('hidden');
+                        } else {
+                            container.classList.add('expanded');
+                            downArrow.classList.add('hidden');
+                            upArrow.classList.remove('hidden');
+                        }
+                    });
+                });
+            }, 100); // Small delay to ensure elements are rendered
         }
 
         // Display all comics when page loads
