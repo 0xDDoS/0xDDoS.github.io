@@ -12,8 +12,12 @@
 [x] :- [  22] The Chairman's Secret Son | https://kagane.org/series/3KZ7JS42JW2ALDI4EB06AB5RS5
 [x] :- [  22] Cleaning Service
 [x] :- [   4] I Became an Apartment Security Manager
+[x] :- [  40] Set It! | SET UP   | https://kagane.org/series/3DZRCDSIXHIOIAWAPPQKLUZRL5   |  https://omegascans.org/series/set-it
+[x] :- [  30] Man of Vengeance   | https://kagane.org/series/3BZRCESIXRICGYKAZPQKMUZRJ5   |  https://omegascans.org/series/the-man-who-devours
+[x] :- [  21] Start Game         | https://hotcomics.io/en/start-game/8cyi9LPp.html
+[x] :- [  14] One More Time      | https://hotcomics.io/en/one-more-time/yriEGKZe.html
+[x] :- [   6] Stuck Living with My In-Laws    | https://hotcomics.io/en/stuck-living-with-my-in-laws/Vo2zOx3G.html
 
-savage Hero
 
 [x] :- [  37] I Ended Up in the World of Murim
 [x] :- [  30] Locked Up
