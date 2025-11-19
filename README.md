@@ -38,8 +38,8 @@
 [x] :- [ 103] Reincarnator
 [x] :- [ 181] Return of The Unrivaled Spear Knight
 [x] :- [ 130] The Count's Youngest Son is A Player
-The Archmage Transcending Through Regression 172
-Perfect Life System: Double Cash for Her Favor
+[x] :- [ 172] The Archmage Transcending Through Regression
+[x] :- [  ?0] Perfect Life System: Double Cash for Her Favor
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
