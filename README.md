@@ -39,7 +39,7 @@
 [x] :- [ 181] Return of The Unrivaled Spear Knight
 [x] :- [ 130] The Count's Youngest Son is A Player
 [x] :- [ 172] The Archmage Transcending Through Regression
-[x] :- [  52] Perfect Life System: Double Cash for Her Favor  | They Offered Their Loyalty to Me After I Obtained Financial Freedom | Drakecomic.org
+[x] :- [  56] Perfect Life System: Double Cash for Her Favor  | They Offered Their Loyalty to Me After I Obtained Financial Freedom | Drakecomic.org
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
