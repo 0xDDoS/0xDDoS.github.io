@@ -17,6 +17,7 @@
 [x] :- [  21] Start Game         | https://hotcomics.io/en/start-game/8cyi9LPp.html
 [x] :- [  14] One More Time      | https://hotcomics.io/en/one-more-time/yriEGKZe.html
 [x] :- [   6] Stuck Living with My In-Laws    | https://hotcomics.io/en/stuck-living-with-my-in-laws/Vo2zOx3G.html
+[x] :- [  28] King of the Night
 
 
 [x] :- [  37] I Ended Up in the World of Murim
