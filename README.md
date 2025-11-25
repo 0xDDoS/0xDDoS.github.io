@@ -41,6 +41,7 @@
 [x] :- [ 172] The Archmage Transcending Through Regression
 [x] :- [  56] Perfect Life System: Double Cash for Her Favor  | They Offered Their Loyalty to Me After I Obtained Financial Freedom | Drakecomic.org
 [x] :- [ 270] Aura Recovery: I Get a New Skill Everyday | Lost Powers Restored: Unlocking a New Skill Every Day
+[x] :- [  94]The doomsday ruthless man: hoarding trillions of supplies at the beginning 
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
