@@ -43,6 +43,7 @@
 [x] :- [ 270] Aura Recovery: I Get a New Skill Everyday | Lost Powers Restored: Unlocking a New Skill Every Day
 [x] :- [  94] The doomsday ruthless man: hoarding trillions of supplies at the beginning 
 [x] :- [  93] My Exclusive Tower Guide
+[x] :- [  94] I've Got a Million Skill Points!
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
