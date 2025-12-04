@@ -44,6 +44,7 @@
 [x] :- [  94] The doomsday ruthless man: hoarding trillions of supplies at the beginning 
 [x] :- [  93] My Exclusive Tower Guide
 [x] :- [  94] I've Got a Million Skill Points!
+[x] :- [ 178] Lord of Destiny Wheel
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
