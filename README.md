@@ -45,7 +45,7 @@
 [x] :- [  93] My Exclusive Tower Guide
 [x] :- [  94] I've Got a Million Skill Points!
 [x] :- [ 178] Lord of Destiny Wheel
-[x] :- [ 129] My Passive Skills Are Invincible
+[x] :- [ 136] My Passive Skills Are Invincible
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
