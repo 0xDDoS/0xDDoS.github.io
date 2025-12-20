@@ -47,6 +47,7 @@
 [x] :- [ 178] Lord of Destiny Wheel
 [x] :- [ 137] My Passive Skills Are Invincible
 [x] :- [  80] Rebirth in the end times: I reached the top by opening boxes 
+[x] :- [   0] I Really Don’t Want to Learn Forbidden Spells
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
