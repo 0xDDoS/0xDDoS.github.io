@@ -46,6 +46,7 @@
 [x] :- [  94] I've Got a Million Skill Points!
 [x] :- [ 178] Lord of Destiny Wheel
 [x] :- [ 137] My Passive Skills Are Invincible
+[x] :- [  73] Rebirth in the end times: I reached the top by opening boxes 
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
