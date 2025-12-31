@@ -48,7 +48,7 @@
 [x] :- [ 137] My Passive Skills Are Invincible
 [x] :- [  80] Rebirth in the end times: I reached the top by opening boxes 
 [x] :- [ 154] I Really Don’t Want to Learn Forbidden Spells
-Master: This Villainous Disciple Is Not The Holy Child
+[x] :- [ 162] Master: This Villainous Disciple Is Not The Holy Child
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
