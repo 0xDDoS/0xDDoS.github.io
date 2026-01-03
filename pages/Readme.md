@@ -19,7 +19,7 @@
 [x] :- [   6] Stuck Living with My In-Laws    | https://hotcomics.io/en/stuck-living-with-my-in-laws/Vo2zOx3G.html
 [x] :- [  28] King of the Night
 [x] :- [   5] Like Father, Like Son
-[x] :- [  28] Teacher’s Efforts
+[x] :- [  36] Teacher’s Efforts
 [x] :- [  20] The Skill of Being Unseen
 
 [x] :- [  37] I Ended Up in the World of Murim
