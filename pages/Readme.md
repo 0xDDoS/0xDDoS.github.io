@@ -21,6 +21,7 @@
 [x] :- [   5] Like Father, Like Son
 [x] :- [  36] Teacher’s Efforts
 [x] :- [  20] The Skill of Being Unseen
+[x] :- [  27] Desire Realization App
 
 [x] :- [  37] I Ended Up in the World of Murim
 [x] :- [  30] Locked Up
