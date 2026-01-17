@@ -49,8 +49,7 @@
 [x] :- [  80] Rebirth in the end times: I reached the top by opening boxes 
 [x] :- [ 154] I Really Don’t Want to Learn Forbidden Spells
 [x] :- [ 162] Master: This Villainous Disciple Is Not The Holy Child
-[×] :- [ 428] The Eternal King
-[×] :- [  78] Legendary Youngest Son of the Marquis House 
+[×] :- [ 428] The Eternal King 
 [×] :- [  77] The Reincarnated Assassin is a Genius Swordsman
 
 
@@ -142,6 +141,7 @@
 [x] :- [65/107] [Dropped] Maxed Strength Necromancer
 [x] :- [  13] [ Dropped ] Super God System
 [x] :- [  35] [ Dropped ] Murim RPG Simulation
+[×] :- [  79] [ Dropped ] Legendary Youngest Son of the Marquis House
 [x] :- [ 171] [PAUSED] I Became the Game's Biggest Villain
 [x] :- [  50] [Completed] How to Retire as the Disaster-Class Necromancer
 [x] :- [ 210] [Completed] The Greatest Estate Developer
