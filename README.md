@@ -51,6 +51,8 @@
 [x] :- [ 162] Master: This Villainous Disciple Is Not The Holy Child
 [×] :- [ 428] The Eternal King
 [×] :- [  78] Legendary Youngest Son of the Marquis House 
+[×] :- [  77]The Reincarnated Assassin is a Genius Swordsman
+
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
