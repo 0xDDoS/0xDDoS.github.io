@@ -51,6 +51,7 @@
 [x] :- [ 162] Master: This Villainous Disciple Is Not The Holy Child
 [×] :- [ 428] The Eternal King 
 [×] :- [  77] The Reincarnated Assassin is a Genius Swordsman
+[×] :- [    ] The Constellations Are My Disciples
 
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
