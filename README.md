@@ -52,7 +52,7 @@
 [×] :- [ 428] The Eternal King 
 [×] :- [  77] The Reincarnated Assassin is a Genius Swordsman
 [×] :- [ 129] The Constellations Are My Disciples
-[×] :- [    ] Return of the Sword God-Rank Civil Servant
+[×] :- [  74] Return of the Sword God-Rank Civil Servant
 
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
