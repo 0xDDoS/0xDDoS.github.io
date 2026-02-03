@@ -58,7 +58,7 @@ const comics = [{
   {
     title: "Disastrous Necromancer",
     originalTitle: "Catastrophic Necromancer | Necromancer, the Ultimate Scourge! | Scourge Necromancer | Necromancer! I Am a Disaster | Necromancer: King of The Scourge | 死灵法师！我即是天灾",
-    chapters: 209,
+    chapters: 247,
     origChapter: 0,
     statuses: ["Ongoing", "Manhua"],
     image: "img/cover/Disastrous_Necromancer.png",
