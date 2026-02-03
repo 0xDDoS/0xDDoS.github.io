@@ -53,7 +53,7 @@
 [×] :- [  77] The Reincarnated Assassin is a Genius Swordsman
 [×] :- [ 129] The Constellations Are My Disciples
 [×] :- [  74] Return of the Sword God-Rank Civil Servant
-
+[×] :- [ 123] SSS Grade Saint Knight
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
