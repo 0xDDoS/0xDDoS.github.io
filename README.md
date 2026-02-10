@@ -55,7 +55,7 @@
 [×] :- [  74] Return of the Sword God-Rank Civil Servant
 [×] :- [ 123] SSS Grade Saint Knight
 [×] :- [  77] Hiding a Logistics Center in The Apocalypse
-[×] :- [    ] The Ultimate Shut-In
+[×] :- [  67] The Ultimate Shut-In
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
