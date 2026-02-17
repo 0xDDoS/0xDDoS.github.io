@@ -56,6 +56,7 @@
 [×] :- [ 123] SSS Grade Saint Knight
 [×] :- [  77] Hiding a Logistics Center in The Apocalypse
 [×] :- [  67] The Ultimate Shut-In
+[ 103] The Zerg Dominator
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
