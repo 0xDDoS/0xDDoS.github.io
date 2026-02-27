@@ -22,7 +22,7 @@
 [x] :- [  36] Teacher’s Efforts
 [x] :- [  20] The Skill of Being Unseen
 [x] :- [  33] Desire Realization App
-[x] :- [    ]Please, Please
+[x] :- [  18]Please, Please
 
 [x] :- [  37] I Ended Up in the World of Murim
 [x] :- [  30] Locked Up
