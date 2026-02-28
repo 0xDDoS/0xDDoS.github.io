@@ -23,7 +23,7 @@
 [x] :- [  20] The Skill of Being Unseen
 [x] :- [  33] Desire Realization App
 [x] :- [  18] Please, Please
-[x] :- [    ] Turning My Life Around With Crypto
+[x] :- [   2] Turning My Life Around With Crypto
 
 [x] :- [  37] I Ended Up in the World of Murim
 [x] :- [  30] Locked Up
