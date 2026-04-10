@@ -95,7 +95,7 @@ const comics = [{
   {
     title: "Murim Login",
     originalTitle: "Log-in Murim | 로그인 무림",
-    chapters: 235,
+    chapters: 250,
     origChapter: 0,
     statuses: ["Ongoing", "Manhwa"],
     image: "img/cover/Murim_Login.webp",
