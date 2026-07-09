@@ -58,7 +58,7 @@
 [×] :- [  67] The Ultimate Shut-In
 [×] :- [ 103] The Zerg Dominator
 [×] :- [ 200] Top Tier Providence 
-[×] :- [  45] High Martiality: With One Hand, I Single-Handedly Repel Three Thousand Emperors!
+[×] :- [  46] High Martiality: With One Hand, I Single-Handedly Repel Three Thousand Emperors!
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
