@@ -61,6 +61,7 @@
 [×] :- [  46] High Martiality: With One Hand, I Single-Handedly Repel Three Thousand Emperors!
 [×] :- [  50] The All-Knowing Cultivator
 [×] :- [ 138] Martial Evolution: Start by Awakening the King of Monsters
+[×] :- [ 148] Full-Time Awakening
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
