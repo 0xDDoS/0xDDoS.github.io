@@ -62,6 +62,7 @@
 [×] :- [  50] The All-Knowing Cultivator
 [×] :- [ 138] Martial Evolution: Start by Awakening the King of Monsters
 [×] :- [ 148] Full-Time Awakening
+[×] :- [ 103] Tyrant of the Otherworldly Hell: My Shadow Can Evolve Infinitely
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
