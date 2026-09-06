@@ -63,6 +63,7 @@
 [×] :- [ 138] Martial Evolution: Start by Awakening the King of Monsters
 [×] :- [ 148] Full-Time Awakening
 [×] :- [ 103] Tyrant of the Otherworldly Hell: My Shadow Can Evolve Infinitely
+[×] :- [ 100] God-level Assassin, I'm the Shadow
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
