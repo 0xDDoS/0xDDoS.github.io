@@ -107,7 +107,7 @@
 [x] :- [ 122] The Player Who Can’t Level Up
 [x] :- [ 330] I Am a Cultivation Bigshot
 [x] :- [ 811] Rebirth of the Urban Immortal Cultivator
-[x] :- [ 110] Solo Spell Caster
+[x] :- [ 135] Solo Spell Caster
 [x] :- [ 186] The Ten Great Emperors at the Beginning Are All My Apprentices
 [x] :- [  96] I Obtained a Mythic Item
 [x] :- [ 113] The Beginning After the End
