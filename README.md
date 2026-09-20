@@ -64,7 +64,7 @@
 [×] :- [ 148] Full-Time Awakening
 [×] :- [ 103] Tyrant of the Otherworldly Hell: My Shadow Can Evolve Infinitely
 [×] :- [ 139] God-level Assassin, I'm the Shadow
-[×] :- [  64] Reincarnator’s Stream 
+[×] :- [  65] Reincarnator’s Stream 
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
