@@ -5,7 +5,7 @@
 
 ```text
 [x] :- [ 265] Logging 10000 Years into the Future
-[x] :- [ 299] Disastrous Necromancer
+[x] :- [ 306] Disastrous Necromancer
 [x] :- [ 282] Nano Machine
 [x] :- [ 250] Murim Login
 [x] :- [ 128] Returned from Hell
