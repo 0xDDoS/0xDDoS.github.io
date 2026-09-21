@@ -65,6 +65,7 @@
 [×] :- [ 103] Tyrant of the Otherworldly Hell: My Shadow Can Evolve Infinitely
 [×] :- [ 139] God-level Assassin, I'm the Shadow
 [×] :- [  65] Reincarnator’s Stream 
+[×] :- [  60] Surviving the Heat Apocalypse with My God-Tier Safehouse
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
