@@ -66,6 +66,7 @@
 [×] :- [ 139] God-level Assassin, I'm the Shadow
 [×] :- [  65] Reincarnator’s Stream 
 [×] :- [  65] Surviving the Heat Apocalypse with My God-Tier Safehouse
+[x] :- [  89] A Hero Who Is Good At Everything
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
