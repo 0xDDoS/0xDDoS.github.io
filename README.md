@@ -68,6 +68,7 @@
 [×] :- [  65] Surviving the Heat Apocalypse with My God-Tier Safehouse
 [x] :- [  89] A Hero Who Is Good At Everything
 [x] :- [  92] My Status Window is on Strike
+[x] :- [ 133] Doomsday for All: Me, Virus Monarch
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
