@@ -73,6 +73,7 @@
 [x] :- [  48] Rebirth of the Thief Who Roamed the World
 [x] :- [  51] Return of the Devourer 
 [x] :- [ 135] Apocalypse Sword God
+[x] :- [ 100] The Return of the Mythical Archmage
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
