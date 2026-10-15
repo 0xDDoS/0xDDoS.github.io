@@ -74,6 +74,7 @@
 [x] :- [  51] Return of the Devourer 
 [x] :- [ 135] Apocalypse Sword God
 [x] :- [ 100] The Return of the Mythical Archmage
+[x] :- [  94] Global Superpowers: Awakening the Purple Thunder at the Beginning 
 
 [x] :- [ 108] The Reincarnation of the Forbidden Archmage
 [x] :- [ 176] Archane Sniper
