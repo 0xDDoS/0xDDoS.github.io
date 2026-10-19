@@ -29,6 +29,7 @@
 [x] :- [  13] Capitalist Harem
 [x] :- [  30] The Professor's Secret Account
 [x] :- [  12] Living With My Teacher!
+[x] :- [  21] Got a Room?
 
 [x] :- [  37] I Ended Up in the World of Murim
 [x] :- [  30] Locked Up
