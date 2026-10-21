@@ -76,7 +76,7 @@
 [x] :- [ 100] The Return of the Mythical Archmage
 [x] :- [  94] Global Superpowers: Awakening the Purple Thunder at the Beginning 
 [x] :- [  96] The Billion-Luck Player
-[x] :- [  40] The Academy's Sashimi Sword Master
+[x] :- [  75] The Academy's Sashimi Sword Master
 [x] :- [  ]
 
 
