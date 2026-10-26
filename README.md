@@ -77,7 +77,7 @@
 [x] :- [  94] Global Superpowers: Awakening the Purple Thunder at the Beginning 
 [x] :- [  96] The Billion-Luck Player
 [x] :- [  94] The Academy's Sashimi Sword Master
-[x] :- [ 100] Steel-Eating Player 
+[x] :- [ 116] Steel-Eating Player 
 [x] :- [  ]
 
 
